@@ -4,103 +4,319 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bilal ibn Rabah - The First Muezzin | Tarajim for Kids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/enhanced-story.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #2c5530;
+      --secondary-color: #97b270;
+      --accent-color: #a8c686;
+      --background-color: #f8f9f6;
+      --text-color: #2c3e50;
+      --border-color: #e8f5e8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .header .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .language-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    } 
+   .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-left: 8px solid var(--accent-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(45deg, var(--accent-color), transparent);
+      border-radius: 50%;
+      opacity: 0.1;
+      transform: translate(50%, -50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .character-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section {
+      background: white;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--secondary-color);
+    }
+
+    .section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .biography-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .lesson-card {
+      background: var(--background-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .quote-section::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .quote-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .language-toggle {
+        position: static;
+        margin: 1rem auto;
+        display: block;
+        width: fit-content;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .hero-section {
+        padding: 2rem;
+      }
+      
+      .lessons-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body dir="ltr">
-  <header>
-    <h1 id="title">Bilal ibn Rabah</h1>
-    <p id="subtitle">The First Muezzin of Islam</p>
-    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
-  </header>
+<body>
+  <div class="header">
+    <button class="language-toggle" onclick="toggleLanguage()" id="lang-toggle">العربية</button>
+    <h1 id="main-title">Bilal ibn Rabah</h1>
+    <p class="subtitle" id="subtitle">The First Muezzin</p>
+  </div>
 
   <div class="container">
-    <h2 id="section-title">The Voice of Faith</h2>
-    
-    <h3 id="birth-title">Early Life in Slavery</h3>
-    <p id="birth-text">Bilal was born in Abyssinia (modern-day Ethiopia) and was brought to Makkah as a slave. His master, Umayyah ibn Khalaf, was a cruel man who tortured Bilal when he learned that Bilal had accepted Islam. Bilal was made to lie on the hot desert sand with heavy stones on his chest, but he never gave up his faith. He kept saying "Ahad, Ahad" (One, One), meaning Allah is One.</p>
-    
-    <h3 id="islam-title">Freedom and Islam</h3>
-    <p id="islam-text">When Abu Bakr As-Siddiq learned about Bilal's torture, he bought him and set him free. Bilal became one of the earliest Muslims and a close companion of Prophet Muhammad (peace be upon him). He was known for his beautiful, deep voice and his strong faith. When the Muslims migrated to Madinah, Bilal went with them and continued to serve Islam with dedication.</p>
-    
-    <h3 id="contributions-title">The First Muezzin</h3>
-    <p id="contributions-text">When the Prophet needed someone to call people to prayer, he chose Bilal because of his beautiful voice and strong faith. Bilal became the first muezzin (caller to prayer) in Islam. His voice was so melodious that people would come from far away just to hear the adhan (call to prayer). He called the adhan for every prayer during the Prophet's lifetime and was known for his sincerity and devotion.</p>
-    
-    <h3 id="death-title">Later Life and Legacy</h3>
-    <p id="death-text">After the Prophet's death, Bilal was so sad that he could no longer stay in Madinah. He moved to Syria and continued to serve Islam there. When the Muslims conquered Jerusalem, Bilal climbed to the top of the mosque and gave the adhan there. He died in Damascus around 20 AH (640 CE) at the age of 60. His grave is in Damascus, and Muslims remember him as a symbol of patience, faith, and the beautiful voice that called people to worship Allah.</p>
-    
-    <a href="/public/" id="back-link">← Back to Stories</a>
+    <div class="hero-section">
+      <div class="hero-content">
+        <span class="character-icon">🕌</span>
+        <p class="biography-text" id="main-bio">
+          Bilal ibn Rabah was born into slavery in Mecca, but his story became one of the most inspiring examples of faith triumphing over oppression. When he accepted Islam, his master Umayyah ibn Khalaf subjected him to severe torture, placing heavy rocks on his chest under the scorching desert sun and demanding he renounce his faith. But Bilal would only repeat 'Ahad, Ahad' (One, One), affirming his belief in the oneness of Allah. Abu Bakr eventually bought and freed him, and Bilal became one of the Prophet's closest companions.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="lessons-title"><span class="section-icon">💡</span> Lessons We Learn</h3>
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <strong id="lesson1">Faith can give you strength to endure any hardship</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson2">Your background doesn't determine your worth in Allah's eyes</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson3">Loyalty and dedication are rewarded by Allah</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson4">A beautiful voice should be used to serve Allah and call people to prayer</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <p class="quote-text" id="quote-text">
+        "I would rather die than give up my faith in Allah, even if you place the mountains on my chest."
+      </p>
+      <p id="quote-attribution">- Bilal ibn Rabah</p>
+    </div>
+
+    <a href="index.html" class="back-link" id="back-link">← Back to All Stories</a>
   </div>
 
   <script>
-    const content = {
+    const langContent = {
       en: {
-        title: "Bilal ibn Rabah",
-        subtitle: "The First Muezzin of Islam",
-        sectionTitle: "The Voice of Faith",
-        birth: {
-          title: "Early Life in Slavery",
-          text: "Bilal was born in Abyssinia (modern-day Ethiopia) and was brought to Makkah as a slave. His master, Umayyah ibn Khalaf, was a cruel man who tortured Bilal when he learned that Bilal had accepted Islam. Bilal was made to lie on the hot desert sand with heavy stones on his chest, but he never gave up his faith. He kept saying 'Ahad, Ahad' (One, One), meaning Allah is One."
-        },
-        islam: {
-          title: "Freedom and Islam",
-          text: "When Abu Bakr As-Siddiq learned about Bilal's torture, he bought him and set him free. Bilal became one of the earliest Muslims and a close companion of Prophet Muhammad (peace be upon him). He was known for his beautiful, deep voice and his strong faith. When the Muslims migrated to Madinah, Bilal went with them and continued to serve Islam with dedication."
-        },
-        contributions: {
-          title: "The First Muezzin",
-          text: "When the Prophet needed someone to call people to prayer, he chose Bilal because of his beautiful voice and strong faith. Bilal became the first muezzin (caller to prayer) in Islam. His voice was so melodious that people would come from far away just to hear the adhan (call to prayer). He called the adhan for every prayer during the Prophet's lifetime and was known for his sincerity and devotion."
-        },
-        death: {
-          title: "Later Life and Legacy",
-          text: "After the Prophet's death, Bilal was so sad that he could no longer stay in Madinah. He moved to Syria and continued to serve Islam there. When the Muslims conquered Jerusalem, Bilal climbed to the top of the mosque and gave the adhan there. He died in Damascus around 20 AH (640 CE) at the age of 60. His grave is in Damascus, and Muslims remember him as a symbol of patience, faith, and the beautiful voice that called people to worship Allah."
-        },
-        backLink: "Back to Home"
+        mainTitle: "Bilal ibn Rabah",
+        subtitle: "The First Muezzin",
+        mainBio: "Bilal ibn Rabah was born into slavery in Mecca, but his story became one of the most inspiring examples of faith triumphing over oppression. When he accepted Islam, his master Umayyah ibn Khalaf subjected him to severe torture, placing heavy rocks on his chest under the scorching desert sun and demanding he renounce his faith. But Bilal would only repeat 'Ahad, Ahad' (One, One), affirming his belief in the oneness of Allah. Abu Bakr eventually bought and freed him, and Bilal became one of the Prophet's closest companions.",
+        lessonsTitle: "Lessons We Learn",
+        lesson1: "Faith can give you strength to endure any hardship",
+        lesson2: "Your background doesn't determine your worth in Allah's eyes",
+        lesson3: "Loyalty and dedication are rewarded by Allah",
+        lesson4: "A beautiful voice should be used to serve Allah and call people to prayer",
+        quoteText: "I would rather die than give up my faith in Allah, even if you place the mountains on my chest.",
+        quoteAttribution: "- Bilal ibn Rabah",
+        backLink: "Back to All Stories"
       },
       ar: {
-        title: "بلال بن رباح",
+        mainTitle: "بلال بن رباح",
         subtitle: "أول مؤذن في الإسلام",
-        sectionTitle: "صوت الإيمان",
-        birth: {
-          title: "الطفولة في العبودية",
-          text: "وُلد بلال في الحبشة (إثيوبيا الحالية) وأُتيح إلى مكة كعبد. كان سيده، أمية بن خلف، رجلاً قاسياً عذب بلال عندما علم أن بلال قد أسلم. كانوا يجعلون بلال يستلقي على الرمال الحارة في الصحراء مع أحجار ثقيلة على صدره، لكنه لم يتخلى عن إيمانه أبدًا. كان يكرر 'أحد، أحد'، أي أن الله واحد."
-        },
-        islam: {
-          title: "الحرية والإسلام",
-          text: "عندما علم أبو بكر الصديق بتعذيب بلال، اشتراه وأعتقه. أصبح بلال من أوائل المسلمين وصاحبًا مقربًا للنبي محمد ﷺ. كان معروفًا بصوته الجميل العميق وإيمانه القوي. عندما هاجر المسلمون إلى المدينة، ذهب بلال معهم وواصل خدمة الإسلام بإخلاص."
-        },
-        contributions: {
-          title: "أول مؤذن",
-          text: "عندما احتاج النبي إلى من ينادي الناس للصلاة، اختار بلال بسبب صوته الجميل وإيمانه القوي. أصبح بلال أول مؤذن في الإسلام. كان صوته عذبًا لدرجة أن الناس كانوا يأتون من أماكن بعيدة فقط لسماع الأذان. كان يرفع الأذان لكل صلاة خلال حياة النبي وكان معروفًا بإخلاصه وتقواه."
-        },
-        death: {
-          title: "سنواته الأخيرة وإرثه",
-          text: "بعد وفاة النبي، كان بلال حزينًا لدرجة أنه لم يستطع البقاء في المدينة. انتقل إلى سوريا وواصل خدمة الإسلام هناك. عندما فتح المسلمون القدس، صعد بلال إلى أعلى المسجد وأذن هناك. توفي في دمشق حوالي 20 هـ (640 م) عن عمر يناهز 60 عامًا. قبره في دمشق، ويتذكره المسلمون كرمز للصبر والإيمان والصوت الجميل الذي كان ينادي الناس لعبادة الله."
-        },
-        backLink: "العودة للصفحة الرئيسية"
+        mainBio: "وُلد بلال بن رباح في العبودية في مكة، لكن قصته أصبحت واحدة من أكثر الأمثلة إلهاماً على انتصار الإيمان على الظلم. عندما اعتنق الإسلام، عرضه سيده أمية بن خلف للتعذيب الشديد، ووضع الصخور الثقيلة على صدره تحت شمس الصحراء الحارقة وطالبه بالتخلي عن إيمانه. لكن بلال كان يكرر فقط 'أحد، أحد'، مؤكداً إيمانه بوحدانية الله. اشتراه أبو بكر في النهاية وحرره، وأصبح بلال من أقرب أصحاب النبي.",
+        lessonsTitle: "الدروس التي نتعلمها",
+        lesson1: "الإيمان يمكن أن يعطيك القوة لتحمل أي مشقة",
+        lesson2: "خلفيتك لا تحدد قيمتك في عيني الله",
+        lesson3: "الولاء والتفاني يكافئهما الله",
+        lesson4: "الصوت الجميل يجب أن يُستخدم لخدمة الله ودعوة الناس للصلاة",
+        quoteText: "أفضل أن أموت على أن أتخلى عن إيماني بالله، حتى لو وضعتم الجبال على صدري.",
+        quoteAttribution: "- بلال بن رباح",
+        backLink: "العودة إلى جميع القصص"
       }
     };
 
     function toggleLanguage() {
       const currentLang = document.documentElement.lang;
       const newLang = currentLang === "en" ? "ar" : "en";
+      
       document.documentElement.lang = newLang;
-      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
-
-      const langContent = content[newLang];
-      document.getElementById("title").textContent = langContent.title;
-      document.getElementById("subtitle").textContent = langContent.subtitle;
-      document.getElementById("section-title").textContent = langContent.sectionTitle;
-      document.getElementById("birth-title").textContent = langContent.birth.title;
-      document.getElementById("birth-text").textContent = langContent.birth.text;
-      document.getElementById("islam-title").textContent = langContent.islam.title;
-      document.getElementById("islam-text").textContent = langContent.islam.text;
-      document.getElementById("contributions-title").textContent = langContent.contributions.title;
-      document.getElementById("contributions-text").textContent = langContent.contributions.text;
-      document.getElementById("death-title").textContent = langContent.death.title;
-      document.getElementById("death-text").textContent = langContent.death.text;
-      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+      document.getElementById("lang-toggle").textContent = newLang === "en" ? "العربية" : "English";
+      
+      const content = langContent[newLang];
+      document.getElementById("main-title").textContent = content.mainTitle;
+      document.getElementById("subtitle").textContent = content.subtitle;
+      document.getElementById("main-bio").textContent = content.mainBio;
+      document.getElementById("lessons-title").innerHTML = `<span class="section-icon">💡</span> ${content.lessonsTitle}`;
+      document.getElementById("lesson1").textContent = content.lesson1;
+      document.getElementById("lesson2").textContent = content.lesson2;
+      document.getElementById("lesson3").textContent = content.lesson3;
+      document.getElementById("lesson4").textContent = content.lesson4;
+      document.getElementById("quote-text").textContent = content.quoteText;
+      document.getElementById("quote-attribution").textContent = content.quoteAttribution;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + content.backLink : "← " + content.backLink;
     }
   </script>
 </body>
