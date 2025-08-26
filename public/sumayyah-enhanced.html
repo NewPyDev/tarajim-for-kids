@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumayyah bint Khayyat - The First Martyr | Tarajim for Kids</title>
+    <style>
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #97b270;
+            --accent-color: #a8c686;
+            --background-color: #f8f9f6;
+            --text-color: #2c3e50;
+            --border-color: #e8f5e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .biography-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .character-icon {
+            font-size: 4em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .biography-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #2c3e50;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .lessons-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .lesson-card {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lesson-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .lesson-text {
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        .quote-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .quote-text {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        .timeline-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #e84393;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #e84393;
+            border: 3px solid white;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-event {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .arabic-name {
+                font-size: 1.5em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .header, .biography-section, .lessons-section, .quote-section, .timeline-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Sumayyah bint Khayyat</h1>
+            <p class="subtitle">The First Martyr</p>
+            <p class="arabic-name">سمية بنت خياط</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="biography-section">
+                <h2 class="section-title">Her Amazing Story</h2>
+                <div class="character-icon">👩</div>
+                <p class="biography-text">
+                    Sumayyah bint Khayyat holds the extraordinary and eternally honored distinction of being the first martyr in Islamic history, a brave and principled woman whose unwavering faith and ultimate sacrifice established a powerful precedent for courage and steadfastness that would inspire countless Muslims throughout the centuries and demonstrate that the strength of one's convictions can transcend all considerations of personal safety, social status, and even life itself. Born in Abyssinia (modern-day Ethiopia) during the latter half of the 6th century CE, Sumayyah grew up in a society that, while different from Arabia in many respects, shared the common ancient world characteristics of rigid social hierarchies, limited opportunities for women, and the widespread acceptance of slavery as a normal part of economic and social life.
+                </p>
+                <p class="biography-text">
+                    The circumstances that brought Sumayyah from her homeland in Abyssinia to the bustling commercial center of Mecca are not entirely clear from historical records, but like many people of her time and background, she likely came to Arabia either as a slave, as part of a trading expedition, or as a refugee seeking better opportunities in the wealthy merchant city that served as the economic and religious heart of the Arabian Peninsula. In Mecca, Sumayyah met and married Yasir ibn Amir, a man who, like herself, came from outside the traditional Meccan tribal structure and who worked as a confederate or ally of the powerful Makhzum clan. Together, they built a modest but stable life in Mecca, raising their son Ammar ibn Yasir and establishing themselves as respected members of the diverse community of immigrants, freedmen, and allies who contributed to the city's commercial success.
+                </p>
+                <p class="biography-text">
+                    When the Prophet Muhammad began receiving divine revelations and started preaching the message of Islam in Mecca around 610 CE, Sumayyah and her family were among the early converts who recognized the truth and beauty of the new faith and embraced it wholeheartedly despite the social and economic risks that such a decision entailed. For Sumayyah, who had experienced firsthand the limitations and injustices that characterized the treatment of women and foreigners in pre-Islamic Arabian society, the Islamic message of human equality, divine justice, and the inherent dignity of all people regardless of their gender, race, or social background must have resonated deeply and provided a sense of hope and purpose that had been missing from her previous religious and social experiences.
+                </p>
+                <p class="biography-text">
+                    As the Muslim community grew and the Prophet's message became more widely known throughout Mecca, the opposition from the city's ruling tribes became increasingly organized and violent, with particular attention focused on those Muslims who lacked the protection of powerful tribal connections and who could be attacked with relative impunity. Sumayyah and her family, as non-tribal converts who worked for but were not fully protected by the Makhzum clan, found themselves in an extremely vulnerable position when the persecution of Muslims began in earnest. The enemies of Islam developed systematic methods of torture and intimidation designed to force Muslims to renounce their faith, and these methods were particularly brutal when applied to those who lacked tribal protection.
+                </p>
+                <p class="biography-text">
+                    For Sumayyah, the persecution was especially severe because she faced the double vulnerability of being both a woman and a person of foreign origin in a society that offered little protection to either group. The tortures inflicted upon Sumayyah and her family were designed not only to cause physical pain but also to break their spirits and demonstrate to other Muslims the consequences of maintaining their faith in the face of opposition from Mecca's ruling elite. They were taken to the desert outside the city during the hottest parts of the day and subjected to various forms of physical abuse while being repeatedly commanded to renounce Islam and return to the worship of the traditional Arabian gods.
+                </p>
+                <p class="biography-text">
+                    However, despite the excruciating pain and the constant pressure to renounce her faith, Sumayyah demonstrated a level of courage and spiritual strength that amazed both her tormentors and her fellow Muslims. Her refusal to compromise her beliefs or speak against Islam and the Prophet Muhammad, even when faced with the most severe physical abuse and the threat of death, established her as a model of faith and steadfastness that would inspire generations of Muslims facing persecution and hardship. The Prophet Muhammad himself witnessed Sumayyah's suffering and was deeply moved by her courage and dedication, promising her that Paradise awaited those who remained steadfast in their faith despite persecution.
+                </p>
+                <p class="biography-text">
+                    When Sumayyah's tormentors finally realized that no amount of physical abuse or psychological pressure would shake her faith or force her to renounce Islam, they made the decision to kill her, making her the first person to die for the Islamic faith and establishing her as the first martyr in Islamic history. Her death was not merely a personal tragedy but a pivotal moment in the early development of Islam, as it demonstrated both the seriousness of the opposition that the Muslim community faced and the depth of commitment that the faith could inspire in its followers. Her martyrdom served as a powerful testimony to the transformative power of Islamic belief and provided other Muslims with a concrete example of how to face persecution and even death with dignity, courage, and unwavering faith.
+                </p>
+            </div>
+        </div>
+
+        <div class="lessons-section">
+            <h2 class="section-title">Lessons We Learn</h2>
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <div class="lesson-number">1</div>
+                    <div class="lesson-text">Faith is worth any sacrifice</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">2</div>
+                    <div class="lesson-text">Women can be incredibly brave and strong</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">3</div>
+                    <div class="lesson-text">Standing up for beliefs requires great courage</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">4</div>
+                    <div class="lesson-text">The first to sacrifice often inspire many others</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-section">
+            <h2 class="section-title">Her Famous Words</h2>
+            <p class="quote-text">"I will never abandon my faith, even if it costs me my life."</p>
+            <p class="quote-author">- Sumayyah bint Khayyat</p>
+        </div>
+
+        <div class="timeline-section">
+            <h2 class="section-title">Important Events in Her Life</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">550 CE</div>
+                    <div class="timeline-event">Born in Abyssinia (Ethiopia)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">580 CE</div>
+                    <div class="timeline-event">Came to Mecca and married Yasir ibn Amir</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">610 CE</div>
+                    <div class="timeline-event">Accepted Islam with her family among the early converts</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">613 CE</div>
+                    <div class="timeline-event">Faced severe persecution and torture for her faith</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">615 CE</div>
+                    <div class="timeline-event">Became the first martyr in Islamic history</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="back-button">← Back to All Stories</a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate lesson cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe lesson cards
+            document.querySelectorAll('.lesson-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Observe timeline items
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+
+            // Add click sound effect (optional)
+            document.querySelectorAll('.lesson-card, .back-button').forEach(element => {
+                element.addEventListener('click', function() {
+                    // Add a subtle click effect
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

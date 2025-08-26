@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abu Bakr As-Siddiq - The Truthful</title>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Abu Bakr As-Siddiq - The Truthful | Tarajim for Kids</title>
   <style>
     :root {
-      --primary-color: #2C5F2D;
-      --secondary-color: #97B270;
-      --accent-color: #FFB067;
-      --background-color: #FFF9E9;
-      --text-color: #234638;
-      --header-bg: #1F4037;
+      --primary-color: #2c5530;
+      --secondary-color: #97b270;
+      --accent-color: #a8c686;
+      --background-color: #f8f9f6;
+      --text-color: #2c3e50;
+      --border-color: #e8f5e8;
     }
 
     * {
@@ -22,81 +21,56 @@
     }
 
     body {
-      background-color: var(--background-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       color: var(--text-color);
-      line-height: 1.8;
-      font-family: 'Quicksand', sans-serif;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+      background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+      min-height: 100vh;
     }
 
-    body[dir="rtl"] {
-      font-family: 'Amiri', serif;
-      direction: rtl;
-      text-align: right;
-    }
-
-    header {
-      background-color: var(--header-bg);
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTEyLjUsMCBMMzcuNSwyNSBMMTIuNSw1MCBNMzcuNSwwIEw2Mi41LDI1IE0tMTIuNSwwIEwxMi41LDI1IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4xIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==');
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
+      padding: 2rem 0;
       text-align: center;
-      padding: 40px 20px;
-      border-bottom: 5px solid var(--accent-color);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
-    header p {
-      font-size: 1.4rem;
+    .header .subtitle {
+      font-size: 1.2rem;
       opacity: 0.9;
+      font-weight: 300;
     }
 
     .language-toggle {
       position: absolute;
       top: 20px;
       right: 20px;
-      background-color: var(--accent-color);
-      color: var(--header-bg);
-      border: none;
-      padding: 12px 20px;
-      font-size: 1.1rem;
-      font-weight: 600;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 16px;
       border-radius: 25px;
       cursor: pointer;
+      font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    body[dir="rtl"] .language-toggle {
-      right: auto;
-      left: 20px;
     }
 
     .language-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 30px;
-    }
-
-    h2 {
-      color: var(--primary-color);
-      font-size: 2.5rem;
-      margin: 30px 0;
-      text-align: center;
-      position: relative;
-      padding-bottom: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
     }
 
     h2::after {
