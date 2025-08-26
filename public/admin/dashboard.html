@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Tarajim for Kids</title>
+    <style>
+        :root {
+            --primary-color: #2C5F2D;
+            --accent-color: #FFB067;
+            --background-color: #FFF9E9;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .sahaba-list {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .sahaba-item {
+            display: grid;
+            grid-template-columns: 50px 1fr 150px;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        #addEditModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Sahaba Management</h1>
+            <div>
+                <button class="btn btn-primary" onclick="showAddModal()">Add New Sahabi</button>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="sahaba-list" id="sahabaList">
+            <!-- Sahaba entries will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="addEditModal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Add New Sahabi</h2>
+            <form id="sahabiForm">
+                <div class="form-group">
+                    <label for="name">Name (English)</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="nameArabic">Name (Arabic)</label>
+                    <input type="text" id="nameArabic" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categories">Categories</label>
+                    <select id="categories" multiple>
+                        <option value="companion">Companion</option>
+                        <option value="scholar">Scholar</option>
+                        <option value="warrior">Warrior</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birthYear">Birth Year</label>
+                    <input type="text" id="birthYear">
+                </div>
+                <div class="form-group">
+                    <label for="deathYear">Death Year</label>
+                    <input type="text" id="deathYear">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/admin/js/dashboard.js"></script>
+</body>
+</html>

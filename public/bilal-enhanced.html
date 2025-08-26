@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilal ibn Rabah - The First Muezzin | Tarajim for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/enhanced-story.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Bilal ibn Rabah</h1>
+    <p id="subtitle">The First Muezzin of Islam</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Voice of Faith</h2>
+    
+    <h3 id="birth-title">Early Life in Slavery</h3>
+    <p id="birth-text">Bilal was born in Abyssinia (modern-day Ethiopia) and was brought to Makkah as a slave. His master, Umayyah ibn Khalaf, was a cruel man who tortured Bilal when he learned that Bilal had accepted Islam. Bilal was made to lie on the hot desert sand with heavy stones on his chest, but he never gave up his faith. He kept saying "Ahad, Ahad" (One, One), meaning Allah is One.</p>
+    
+    <h3 id="islam-title">Freedom and Islam</h3>
+    <p id="islam-text">When Abu Bakr As-Siddiq learned about Bilal's torture, he bought him and set him free. Bilal became one of the earliest Muslims and a close companion of Prophet Muhammad (peace be upon him). He was known for his beautiful, deep voice and his strong faith. When the Muslims migrated to Madinah, Bilal went with them and continued to serve Islam with dedication.</p>
+    
+    <h3 id="contributions-title">The First Muezzin</h3>
+    <p id="contributions-text">When the Prophet needed someone to call people to prayer, he chose Bilal because of his beautiful voice and strong faith. Bilal became the first muezzin (caller to prayer) in Islam. His voice was so melodious that people would come from far away just to hear the adhan (call to prayer). He called the adhan for every prayer during the Prophet's lifetime and was known for his sincerity and devotion.</p>
+    
+    <h3 id="death-title">Later Life and Legacy</h3>
+    <p id="death-text">After the Prophet's death, Bilal was so sad that he could no longer stay in Madinah. He moved to Syria and continued to serve Islam there. When the Muslims conquered Jerusalem, Bilal climbed to the top of the mosque and gave the adhan there. He died in Damascus around 20 AH (640 CE) at the age of 60. His grave is in Damascus, and Muslims remember him as a symbol of patience, faith, and the beautiful voice that called people to worship Allah.</p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Bilal ibn Rabah",
+        subtitle: "The First Muezzin of Islam",
+        sectionTitle: "The Voice of Faith",
+        birth: {
+          title: "Early Life in Slavery",
+          text: "Bilal was born in Abyssinia (modern-day Ethiopia) and was brought to Makkah as a slave. His master, Umayyah ibn Khalaf, was a cruel man who tortured Bilal when he learned that Bilal had accepted Islam. Bilal was made to lie on the hot desert sand with heavy stones on his chest, but he never gave up his faith. He kept saying 'Ahad, Ahad' (One, One), meaning Allah is One."
+        },
+        islam: {
+          title: "Freedom and Islam",
+          text: "When Abu Bakr As-Siddiq learned about Bilal's torture, he bought him and set him free. Bilal became one of the earliest Muslims and a close companion of Prophet Muhammad (peace be upon him). He was known for his beautiful, deep voice and his strong faith. When the Muslims migrated to Madinah, Bilal went with them and continued to serve Islam with dedication."
+        },
+        contributions: {
+          title: "The First Muezzin",
+          text: "When the Prophet needed someone to call people to prayer, he chose Bilal because of his beautiful voice and strong faith. Bilal became the first muezzin (caller to prayer) in Islam. His voice was so melodious that people would come from far away just to hear the adhan (call to prayer). He called the adhan for every prayer during the Prophet's lifetime and was known for his sincerity and devotion."
+        },
+        death: {
+          title: "Later Life and Legacy",
+          text: "After the Prophet's death, Bilal was so sad that he could no longer stay in Madinah. He moved to Syria and continued to serve Islam there. When the Muslims conquered Jerusalem, Bilal climbed to the top of the mosque and gave the adhan there. He died in Damascus around 20 AH (640 CE) at the age of 60. His grave is in Damascus, and Muslims remember him as a symbol of patience, faith, and the beautiful voice that called people to worship Allah."
+        },
+        backLink: "Back to Home"
+      },
+      ar: {
+        title: "بلال بن رباح",
+        subtitle: "أول مؤذن في الإسلام",
+        sectionTitle: "صوت الإيمان",
+        birth: {
+          title: "الطفولة في العبودية",
+          text: "وُلد بلال في الحبشة (إثيوبيا الحالية) وأُتيح إلى مكة كعبد. كان سيده، أمية بن خلف، رجلاً قاسياً عذب بلال عندما علم أن بلال قد أسلم. كانوا يجعلون بلال يستلقي على الرمال الحارة في الصحراء مع أحجار ثقيلة على صدره، لكنه لم يتخلى عن إيمانه أبدًا. كان يكرر 'أحد، أحد'، أي أن الله واحد."
+        },
+        islam: {
+          title: "الحرية والإسلام",
+          text: "عندما علم أبو بكر الصديق بتعذيب بلال، اشتراه وأعتقه. أصبح بلال من أوائل المسلمين وصاحبًا مقربًا للنبي محمد ﷺ. كان معروفًا بصوته الجميل العميق وإيمانه القوي. عندما هاجر المسلمون إلى المدينة، ذهب بلال معهم وواصل خدمة الإسلام بإخلاص."
+        },
+        contributions: {
+          title: "أول مؤذن",
+          text: "عندما احتاج النبي إلى من ينادي الناس للصلاة، اختار بلال بسبب صوته الجميل وإيمانه القوي. أصبح بلال أول مؤذن في الإسلام. كان صوته عذبًا لدرجة أن الناس كانوا يأتون من أماكن بعيدة فقط لسماع الأذان. كان يرفع الأذان لكل صلاة خلال حياة النبي وكان معروفًا بإخلاصه وتقواه."
+        },
+        death: {
+          title: "سنواته الأخيرة وإرثه",
+          text: "بعد وفاة النبي، كان بلال حزينًا لدرجة أنه لم يستطع البقاء في المدينة. انتقل إلى سوريا وواصل خدمة الإسلام هناك. عندما فتح المسلمون القدس، صعد بلال إلى أعلى المسجد وأذن هناك. توفي في دمشق حوالي 20 هـ (640 م) عن عمر يناهز 60 عامًا. قبره في دمشق، ويتذكره المسلمون كرمز للصبر والإيمان والصوت الجميل الذي كان ينادي الناس لعبادة الله."
+        },
+        backLink: "العودة للصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+    }
+  </script>
+</body>
+</html>

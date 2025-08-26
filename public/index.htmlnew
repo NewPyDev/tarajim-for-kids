@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarajim for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2C5F2D;     /* Islamic green */
+      --secondary-color: #97B270;    /* Soft sage */
+      --accent-color: #FFB067;      /* Warm orange */
+      --background-color: #FFF9E9;  /* Soft cream */
+      --text-color: #234638;        /* Deep green-gray */
+      --header-bg: #1F4037;         /* Dark green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body[dir="ltr"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    .language-toggle {
+      background: var(--accent-color);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .divider {
+      height: 4px;
+      background: var(--secondary-color);
+      margin: 20px 0;
+      border-radius: 2px;
+    }
+
+    footer {
+      background: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Tarajim for Kids</h1>
+    <p id="subtitle">Explore the lives of the Sahabah in a fun and colorful way!</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+  <nav>
+    <a href="javascript:void(0)" id="nav-caliphs" onclick="filterCards('caliphs')">Caliphs</a>
+    <a href="javascript:void(0)" id="nav-bravery" onclick="filterCards('bravery')">Bravery</a>
+    <a href="javascript:void(0)" id="nav-kindness" onclick="filterCards('kindness')">Kindness</a>
+    <a href="javascript:void(0)" id="nav-loyalty" onclick="filterCards('loyalty')">Loyalty</a>
+    <a href="javascript:void(0)" id="nav-all" onclick="filterCards('all')">All</a>
+  </nav>
+  <div class="container">
+    <h2 id="section-title">Stories of the Sahabah</h2>
+    <div class="divider"></div>
+    <div class="grid">
+      <div class="card" data-categories="caliphs">
+        <a href="abu-bakr.html">
+          <h3 id="abu-bakr-title">Abu Bakr As-Siddiq (أبو بكر الصديق)</h3>
+          <p id="abu-bakr-desc">The first Caliph and closest companion of the Prophet. He supported the Prophet during the Hijrah and united the Muslim community.</p>
+        </a>
+      </div>
+      <div class="card" data-categories="caliphs">
+        <a href="umar.html">
+          <h3 id="umar-title">Umar ibn Al-Khattab (عمر بن الخطاب)</h3>
+          <p id="umar-desc">The second Caliph known for his justice and strength. Under his leadership, Islam spread far and wide.</p>
+        </a>
+      </div>
+      <div class="card" data-categories="bravery">
+        <a href="khalid.html">
+          <h3 id="khalid-title">Khalid ibn Al-Walid (خالد بن الوليد)</h3>
+          <p id="khalid-desc">Known as the 'Sword of Allah', Khalid was an exceptional military commander who never lost a battle.</p>
+        </a>
+      </div>
+      <div class="card" data-categories="kindness">
+        <a href="bilal.html">
+          <h3 id="bilal-title">Bilal ibn Rabah (بلال بن رباح)</h3>
+          <p id="bilal-desc">The first muezzin in Islam, Bilal was known for his beautiful voice and unwavering faith despite persecution.</p>
+        </a>
+      </div>
+      <div class="card" data-categories="loyalty">
+        <a href="salman.html">
+          <h3 id="salman-title">Salman Al-Farisi (سلمان الفارسي)</h3>
+          <p id="salman-desc">A Persian companion who traveled far in search of truth. His suggestion of digging a trench helped Muslims defend Medina.</p>
+        </a>
+      </div>
+      <div class="card" data-categories="loyalty">
+        <a href="zaid.html">
+          <h3 id="zaid-title">Zaid ibn Thabit (زيد بن ثابت)</h3>
+          <p id="zaid-desc">The chief scribe of the Prophet and compiler of the Quran. His intelligence and dedication helped preserve the divine message.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Tarajim for Kids | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const content = {
+      en: {
+        title: "Tarajim for Kids",
+        subtitle: "Explore the lives of the Sahabah in a fun and colorful way!",
+        nav: {
+          caliphs: "Caliphs",
+          bravery: "Bravery",
+          kindness: "Kindness",
+          loyalty: "Loyalty",
+          all: "All"
+        },
+        sectionTitle: "Stories of the Sahabah"
+      },
+      ar: {
+        title: "تراجم للأطفال",
+        subtitle: "اكتشف حياة الصحابة بطريقة ممتعة وملونة!",
+        nav: {
+          caliphs: "الخلفاء",
+          bravery: "الشجاعة",
+          kindness: "الرحمة",
+          loyalty: "الوفاء",
+          all: "الكل"
+        },
+        sectionTitle: "قصص الصحابة"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("nav-caliphs").textContent = langContent.nav.caliphs;
+      document.getElementById("nav-bravery").textContent = langContent.nav.bravery;
+      document.getElementById("nav-kindness").textContent = langContent.nav.kindness;
+      document.getElementById("nav-loyalty").textContent = langContent.nav.loyalty;
+      document.getElementById("nav-all").textContent = langContent.nav.all;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+    }
+
+    function filterCards(category) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.categories.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

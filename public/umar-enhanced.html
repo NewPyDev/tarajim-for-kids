@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umar ibn al-Khattab - The Just</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #8B4513;
+      --secondary-color: #DEB887;
+      --accent-color: #CD853F;
+      --background-color: #FFF8DC;
+      --text-color: #5D4037;
+      --header-bg: #3E2723;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTMwLDAgTDYwLDMwIEwzMCw2MCBMMCwzMCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiM4QjQ1MTMiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTE1LDAgTDQ1LDMwIEwxNSw2MCBNNDUsMCBMNzUsMzAgTS0xNSwwIEwxNSwzMCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Umar ibn al-Khattab</h1>
+    <p id="subtitle">The Just - The Second Caliph</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Life of Umar ibn al-Khattab</h2>
+    
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">
+      Umar ibn al-Khattab was born in 584 CE in Mecca. He belonged to the Banu Adi clan of the Quraysh tribe. Known for his 
+      strength, intelligence, and leadership qualities, he initially opposed Islam and was a fierce enemy of the Prophet. 
+      He was a skilled administrator and merchant, known for his physical strength and commanding presence.
+    </p>
+    
+    <h3 id="islam-title">Embracing Islam</h3>
+    <p id="islam-text">
+      Umar's conversion to Islam in 616 CE was a significant event that strengthened the Muslim community. After reading 
+      verses from the Quran, he was deeply moved and immediately went to the Prophet to declare his faith. His conversion 
+      gave Muslims the confidence to pray openly at the Kaaba for the first time. He became one of the Prophet's closest 
+      companions and advisors.
+    </p>
+    
+    <h3 id="contributions-title">Contributions to Islam</h3>
+    <p id="contributions-text">
+      As the second Caliph (634-644 CE), Umar established the Islamic calendar, created the first welfare state, and 
+      expanded the Muslim empire significantly. He was known for his justice and administrative genius, establishing 
+      systems for governance, taxation, and social welfare. He personally patrolled the streets at night to ensure the 
+      welfare of his subjects. Under his rule, Jerusalem was conquered peacefully, and he personally received the keys 
+      to the city.
+    </p>
+    
+    <h3 id="death-title">Passing</h3>
+    <p id="death-text">
+      Umar was assassinated in 644 CE by a Persian slave named Abu Lu'lu'a while leading the dawn prayer in the Prophet's 
+      Mosque in Medina. Before his death, he appointed a council of six companions to choose his successor. He was buried 
+      next to the Prophet Muhammad and Abu Bakr in the Prophet's Mosque. His ten-year caliphate is remembered as a golden 
+      age of Islamic expansion and justice, earning him the title "Al-Farooq" (The Distinguisher between right and wrong).
+    </p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Umar ibn al-Khattab",
+        subtitle: "The Just - The Second Caliph",
+        sectionTitle: "The Life of Umar ibn al-Khattab",
+        birth: {
+          title: "Birth and Early Life",
+          text: "Umar ibn al-Khattab was born in 584 CE in Mecca. He belonged to the Banu Adi clan of the Quraysh tribe. Known for his strength, intelligence, and leadership qualities, he initially opposed Islam and was a fierce enemy of the Prophet. He was a skilled administrator and merchant, known for his physical strength and commanding presence."
+        },
+        islam: {
+          title: "Embracing Islam",
+          text: "Umar's conversion to Islam in 616 CE was a significant event that strengthened the Muslim community. After reading verses from the Quran, he was deeply moved and immediately went to the Prophet to declare his faith. His conversion gave Muslims the confidence to pray openly at the Kaaba for the first time. He became one of the Prophet's closest companions and advisors."
+        },
+        contributions: {
+          title: "Contributions to Islam",
+          text: "As the second Caliph (634-644 CE), Umar established the Islamic calendar, created the first welfare state, and expanded the Muslim empire significantly. He was known for his justice and administrative genius, establishing systems for governance, taxation, and social welfare. He personally patrolled the streets at night to ensure the welfare of his subjects. Under his rule, Jerusalem was conquered peacefully, and he personally received the keys to the city."
+        },
+        death: {
+          title: "Passing",
+          text: "Umar was assassinated in 644 CE by a Persian slave named Abu Lu'lu'a while leading the dawn prayer in the Prophet's Mosque in Medina. Before his death, he appointed a council of six companions to choose his successor. He was buried next to the Prophet Muhammad and Abu Bakr in the Prophet's Mosque. His ten-year caliphate is remembered as a golden age of Islamic expansion and justice, earning him the title 'Al-Farooq' (The Distinguisher between right and wrong)."
+        },
+        backLink: "Back to Stories"
+      },
+      ar: {
+        title: "عمر بن الخطاب",
+        subtitle: "العادل - الخليفة الراشد الثاني",
+        sectionTitle: "حياة عمر بن الخطاب",
+        birth: {
+          title: "الميلاد والطفولة",
+          text: "وُلد عمر بن الخطاب عام 584 م في مكة. كان ينتمي إلى قبيلة بني عدي من قريش. عُرف بقوته وذكائه وصفاته القيادية، وكان في البداية يعارض الإسلام وعدواً شرساً للنبي. كان إدارياً ماهراً وتاجراً، معروفاً بقوته الجسدية وحضوره المهيب."
+        },
+        islam: {
+          title: "الإسلام",
+          text: "كان إسلام عمر عام 616 م حدثاً مهماً قوّى المجتمع الإسلامي. بعد قراءة آيات من القرآن، تأثر بعمق وذهب فوراً إلى النبي ليعلن إيمانه. أعطى إسلامه المسلمين الثقة للصلاة علناً في الكعبة لأول مرة. أصبح من أقرب أصحاب النبي ومستشاريه."
+        },
+        contributions: {
+          title: "إسهاماته في الإسلام",
+          text: "كخليفة ثانٍ (634-644 م)، أسس عمر التقويم الإسلامي، وأنشأ أول دولة رفاهية، ووسّع الإمبراطورية الإسلامية بشكل كبير. عُرف بعدالته وعبقريته الإدارية، حيث أسس أنظمة للحكم والضرائب والرفاهية الاجتماعية. كان يتجول شخصياً في الشوارع ليلاً لضمان رفاهية رعاياه. في عهده، فُتحت القدس سلمياً، وتسلم شخصياً مفاتيح المدينة."
+        },
+        death: {
+          title: "الوفاة",
+          text: "اغتيل عمر عام 644 م على يد عبد فارسي يُدعى أبو لؤلؤة أثناء قيادته لصلاة الفجر في المسجد النبوي بالمدينة. قبل وفاته، عيّن مجلساً من ستة صحابة لاختيار خلفه. دُفن بجانب النبي محمد وأبي بكر في المسجد النبوي. خلافته التي دامت عشر سنوات تُذكر كعصر ذهبي للتوسع الإسلامي والعدالة، مما أكسبه لقب 'الفاروق' (المميز بين الحق والباطل)."
+        },
+        backLink: "العودة إلى القصص"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+    }
+  </script>
+</body>
+</html>

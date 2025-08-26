@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uthman ibn Affan - The Generous</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #8B4513;
+      --secondary-color: #DEB887;
+      --accent-color: #CD853F;
+      --background-color: #FFF8DC;
+      --text-color: #5D4037;
+      --header-bg: #3E2723;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTMwLDAgTDYwLDMwIEwzMCw2MCBMMCwzMCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiM4QjQ1MTMiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTE1LDAgTDQ1LDMwIEwxNSw2MCBNNDUsMCBMNzUsMzAgTS0xNSwwIEwxNSwzMCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Uthman ibn Affan</h1>
+    <p id="subtitle">The Generous - The Third Caliph</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Life of Uthman ibn Affan</h2>
+    
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">
+      Uthman ibn Affan was born in 576 CE in Mecca to the wealthy Umayyad clan of the Quraysh. He was known for his 
+      exceptional beauty and was nicknamed "Uthman the Handsome." A successful merchant, he was among the wealthiest 
+      men in Mecca. He married Ruqayyah, the Prophet's daughter, making him the Prophet's son-in-law.
+    </p>
+    
+    <h3 id="islam-title">Embracing Islam</h3>
+    <p id="islam-text">
+      Uthman was among the earliest converts to Islam, accepting the message through Abu Bakr's invitation. Despite 
+      facing severe persecution, he remained steadfast. After his wife Ruqayyah's death, he married her sister Umm 
+      Kulthum, earning the title "Dhun-Nurayn" (Possessor of the Two Lights) for marrying two daughters of the Prophet.
+    </p>
+    
+    <h3 id="contributions-title">Contributions to Islam</h3>
+    <p id="contributions-text">
+      As the third Caliph (644-656 CE), Uthman oversaw the compilation of the Quran into a single, authoritative 
+      manuscript. He expanded the Muslim empire to include North Africa, Cyprus, and parts of Central Asia. Known for 
+      his generosity, he used his personal wealth to support the Muslim community. He established the first Muslim navy 
+      and expanded the Prophet's Mosque in Medina. His reign saw the establishment of the first Islamic coinage system.
+    </p>
+    
+    <h3 id="legacy-title">Legacy</h3>
+    <p id="legacy-text">
+      Uthman's greatest legacy is the standardized Quran that Muslims use today. He ensured that all copies of the Quran 
+      were consistent and authentic. Despite facing challenges during his later years, his contributions to Islamic 
+      administration, expansion, and the preservation of the Quran remain unparalleled. He was martyred in 656 CE while 
+      reading the Quran, becoming the first martyr in Islamic history.
+    </p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    let isArabic = false;
+    
+    const translations = {
+      title: {
+        en: "Uthman ibn Affan",
+        ar: "عثمان بن عفان"
+      },
+      subtitle: {
+        en: "The Generous - The Third Caliph",
+        ar: "ذو النورين - الخليفة الثالث"
+      },
+      sectionTitle: {
+        en: "The Life of Uthman ibn Affan",
+        ar: "حياة عثمان بن عفان"
+      },
+      birthTitle: {
+        en: "Birth and Early Life",
+        ar: "الميلاد والطفولة"
+      },
+      birthText: {
+        en: "Uthman ibn Affan was born in 576 CE in Mecca to the wealthy Umayyad clan of the Quraysh. He was known for his exceptional beauty and was nicknamed \"Uthman the Handsome.\" A successful merchant, he was among the wealthiest men in Mecca. He married Ruqayyah, the Prophet's daughter, making him the Prophet's son-in-law.",
+        ar: "وُلد عثمان بن عفان عام 576 م في مكة لأحد أغنى أسر قريش. عُرف بجماله الاستثنائي ولقّب بـ\"عثمان الجميل\". كان تاجراً ناجحاً ومن أغنى رجال مكة. تزوج رقية بنت النبي، مما جعله صهراً للنبي محمد ﷺ."
+      },
+      islamTitle: {
+        en: "Embracing Islam",
+        ar: "اعتناق الإسلام"
+      },
+      islamText: {
+        en: "Uthman was among the earliest converts to Islam, accepting the message through Abu Bakr's invitation. Despite facing severe persecution, he remained steadfast. After his wife Ruqayyah's death, he married her sister Umm Kulthum, earning the title \"Dhun-Nurayn\" (Possessor of the Two Lights) for marrying two daughters of the Prophet.",
+        ar: "كان عثمان من أوائل من اعتنق الإسلام بعد دعوة أبي بكر الصديق. رغم اضطهاد قريش له، ظل ثابتاً على دينه. بعد وفاة زوجته رقية، تزوج أختها أم كلثوم، ليُعرف بلقب \"ذو النورين\" لتزوجه من بنتي النبي."
+      },
+      contributionsTitle: {
+        en: "Contributions to Islam",
+        ar: "إسهاماته في الإسلام"
+      },
+      contributionsText: {
+        en: "As the third Caliph (644-656 CE), Uthman oversaw the compilation of the Quran into a single, authoritative manuscript. He expanded the Muslim empire to include North Africa, Cyprus, and parts of Central Asia. Known for his generosity, he used his personal wealth to support the Muslim community. He established the first Muslim navy and expanded the Prophet's Mosque in Medina. His reign saw the establishment of the first Islamic coinage system.",
+        ar: "كخليفة ثالث (644-656 م)، أشرف عثمان على جمع القرآن في مصحف واحد موحد. وسع الدولة الإسلامية لتشمل شمال أفريقيا وقبرص وأجزاء من آسيا الوسطى. عُرف بسخائه واستخدم ثروته الشخصية لدعم المجتمع المسلم. أنشأ أول أسطول بحري إسلامي ووسع مسجد النبي في المدينة. شهد عهده إنشاء أول نظام للعملة الإسلامية."
+      },
+      legacyTitle: {
+        en: "Legacy",
+        ar: "الإرث"
+      },
+      legacyText: {
+        en: "Uthman's greatest legacy is the standardized Quran that Muslims use today. He ensured that all copies of the Quran were consistent and authentic. Despite facing challenges during his later years, his contributions to Islamic administration, expansion, and the preservation of the Quran remain unparalleled. He was martyred in 656 CE while reading the Quran, becoming the first martyr in Islamic history.",
+        ar: "أعظم إرث لعثمان هو القرآن الموحد الذي يستخدمه المسلمون اليوم. ضمن أن جميع نسخ القرآن كانت متسقة وأصيلة. رغم التحديات التي واجهها في سنواته الأخيرة، تبقى إسهاماته في الإدارة الإسلامية والتوسع وحفظ القرآن بلا مثيل. استُشهد عام 656 م أثناء قراءته للقرآن، ليصبح أول شهيد في التاريخ الإسلامي."
+      },
+      backLink: {
+        en: "← Back to Main Page",
+        ar: "← العودة للصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      isArabic = !isArabic;
+      document.body.dir = isArabic ? 'rtl' : 'ltr';
+      
+      document.getElementById('title').textContent = translations.title[isArabic ? 'ar' : 'en'];
+      document.getElementById('subtitle').textContent = translations.subtitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('section-title').textContent = translations.sectionTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('birth-title').textContent = translations.birthTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('birth-text').textContent = translations.birthText[isArabic ? 'ar' : 'en'];
+      document.getElementById('islam-title').textContent = translations.islamTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('islam-text').textContent = translations.islamText[isArabic ? 'ar' : 'en'];
+      document.getElementById('contributions-title').textContent = translations.contributionsTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('contributions-text').textContent = translations.contributionsText[isArabic ? 'ar' : 'en'];
+      document.getElementById('legacy-title').textContent = translations.legacyTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('legacy-text').textContent = translations.legacyText[isArabic ? 'ar' : 'en'];
+      document.getElementById('back-link').textContent = translations.backLink[isArabic ? 'ar' : 'en'];
+    }
+  </script>
+</body>
+</html>

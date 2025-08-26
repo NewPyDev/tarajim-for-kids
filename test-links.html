@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Test - Tarajim for Kids</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; }
+        h1 { color: #2C5F2D; text-align: center; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .test-link { display: block; margin: 10px 0; padding: 10px; background: #e8f5e8; border-radius: 5px; text-decoration: none; color: #2C5F2D; }
+        .test-link:hover { background: #d4edda; }
+        .status { font-weight: bold; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Link Testing Page</h1>
+        
+        <div class="test-section">
+            <h2>Main Application Links</h2>
+            <a href="/public/" class="test-link">Main Application (Public)</a>
+            <a href="/admin/login.html" class="test-link">Admin Panel</a>
+            <a href="/api/sahaba/public" class="test-link">API - Public Sahaba Data</a>
+        </div>
+
+        <div class="test-section">
+            <h2>Enhanced Sahaba Pages</h2>
+            <a href="/public/abu-bakr-enhanced.html" class="test-link">Abu Bakr As-Siddiq</a>
+            <a href="/public/umar-enhanced.html" class="test-link">Umar ibn Al-Khattab</a>
+            <a href="/public/uthman-enhanced.html" class="test-link">Uthman ibn Affan</a>
+            <a href="/public/ali-enhanced.html" class="test-link">Ali ibn Abi Talib</a>
+            <a href="/public/khalid-enhanced.html" class="test-link">Khalid ibn Al-Walid</a>
+            <a href="/public/bilal-enhanced.html" class="test-link">Bilal ibn Rabah</a>
+            <a href="/public/salman-enhanced.html" class="test-link">Salman Al-Farisi</a>
+            <a href="/public/saad.html" class="test-link">Sa'ad ibn Abi Waqqas</a>
+            <a href="/public/zaid.html" class="test-link">Zaid ibn Thabit</a>
+            <a href="/public/abu-ubaidah.html" class="test-link">Abu Ubaidah ibn Al-Jarrah</a>
+            <a href="/public/abu-dhar.html" class="test-link">Abu Dhar Al-Ghifari</a>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Instructions</h2>
+            <p>1. Start the server: <code>npm start</code></p>
+            <p>2. Click each link above to test navigation</p>
+            <p>3. Test language toggle on each page</p>
+            <p>4. Test responsive design on mobile</p>
+            <p>5. Test category filtering on main page</p>
+        </div>
+
+        <div class="test-section">
+            <h2>Quick Server Test</h2>
+            <button onclick="testAPI()" style="padding: 10px 20px; background: #2C5F2D; color: white; border: none; border-radius: 5px; cursor: pointer;">Test API Connection</button>
+            <div id="api-result" style="margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('api-result');
+            resultDiv.innerHTML = '<span style="color: blue;">Testing...</span>';
+            
+            try {
+                const response = await fetch('/api/sahaba/public');
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `<span class="success">✓ API Working! Found ${data.length} Sahaba entries</span>`;
+                } else {
+                    resultDiv.innerHTML = `<span class="error">✗ API Error: ${response.status}</span>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<span class="error">✗ Connection Error: ${error.message}</span>`;
+            }
+        }
+    </script>
+</body>
+</html>

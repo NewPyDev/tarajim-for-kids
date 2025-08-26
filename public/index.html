@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarajim for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2C5F2D;     /* Islamic green */
+      --secondary-color: #97B270;    /* Soft sage */
+      --accent-color: #FFB067;      /* Warm orange */
+      --background-color: #FFF9E9;  /* Soft cream */
+      --text-color: #234638;        /* Deep green-gray */
+      --header-bg: #1F4037;         /* Dark green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body[dir="ltr"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTEyLjUsMCBMMzcuNSwyNSBMMTIuNSw1MCBNMzcuNSwwIEw2Mi41LDI1IE0tMTIuNSwwIEwxMi41LDI1IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4xIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.6rem;
+      opacity: 0.9;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    nav a.active {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    nav a:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      display: block;
+      transition: all 0.3s ease, display 0s;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card .icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      border-top: 5px solid var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Tarajim for Kids</h1>
+    <p id="subtitle">Explore the lives of the Sahabah in a fun and colorful way!</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+  <nav>
+    <a href="javascript:void(0)" id="nav-caliphs" onclick="filterCards('caliphs')">Caliphs</a>
+    <a href="javascript:void(0)" id="nav-bravery" onclick="filterCards('bravery')">Bravery</a>
+    <a href="javascript:void(0)" id="nav-kindness" onclick="filterCards('kindness')">Kindness</a>
+    <a href="javascript:void(0)" id="nav-loyalty" onclick="filterCards('loyalty')">Loyalty</a>
+    <a href="javascript:void(0)" id="nav-all" onclick="filterCards('all')">All</a>
+  </nav>
+  <div class="container">
+    <h2 id="section-title">Stories of the Caliphs</h2>
+    <div class="divider"></div>
+    <div class="grid" id="sahabaGrid">
+      <!-- Dynamic content will be loaded here -->
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Tarajim for Kids | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const content = {
+      en: {
+        title: "Tarajim for Kids",
+        subtitle: "Explore the lives of the Sahabah in a fun and colorful way!",
+        nav: { caliphs: "Caliphs", bravery: "Bravery", kindness: "Kindness", loyalty: "Loyalty" },
+        sectionTitle: "Stories of the Sahabah",
+        abuBakr: { title: "Abu Bakr As-Siddiq (أبو بكر الصديق)", desc: "Abu Bakr was the first Caliph and closest companion of the Prophet. He supported the Prophet during the Hijrah and united the Muslim community." },
+        umar: { title: "Umar ibn Al-Khattab (عمر بن الخطاب)", desc: "Umar was the second Caliph, known for his justice and strength. He expanded the Islamic empire and protected the weak." },
+        uthman: { title: "Uthman ibn Affan (عثمان بن عفان)", desc: "Uthman, the third Caliph, was known for his generosity and modesty. He preserved the Quran by compiling it into one standardized version." },
+        ali: { title: "Ali ibn Abi Talib (علي بن أبي طالب)", desc: "Ali, the fourth Caliph, was known for his bravery and wisdom. He was a close family member of the Prophet and a just leader." },
+        khalid: { title: "Khalid ibn Al-Walid (خالد بن الوليد)", desc: "Known as the 'Sword of Allah', Khalid was an exceptional military commander who never lost a battle. His strategic genius helped spread Islam." },
+        bilal: { title: "Bilal ibn Rabah (بلال بن رباح)", desc: "The first muezzin in Islam, Bilal was known for his beautiful voice and unwavering faith despite persecution. He was freed by Abu Bakr." },
+        salman: { title: "Salman Al-Farisi (سلمان الفارسي)", desc: "A Persian companion who traveled far in search of truth. His suggestion of digging a trench helped Muslims defend Medina." },
+        saad: { title: "Sa'ad ibn Abi Waqqas (سعد بن أبي وقاص)", desc: "A skilled archer and military commander who led the conquest of Persia. He was among the first to accept Islam and one of the ten promised Paradise." },
+        zaid: { title: "Zaid ibn Thabit (زيد بن ثابت)", desc: "The chief scribe of the Prophet and compiler of the Quran. His intelligence and dedication helped preserve the divine message for future generations." },
+        abuUbaidah: { title: "Abu Ubaidah ibn Al-Jarrah (أبو عبيدة بن الجراح)", desc: "Known as the Trustworthy One of the Ummah, he led the conquest of Syria and was one of the ten companions promised Paradise." },
+        abuDhar: { title: "Abu Dhar Al-Ghifari (أبو ذر الغفاري)", desc: "Known for his strict honesty and speaking truth to power, Abu Dhar was described by the Prophet as the most truthful person under the sky." }
+      },
+      ar: {
+        title: "تراجم للأطفال",
+        subtitle: "تعرف على حياة الصحابة بطريقة ممتعة وملونة!",
+        nav: { caliphs: "الخلفاء", bravery: "الشجاعة", kindness: "الطيبة", loyalty: "الوفاء" },
+        sectionTitle: "قصص الصحابة",
+        abuBakr: { title: "أبو بكر الصديق (Abu Bakr As-Siddiq)", desc: "كان أبو بكر أول خليفة وأقرب صحابي للنبي. دعم النبي أثناء الهجرة ووحد الأمة الإسلامية." },
+        umar: { title: "عمر بن الخطاب (Umar ibn Al-Khattab)", desc: "كان عمر الخليفة الثاني، اشتهر بالعدل والقوة. وسّع الإمبراطورية الإسلامية وحمى الضعفاء." },
+        uthman: { title: "عثمان بن عفان (Uthman ibn Affan)", desc: "كان عثمان، الخليفة الثالث، معروفًا بكرمه وتواضعه. حفظ القرآن بتوحيده في نسخة واحدة." },
+        ali: { title: "علي بن أبي طالب (Ali ibn Abi Talib)", desc: "كان علي، الخليفة الرابع، معروفًا بشجاعته وحكمته. كان قريبًا من النبي وقائدًا عادلًا." },
+        khalid: { title: "خالد بن الوليد (Khalid ibn Al-Walid)", desc: "المعروف بسيف الله المسلول، كان خالد قائداً عسكريً استثنائيً لم يخسر معركة قط. ساعدت عبقريته العسكرية في نشر الإسلام." },
+        bilal: { title: "بلال بن رباح (Bilal ibn Rabah)", desc: "أول مؤذن في الإسلام، عُرف بلال بصوته الجميل وإيمانه الثابت رغم الاضطهاد. حرره أبو بكر." },
+        salman: { title: "سلمان الفارسي (Salman Al-Farisi)", desc: "صحابي فارسي سافر بعيدًا بحثًا عن الحقيقة. ساعد اقتراحه بحفر الخندق المسلمين في الدفاع عن المدينة." },
+        saad: { title: "سعد بن أبي وقاص (Sa'ad ibn Abi Waqqas)", desc: "رامٍ ماهر وقائد عسكري قاد فتح فارس. كان من أوائل من أسلموا وأحد العشرة المبشرين بالجنة." },
+        zaid: { title: "زيد بن ثابت (Zaid ibn Thabit)", desc: "كاتب الوحي الرئيسي وجامع القرآن. ساعد ذكاؤه وتفانيه في حفظ الرسالة الإلهية للأجيال القادمة." },
+        abuUbaidah: { title: "أبو عبيدة بن الجراح (Abu Ubaidah ibn Al-Jarrah)", desc: "رف بأمين هذه الأمة، قاد فتح الشام وكان أحد العشرة المبشرين بالجنة." },
+        abuDhar: { title: "أبو ذر الغفاري (Abu Dhar Al-Ghifari)", desc: "رف بصدقه الشديد وقول الحق للسلطة، وصفه النبي بأنه أصدق لهجة تحت السماء." }
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("nav-caliphs").textContent = langContent.nav.caliphs;
+      document.getElementById("nav-bravery").textContent = langContent.nav.bravery;
+      document.getElementById("nav-kindness").textContent = langContent.nav.kindness;
+      document.getElementById("nav-loyalty").textContent = langContent.nav.loyalty;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("abu-bakr-title").textContent = langContent.abuBakr.title;
+      document.getElementById("abu-bakr-desc").textContent = langContent.abuBakr.desc;
+      document.getElementById("umar-title").textContent = langContent.umar.title;
+      document.getElementById("umar-desc").textContent = langContent.umar.desc;
+      document.getElementById("uthman-title").textContent = langContent.uthman.title;
+      document.getElementById("uthman-desc").textContent = langContent.uthman.desc;
+      document.getElementById("ali-title").textContent = langContent.ali.title;
+      document.getElementById("ali-desc").textContent = langContent.ali.desc;
+      document.getElementById("khalid-title").textContent = langContent.khalid.title;
+      document.getElementById("khalid-desc").textContent = langContent.khalid.desc;
+      document.getElementById("bilal-title").textContent = langContent.bilal.title;
+      document.getElementById("bilal-desc").textContent = langContent.bilal.desc;
+      document.getElementById("salman-title").textContent = langContent.salman.title;
+      document.getElementById("salman-desc").textContent = langContent.salman.desc;
+      document.getElementById("saad-title").textContent = langContent.saad.title;
+      document.getElementById("saad-desc").textContent = langContent.saad.desc;
+      document.getElementById("zaid-title").textContent = langContent.zaid.title;
+      document.getElementById("zaid-desc").textContent = langContent.zaid.desc;
+      document.getElementById("abu-ubaidah-title").textContent = langContent.abuUbaidah.title;
+      document.getElementById("abu-ubaidah-desc").textContent = langContent.abuUbaidah.desc;
+      document.getElementById("abu-dhar-title").textContent = langContent.abuDhar.title;
+      document.getElementById("abu-dhar-desc").textContent = langContent.abuDhar.desc;
+    }
+
+    function filterCards(category) {
+      const cards = document.querySelectorAll('.card');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Update active nav link
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.id === `nav-${category}`) {
+          link.classList.add('active');
+        }
+      });
+
+      // Show/hide cards based on category
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+          return;
+        }
+
+        const categories = card.dataset.categories.split(',');
+        if (categories.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Load Sahaba data when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      loadSahaba();
+    });
+
+    async function loadSahaba() {
+      try {
+        const response = await fetch('/api/sahaba/public');
+        if (!response.ok) {
+          throw new Error('Failed to load data');
+        }
+        const sahaba = await response.json();
+        displaySahaba(sahaba);
+        filterCards('all'); // Apply default filter after loading
+      } catch (error) {
+        console.error('Error loading Sahaba:', error);
+        // Fallback to show message if API fails
+        document.getElementById('sahabaGrid').innerHTML = '<p>Unable to load content. Please try again later.</p>';
+      }
+    }
+
+    function displaySahaba(sahaba) {
+      const container = document.getElementById('sahabaGrid');
+      if (!container) return;
+      
+      const html = sahaba.map(sahabi => `
+        <div class="card" data-categories="${sahabi.categories ? sahabi.categories.join(',') : ''}">
+          <div class="icon">${sahabi.icon || '#'}</div>
+          <a href="/public/${sahabi.slug}.html">
+            <h3>${sahabi.name} (${sahabi.nameArabic})</h3>
+            <p>${sahabi.description}</p>
+          </a>
+        </div>
+      `).join('');
+      
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>.

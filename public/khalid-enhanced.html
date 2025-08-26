@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khalid ibn Al-Walid - Sword of Allah | Tarajim for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/enhanced-story.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Khalid ibn Al-Walid</h1>
+    <p id="subtitle">The Sword of Allah</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Great Warrior of Islam</h2>
+    
+    <h3 id="birth-title">Early Life</h3>
+    <p id="birth-text">Khalid ibn Al-Walid was born in Makkah into the noble Banu Makhzum clan. Even before Islam, he was known as one of the greatest warriors of Arabia. He was tall, strong, and incredibly brave. His family was wealthy and respected, and he learned the art of warfare from a young age. He became famous for his military skills and strategic mind.</p>
+    
+    <h3 id="islam-title">Embracing Islam</h3>
+    <p id="islam-text">Khalid initially fought against the Muslims in the Battle of Uhud, where his military tactics caused great difficulty for the Muslim army. However, after the Treaty of Hudaybiyyah, he realized the truth of Islam and embraced it in the 8th year after Hijrah. The Prophet Muhammad (peace be upon him) gave him the title "Saifullah" (Sword of Allah) even before he became Muslim, showing his great respect for Khalid's abilities.</p>
+    
+    <h3 id="contributions-title">Military Achievements</h3>
+    <p id="contributions-text">After becoming Muslim, Khalid became Islam's greatest military commander. He never lost a battle! He led the Muslim armies in many important battles including the Battle of Mu'tah, where he saved the Muslim army with his brilliant tactics. He conquered Syria and defeated the Roman and Persian empires. His most famous victory was the Battle of Yarmouk, where 40,000 Muslims defeated 200,000 Romans. He was kind to his soldiers and fair to his enemies.</p>
+    
+    <h3 id="death-title">Later Life</h3>
+    <p id="death-text">Khalid spent his later years in Syria and Iraq, teaching people about Islam and helping to establish Muslim rule. He lived a simple life despite being a great commander. He died in Homs, Syria in 21 AH (642 CE) at the age of 55. On his deathbed, he said: "I have fought in so many battles, but there is not on my body the trace of a sword or spear. I die like the dying of old men, not as a martyr. This is the will of Allah." He was buried in Homs, where his tomb is still visited today.</p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Khalid ibn Al-Walid",
+        subtitle: "The Sword of Allah",
+        sectionTitle: "The Great Warrior of Islam",
+        birth: {
+          title: "Early Life",
+          text: "Khalid ibn Al-Walid was born in Makkah into the noble Banu Makhzum clan. Even before Islam, he was known as one of the greatest warriors of Arabia. He was tall, strong, and incredibly brave. His family was wealthy and respected, and he learned the art of warfare from a young age. He became famous for his military skills and strategic mind."
+        },
+        islam: {
+          title: "Embracing Islam",
+          text: "Khalid initially fought against the Muslims in the Battle of Uhud, where his military tactics caused great difficulty for the Muslim army. However, after the Treaty of Hudaybiyyah, he realized the truth of Islam and embraced it in the 8th year after Hijrah. The Prophet Muhammad (peace be upon him) gave him the title 'Saifullah' (Sword of Allah) even before he became Muslim, showing his great respect for Khalid's abilities."
+        },
+        contributions: {
+          title: "Military Achievements",
+          text: "After becoming Muslim, Khalid became Islam's greatest military commander. He never lost a battle! He led the Muslim armies in many important battles including the Battle of Mu'tah, where he saved the Muslim army with his brilliant tactics. He conquered Syria and defeated the Roman and Persian empires. His most famous victory was the Battle of Yarmouk, where 40,000 Muslims defeated 200,000 Romans. He was kind to his soldiers and fair to his enemies."
+        },
+        death: {
+          title: "Later Life",
+          text: "Khalid spent his later years in Syria and Iraq, teaching people about Islam and helping to establish Muslim rule. He lived a simple life despite being a great commander. He died in Homs, Syria in 21 AH (642 CE) at the age of 55. On his deathbed, he said: 'I have fought in so many battles, but there is not on my body the trace of a sword or spear. I die like the dying of old men, not as a martyr. This is the will of Allah.' He was buried in Homs, where his tomb is still visited today."
+        },
+        backLink: "Back to Home"
+      },
+      ar: {
+        title: "خالد بن الوليد",
+        subtitle: "سيف الله المسلول",
+        sectionTitle: "القائد العظيم للإسلام",
+        birth: {
+          title: "طفولته المبكرة",
+          text: "وُلد خالد بن الوليد في مكة في قبيلة بني مخزوم العريقة. حتى قبل الإسلام، كان يُعرف بأنه أحد أعظم المحاربين في الجزيرة العربية. كان طويل القامة، قوي البنية، وشجاعًا بشكل لا يصدق. كانت عائلته غنية ومحترمة، وتعلم فن الحرب منذ صغره. أصبح مشهورًا بمهاراته العسكرية وعقله الاستراتيجي."
+        },
+        islam: {
+          title: "دخول الإسلام",
+          text: "في البداية، قاتل خالد ضد المسلمين في معركة أحد، حيث تسببت تكتيكاته العسكرية في صعوبات كبيرة للجيش المسلم. ومع ذلك، بعد صلح الحديبية، أدرك حقيقة الإسلام وأسلم في السنة الثامنة للهجرة. أعطاه النبي محمد ﷺ لقب 'سيف الله' حتى قبل أن يسلم، مما يدل على احترامه الكبير لقدرات خالد."
+        },
+        contributions: {
+          title: "الإنجازات العسكرية",
+          text: "بعد إسلامه، أصبح خالد أعظم القادة العسكريين في الإسلام. لم يخسر أبدًا أي معركة! قاد الجيوش الإسلامية في العديد من المعارك المهمة بما في ذلك معركة مؤتة، حيث أنقذ الجيش الإسلامي بتكتيكاته الرائعة. فتح سوريا وهزم الإمبراطوريتين الرومانية والفارسية. كانت أشهر انتصاراته معركة اليرموك، حيث هزم 40,000 مسلم 200,000 روماني. كان لطيفًا مع جنوده وعادلًا مع أعدائه."
+        },
+        death: {
+          title: "سنواته الأخيرة",
+          text: "قضى خالد سنواته الأخيرة في سوريا والعراق، يعلّم الناس الإسلام ويساعد في تأسيس الحكم الإسلامي. عاش حياة بسيطة رغم كونه قائدًا عظيمًا. توفي في حمص، سوريا في 21 هـ (642 م) عن عمر يناهز 55 عامًا. على فراش الموت، قال: 'لقد قاتلت في معارك كثيرة، لكن لا يوجد على جسدي أثر سيف أو رمح. أموت كما يموت الشيوخ، وليس كشهيد. هذا هو مشيئة الله.' دُفن في حمص، حيث يُزار قبره حتى اليوم."
+        },
+        backLink: "العودة للصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+    }
+  </script>
+</body>
+</html>

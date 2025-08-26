@@ -1,0 +1,21 @@
+{
+  "name": "tarajim-for-kids",
+  "version": "1.0.0",
+  "description": "A bilingual educational web application for teaching children about the lives of the Sahabah",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "node server/app.js",
+    "create-admin": "node scripts/create-admin.js",
+    "test": "node test-server.js",
+    "test-links": "echo 'Open http://localhost:3000/test-links.html in your browser to test all links'"
+  },
+  "keywords": ["education", "islamic", "sahabah", "bilingual", "kids"],
+  "author": "Tarajim for Kids",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

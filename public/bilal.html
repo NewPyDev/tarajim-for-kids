@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Bilal ibn Rabah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2C5F2D;     /* Islamic green */
+      --secondary-color: #97B270;    /* Soft sage */
+      --accent-color: #FFB067;      /* Warm orange */
+      --background-color: #FFF9E9;  /* Soft cream */
+      --text-color: #234638;        /* Deep green-gray */
+      --header-bg: #1F4037;         /* Dark green */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body[dir="ltr"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border-bottom: 5px solid var(--accent-color);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      background: none;
+      box-shadow: none;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Bilal ibn Rabah</h1>
+    <p id="subtitle">Learn about the first muezzin in Islam!</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">Bilal ibn Rabah (رضي الله عنه)</h2>
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">Bilal ibn Rabah was born in Mecca around 580 CE. He was born into slavery and served as a slave to Umayyah ibn Khalaf, who was known for his strong opposition to Islam.</p>
+    
+    <h3 id="islam-title">Acceptance of Islam</h3>
+    <p id="islam-text">Bilal was among the earliest converts to Islam. Despite facing severe persecution and torture from his master, he remained steadfast in his faith, repeatedly declaring "Ahad! Ahad!" (One! One!) referring to the oneness of Allah.</p>
+    
+    <h3 id="contributions-title">Major Contributions to Islam</h3>
+    <p id="contributions-text">After being freed by Abu Bakr As-Siddiq, Bilal became one of the closest companions of the Prophet Muhammad ﷺ. He was chosen as the first muezzin (caller to prayer) in Islam, known for his beautiful and powerful voice. He called the adhan from the top of the Kaaba when Mecca was conquered.</p>
+    
+    <h3 id="death-title">Legacy and Death</h3>
+    <p id="death-text">Bilal passed away in Damascus around 640 CE. His legacy as the first muezzin and his unwavering faith in the face of persecution continue to inspire Muslims worldwide. His story represents the Islamic principle of equality and the rejection of racial discrimination.</p>
+    
+    <a href="index.html" id="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Bilal ibn Rabah",
+        subtitle: "Learn about the first muezzin in Islam!",
+        sectionTitle: "Bilal ibn Rabah (رضي الله عنه)",
+        birthTitle: "Birth and Early Life",
+        birthText: "Bilal ibn Rabah was born in Mecca around 580 CE. He was born into slavery and served as a slave to Umayyah ibn Khalaf, who was known for his strong opposition to Islam.",
+        islamTitle: "Acceptance of Islam",
+        islamText: "Bilal was among the earliest converts to Islam. Despite facing severe persecution and torture from his master, he remained steadfast in his faith, repeatedly declaring \"Ahad! Ahad!\" (One! One!) referring to the oneness of Allah.",
+        contributionsTitle: "Major Contributions to Islam",
+        contributionsText: "After being freed by Abu Bakr As-Siddiq, Bilal became one of the closest companions of the Prophet Muhammad ﷺ. He was chosen as the first muezzin (caller to prayer) in Islam, known for his beautiful and powerful voice. He called the adhan from the top of the Kaaba when Mecca was conquered.",
+        deathTitle: "Legacy and Death",
+        deathText: "Bilal passed away in Damascus around 640 CE. His legacy as the first muezzin and his unwavering faith in the face of persecution continue to inspire Muslims worldwide. His story represents the Islamic principle of equality and the rejection of racial discrimination.",
+        backLink: "← Back to Home"
+      },
+      ar: {
+        title: "بلال بن رباح",
+        subtitle: "تعرف على أول مؤذن في الإسلام!",
+        sectionTitle: "بلال بن رباح (رضي الله عنه)",
+        birthTitle: "الولادة والحياة المبكرة",
+        birthText: "ولد بلال بن رباح في مكة حوالي عام 580 م. ولد في العبودية وكان عبداً لأمية بن خلف، الذي كان معروفاً بمعارضته الشديدة للإسلام.",
+        islamTitle: "دخوله في الإسلام",
+        islamText: "كان بلال من أوائل المعتنقين للإسلام. رغم تعرضه للاضطهاد والتعذيب الشديد من سيده، ظل ثابتاً على إيمانه، مردداً 'أحد! أحد!' في إشارة إلى وحدانية الله.",
+        contributionsTitle: "المساهمات الرئيسية في الإسلام",
+        contributionsText: "بعد أن أعتقه أبو بكر الصديق، أصبح بلال من أقرب الصحابة إلى النبي محمد ﷺ. تم اختياره كأول مؤذن في الإسلام، وعُرف بصوته الجميل والقوي. أذّن من فوق الكعبة عند فتح مكة.",
+        deathTitle: "الإرث والوفاة",
+        deathText: "توفي بلال في دمشق حوالي عام 640 م. لا يزال إرثه كأول مؤذن وإيمانه الثابت في مواجهة الاضطهاد مصدر إلهام للمسلمين في جميع أنحاء العالم. تمثل قصته مبدأ المساواة في الإسلام ورفض التمييز العنصري.",
+        backLink: "← العودة إلى الصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birthTitle;
+      document.getElementById("birth-text").textContent = langContent.birthText;
+      document.getElementById("islam-title").textContent = langContent.islamTitle;
+      document.getElementById("islam-text").textContent = langContent.islamText;
+      document.getElementById("contributions-title").textContent = langContent.contributionsTitle;
+      document.getElementById("contributions-text").textContent = langContent.contributionsText;
+      document.getElementById("death-title").textContent = langContent.deathTitle;
+      document.getElementById("death-text").textContent = langContent.deathText;
+      document.getElementById("back-link").textContent = langContent.backLink;
+    }
+  </script>
+</body>
+</html>

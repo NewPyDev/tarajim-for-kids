@@ -1,0 +1,147 @@
+{
+  "sahaba": [
+    {
+      "id": 1,
+      "name": "Abu Bakr As-Siddiq",
+      "nameArabic": "أبو بكر الصديق",
+      "description": "The first Caliph and closest companion of the Prophet. He supported the Prophet during the Hijrah and united the Muslim community.",
+      "categories": [
+        "caliphs"
+      ],
+      "birthYear": "573",
+      "deathYear": "634",
+      "slug": "abu-bakr-enhanced",
+      "icon": "1"
+    },
+    {
+      "id": 2,
+      "name": "Umar ibn Al-Khattab",
+      "nameArabic": "عمر بن الخطاب",
+      "description": "The second Caliph known for his justice and strength. Under his leadership, Islam spread far and wide.",
+      "categories": [
+        "caliphs"
+      ],
+      "birthYear": "584",
+      "deathYear": "644",
+      "slug": "umar-enhanced",
+      "icon": "2"
+    },
+    {
+      "id": 3,
+      "name": "Uthman ibn Affan",
+      "nameArabic": "عثمان بن عفان",
+      "description": "The third Caliph, known for his generosity and modesty. He preserved the Quran by compiling it into one standardized version.",
+      "categories": [
+        "caliphs"
+      ],
+      "birthYear": "576",
+      "deathYear": "656",
+      "slug": "uthman-enhanced",
+      "icon": "3"
+    },
+    {
+      "id": 4,
+      "name": "Ali ibn Abi Talib",
+      "nameArabic": "علي بن أبي طالب",
+      "description": "The fourth Caliph, known for his bravery and wisdom. He was a close family member of the Prophet and a just leader.",
+      "categories": [
+        "caliphs"
+      ],
+      "birthYear": "601",
+      "deathYear": "661",
+      "slug": "ali-enhanced",
+      "icon": "4"
+    },
+    {
+      "id": 5,
+      "name": "Khalid ibn Al-Walid",
+      "nameArabic": "خالد بن الوليد",
+      "description": "Known as the 'Sword of Allah', Khalid was an exceptional military commander who never lost a battle.",
+      "categories": [
+        "bravery"
+      ],
+      "birthYear": "592",
+      "deathYear": "638",
+      "slug": "khalid-enhanced",
+      "icon": "⚔️"
+    },
+    {
+      "id": 6,
+      "name": "Bilal ibn Rabah",
+      "nameArabic": "بلال بن رباح",
+      "description": "The first muezzin in Islam, known for his beautiful voice and unwavering faith despite persecution.",
+      "categories": [
+        "loyalty"
+      ],
+      "birthYear": "580",
+      "deathYear": "640",
+      "slug": "bilal-enhanced",
+      "icon": "🕌"
+    },
+    {
+      "id": 7,
+      "name": "Salman Al-Farisi",
+      "nameArabic": "سلمان الفارسي",
+      "description": "A Persian companion who traveled far in search of truth. His suggestion of digging a trench helped Muslims defend Medina.",
+      "categories": [
+        "kindness"
+      ],
+      "birthYear": "568",
+      "deathYear": "656",
+      "slug": "salman-enhanced",
+      "icon": "🏰"
+    },
+    {
+      "id": 8,
+      "name": "Sa'ad ibn Abi Waqqas",
+      "nameArabic": "سعد بن أبي وقاص",
+      "description": "A skilled archer and military commander who led the conquest of Persia. He was among the first to accept Islam.",
+      "categories": [
+        "bravery"
+      ],
+      "birthYear": "595",
+      "deathYear": "674",
+      "slug": "saad",
+      "icon": "🏹"
+    },
+    {
+      "id": 9,
+      "name": "Zaid ibn Thabit",
+      "nameArabic": "زيد بن ثابت",
+      "description": "The chief scribe of the Prophet and compiler of the Quran. His intelligence helped preserve the divine message.",
+      "categories": [
+        "loyalty"
+      ],
+      "birthYear": "610",
+      "deathYear": "665",
+      "slug": "zaid",
+      "icon": "📜"
+    },
+    {
+      "id": 10,
+      "name": "Abu Ubaidah ibn Al-Jarrah",
+      "nameArabic": "أبو عبيدة بن الجراح",
+      "description": "Known as the Trustworthy One of the Ummah, he led the conquest of Syria and was one of the ten promised Paradise.",
+      "categories": [
+        "loyalty"
+      ],
+      "birthYear": "583",
+      "deathYear": "639",
+      "slug": "abu-ubaidah",
+      "icon": "🛡️"
+    },
+    {
+      "id": 11,
+      "name": "Abu Dhar Al-Ghifari",
+      "nameArabic": "أبو ذر الغفاري",
+      "description": "Known for his strict honesty and speaking truth to power, described by the Prophet as the most truthful person under the sky.",
+      "categories": [
+        "kindness"
+      ],
+      "birthYear": "568",
+      "deathYear": "652",
+      "slug": "abu-dhar",
+      "icon": "💎"
+    }
+  ]
+}

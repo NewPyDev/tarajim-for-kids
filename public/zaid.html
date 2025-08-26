@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaid ibn Thabit - The Scribe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4B0082;
+      --secondary-color: #9370DB;
+      --accent-color: #BA55D3;
+      --background-color: #F8F8FF;
+      --text-color: #4B0082;
+      --header-bg: #2E0854;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body[dir="rtl"] { font-family: 'Amiri', serif; direction: rtl; text-align: right; }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      position: relative;
+    }
+
+    header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 15px; }
+    header p { font-size: 1.4rem; opacity: 0.9; }
+
+    .language-toggle {
+      position: absolute; top: 20px; right: 20px;
+      background-color: var(--accent-color); color: var(--header-bg);
+      border: none; padding: 12px 20px; font-size: 1.1rem;
+      border-radius: 25px; cursor: pointer; transition: all 0.3s ease;
+    }
+
+    body[dir="rtl"] .language-toggle { right: auto; left: 20px; }
+
+    .container { max-width: 900px; margin: 40px auto; padding: 0 30px; }
+
+    h2 {
+      color: var(--primary-color); font-size: 2.5rem; margin: 30px 0;
+      text-align: center; position: relative; padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: ''; position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%); width: 100px; height: 3px;
+      background-color: var(--accent-color); border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color); font-size: 1.8rem; margin: 25px 0 15px;
+      padding-left: 20px; border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 { padding-left: 0; padding-right: 20px; border-left: none; border-right: 4px solid var(--accent-color); }
+
+    .container p {
+      font-size: 1.2rem; margin-bottom: 20px; padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7); border-radius: 10px;
+    }
+
+    #back-link {
+      display: inline-block; text-decoration: none; color: var(--primary-color);
+      font-weight: bold; font-size: 1.2rem; margin-top: 30px;
+      padding: 12px 25px; border: 2px solid var(--primary-color);
+      border-radius: 25px; transition: all 0.3s ease;
+    }
+
+    #back-link:hover { background-color: var(--primary-color); color: white; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      .container { padding: 0 20px; }
+      h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Zaid ibn Thabit</h1>
+    <p id="subtitle">The Scribe - Compiler of the Quran</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Life of Zaid ibn Thabit</h2>
+    
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">
+      Zaid ibn Thabit was born in 610 CE in Medina. He belonged to the Banu Najjar clan of the Khazraj tribe. When the Prophet migrated to Medina, young Zaid was only eleven years old. Despite his youth, he showed exceptional intelligence and quickly learned to read and write, which was rare at that time. The Prophet recognized his talents and took him under his personal care.
+    </p>
+    
+    <h3 id="islam-title">Becoming the Prophet's Scribe</h3>
+    <p id="islam-text">
+      Due to his literacy and sharp mind, Zaid became the chief scribe of the Prophet Muhammad. He was responsible for writing down the Quranic revelations as they were revealed. The Prophet also asked him to learn Hebrew and Syriac languages to help with correspondence with Jewish and Christian communities. Zaid mastered these languages in just a few weeks, demonstrating his remarkable intellectual abilities.
+    </p>
+    
+    <h3 id="contributions-title">Compilation of the Quran</h3>
+    <p id="contributions-text">
+      After the Prophet's death, during the caliphate of Abu Bakr, Zaid was chosen to compile the Quran into a single book. This was a monumental task that required collecting verses from various written materials and the memories of the companions. Later, during Uthman's caliphate, Zaid led the committee that produced the standardized version of the Quran that is used today. His meticulous work ensured the preservation of the divine message for all future generations.
+    </p>
+    
+    <h3 id="death-title">Legacy and Passing</h3>
+    <p id="death-text">
+      Zaid continued to serve the Muslim community as a scholar and judge after the compilation of the Quran. He was known for his deep knowledge of Islamic law and his fair judgments. He passed away in 665 CE in Medina at the age of 55. His greatest legacy is the preservation of the Quran in its complete and authentic form, making him one of the most important figures in Islamic history.
+    </p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Zaid ibn Thabit", subtitle: "The Scribe - Compiler of the Quran",
+        sectionTitle: "The Life of Zaid ibn Thabit",
+        birth: { title: "Birth and Early Life", text: "Zaid ibn Thabit was born in 610 CE in Medina. He belonged to the Banu Najjar clan of the Khazraj tribe. When the Prophet migrated to Medina, young Zaid was only eleven years old. Despite his youth, he showed exceptional intelligence and quickly learned to read and write, which was rare at that time. The Prophet recognized his talents and took him under his personal care." },
+        islam: { title: "Becoming the Prophet's Scribe", text: "Due to his literacy and sharp mind, Zaid became the chief scribe of the Prophet Muhammad. He was responsible for writing down the Quranic revelations as they were revealed. The Prophet also asked him to learn Hebrew and Syriac languages to help with correspondence with Jewish and Christian communities. Zaid mastered these languages in just a few weeks, demonstrating his remarkable intellectual abilities." },
+        contributions: { title: "Compilation of the Quran", text: "After the Prophet's death, during the caliphate of Abu Bakr, Zaid was chosen to compile the Quran into a single book. This was a monumental task that required collecting verses from various written materials and the memories of the companions. Later, during Uthman's caliphate, Zaid led the committee that produced the standardized version of the Quran that is used today. His meticulous work ensured the preservation of the divine message for all future generations." },
+        death: { title: "Legacy and Passing", text: "Zaid continued to serve the Muslim community as a scholar and judge after the compilation of the Quran. He was known for his deep knowledge of Islamic law and his fair judgments. He passed away in 665 CE in Medina at the age of 55. His greatest legacy is the preservation of the Quran in its complete and authentic form, making him one of the most important figures in Islamic history." },
+        backLink: "Back to Stories"
+      },
+      ar: {
+        title: "زيد بن ثابت", subtitle: "الكاتب - جامع القرآن",
+        sectionTitle: "حياة زيد بن ثابت",
+        birth: { title: "الميلاد والطفولة", text: "وُلد زيد بن ثابت عام 610 م في المدينة. كان ينتمي إلى قبيلة بني النجار من الخزرج. عندما هاجر النبي إلى المدينة، كان زيد الصغير يبلغ من العمر إحدى عشرة سنة فقط. رغم صغر سنه، أظهر ذكاءً استثنائياً وتعلم القراءة والكتابة بسرعة، وهو أمر نادر في ذلك الوقت. أدرك النبي مواهبه وأخذه تحت رعايته الشخصية." },
+        islam: { title: "أن يصبح كاتب النبي", text: "بسبب معرفته بالقراءة والكتابة وذهنه الحاد، أصبح زيد كاتب الوحي الرئيسي للنبي محمد ﷺ. كان مسؤولاً عن كتابة الآيات القرآنية عند نزولها. طلب منه النبي أيضاً تعلم اللغتين العبرية والسريانية للمساعدة في المراسلات مع المجتمعات اليهودية والمسيحية. أتقن زيد هذه اللغات في أسابيع قليلة فقط، مما يدل على قدراته الفكرية الرائعة." },
+        contributions: { title: "جمع القرآن", text: "بعد وفاة النبي، في عهد أبي بكر، تم اختيار زيد لجمع القرآن في مصحف واحد. كانت هذه مهمة ضخمة تطلبت جمع الآيات من مواد مكتوبة مختلفة ومن ذاكرة الصحابة. لاحقاً، في عهد عثمان، قاد زيد اللجنة التي أنتجت النسخة الموحدة من القرآن المستخدمة اليوم. عمله الدقيق ضمن حفظ الرسالة الإلهية لجميع الأجيال القادمة." },
+        death: { title: "الإرث والوفاة", text: "واصل زيد خدمة المجتمع الإسلامي كعالم وقاضٍ بعد جمع القرآن. عُرف بمعرفته العميقة بالشريعة الإسلامية وأحكامه العادلة. توفي عام 665 م في المدينة عن عمر 55 سنة. إرثه الأعظم هو حفظ القرآن في شكله الكامل والأصيل، مما يجعله من أهم الشخصيات في التاريخ الإسلامي." },
+        backLink: "العودة إلى القصص"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abu Bakr As-Siddiq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2C5F2D;
+      --secondary-color: #97B270;
+      --accent-color: #FFB067;
+      --background-color: #FFF9E9;
+      --text-color: #234638;
+      --header-bg: #1F4037;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body[dir="ltr"] {
+      direction: ltr;
+      text-align: left;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTEyLjUsMCBMMzcuNSwyNSBMMTIuNSw1MCBNMzcuNSwwIEw2Mi41LDI1IE0tMTIuNSwwIEwxMi41LDI1IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4xIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      background: none;  /* Remove white background */
+      box-shadow: none;  /* Remove shadow */
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Abu Bakr As-Siddiq</h1>
+    <p id="subtitle">Learn about the life of the first Caliph of Islam!</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+  <div class="container">
+    <h2 id="section-title">Abu Bakr As-Siddiq (رضي الله عنه)</h2>
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">
+      Abu Bakr was born in 573 CE in Mecca into a noble family of the Quraysh tribe. His real name was Abdullah ibn Abi Quhafa. He was known for his honesty, kindness, and intelligence, earning respect in Meccan society.
+    </p>
+    <h3 id="islam-title">How He Entered Islam</h3>
+    <p id="islam-text">
+      Abu Bakr was the first adult to accept Islam. He immediately believed the Prophet ﷺ when he announced his message, earning him the title "As-Siddiq" (The Truthful). Abu Bakr helped spread Islam and supported the Prophet throughout his life.
+    </p>
+    <h3 id="contributions-title">Major Contributions to Islam</h3>
+    <p id="contributions-text">
+      Abu Bakr freed many persecuted Muslim slaves, including Bilal ibn Rabah. He accompanied the Prophet during the Hijrah (migration to Medina) and became the first Caliph after the Prophet's passing. Abu Bakr united the Muslim Ummah and oversaw the compilation of the Quran.
+    </p>
+    <h3 id="death-title">Legacy and Death</h3>
+    <p id="death-text">
+      Abu Bakr passed away in 634 CE at the age of 63. His leadership set the foundation for the future of Islam, and his humility and devotion remain an inspiration for all Muslims.
+    </p>
+    <a href="index.html" id="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "Abu Bakr As-Siddiq",
+        subtitle: "Learn about the life of the first Caliph of Islam!",
+        sectionTitle: "Abu Bakr As-Siddiq (رضي الله عنه)",
+        birth: { title: "Birth and Early Life", text: "Abu Bakr was born in 573 CE in Mecca into a noble family of the Quraysh tribe. His real name was Abdullah ibn Abi Quhafa. He was known for his honesty, kindness, and intelligence, earning respect in Meccan society." },
+        islam: { title: "How He Entered Islam", text: "Abu Bakr was the first adult to accept Islam. He immediately believed the Prophet ﷺ when he announced his message, earning him the title 'As-Siddiq' (The Truthful). Abu Bakr helped spread Islam and supported the Prophet throughout his life." },
+        contributions: { title: "Major Contributions to Islam", text: "Abu Bakr freed many persecuted Muslim slaves, including Bilal ibn Rabah. He accompanied the Prophet during the Hijrah (migration to Medina) and became the first Caliph after the Prophet's passing. Abu Bakr united the Muslim Ummah and oversaw the compilation of the Quran." },
+        death: { title: "Legacy and Death", text: "Abu Bakr passed away in 634 CE at the age of 63. His leadership set the foundation for the future of Islam, and his humility and devotion remain an inspiration for all Muslims." },
+        backLink: "← Back to Home"
+      },
+      ar: {
+        title: "أبو بكر الصديق",
+        subtitle: "تعرف على حياة أول خليفة في الإسلام!",
+        sectionTitle: "أبو بكر الصديق (رضي الله عنه)",
+        birth: { title: "الولادة والحياة المبكرة", text: "ولد أبو بكر عام 573 م في مكة لعائلة نبيلة من قبيلة قريش. كان اسمه الحقيقي عبد الله بن أبي قحافة. اشتهر بصدقه ولطفه وذكائه، مما أكسبه احترام المجتمع المكي." },
+        islam: { title: "كيف دخل الإسلام", text: "كان أبو بكر أول شخص بالغ يدخل الإسلام. آمن بالنبي ﷺ فور إعلانه رسالته، وحصل على لقب 'الصديق'. ساعد أبو بكر في نشر الإسلام ودعم النبي طوال حياته." },
+        contributions: { title: "المساهمات الرئيسية في الإسلام", text: "حرر أبو بكر العديد من العبيد المسلمين المضطهدين، بما في ذلك بلال بن رباح. رافق النبي خلال الهجرة إلى المدينة المنورة وأصبح أول خليفة بعد وفاة النبي. وحد أبو بكر الأمة الإسلامية وأشرف على جمع القرآن." },
+        death: { title: "الإرث والوفاة", text: "توفي أبو بكر في عام 634 م عن عمر يناهز 63 عامًا. أسس قيادته مستقبل الإسلام، وظلت تواضعه وإخلاصه مصدر إلهام لجميع المسلمين." },
+        backLink: "← العودة إلى الصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = langContent.backLink;
+    }
+  </script>
+</body>
+</html>

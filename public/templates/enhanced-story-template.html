@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{STORY_TITLE}}</title>
+  <style>
+    :root {
+      --primary-color: #2C5F2D;
+      --secondary-color: #97B270;
+      --accent-color: #FFB067;
+      --background-color: #FFF9E9;
+      --text-color: #234638;
+      --header-bg: #1F4037;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTEyLjUsMCBMMzcuNSwyNSBMMTIuNSw1MCBNMzcuNSwwIEw2Mi41LDI1IE0tMTIuNSwwIEwxMi41LDI1IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4xIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">{{STORY_TITLE}}</h1>
+    <p id="subtitle">{{STORY_SUBTITLE}}</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">{{SECTION_TITLE}}</h2>
+    
+    <h3 id="birth-title">{{BIRTH_TITLE}}</h3>
+    <p id="birth-text">{{BIRTH_TEXT}}</p>
+    
+    <h3 id="islam-title">{{ISLAM_TITLE}}</h3>
+    <p id="islam-text">{{ISLAM_TEXT}}</p>
+    
+    <h3 id="contributions-title">{{CONTRIBUTIONS_TITLE}}</h3>
+    <p id="contributions-text">{{CONTRIBUTIONS_TEXT}}</p>
+    
+    <h3 id="death-title">{{DEATH_TITLE}}</h3>
+    <p id="death-text">{{DEATH_TEXT}}</p>
+    
+    <a href="index.html" id="back-link">← {{BACK_TEXT}}</a>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        title: "{{STORY_TITLE_EN}}",
+        subtitle: "{{STORY_SUBTITLE_EN}}",
+        sectionTitle: "{{SECTION_TITLE_EN}}",
+        birth: {
+          title: "{{BIRTH_TITLE_EN}}",
+          text: "{{BIRTH_TEXT_EN}}"
+        },
+        islam: {
+          title: "{{ISLAM_TITLE_EN}}",
+          text: "{{ISLAM_TEXT_EN}}"
+        },
+        contributions: {
+          title: "{{CONTRIBUTIONS_TITLE_EN}}",
+          text: "{{CONTRIBUTIONS_TEXT_EN}}"
+        },
+        death: {
+          title: "{{DEATH_TITLE_EN}}",
+          text: "{{DEATH_TEXT_EN}}"
+        },
+        backLink: "{{BACK_TEXT_EN}}"
+      },
+      ar: {
+        title: "{{STORY_TITLE_AR}}",
+        subtitle: "{{STORY_SUBTITLE_AR}}",
+        sectionTitle: "{{SECTION_TITLE_AR}}",
+        birth: {
+          title: "{{BIRTH_TITLE_AR}}",
+          text: "{{BIRTH_TEXT_AR}}"
+        },
+        islam: {
+          title: "{{ISLAM_TITLE_AR}}",
+          text: "{{ISLAM_TEXT_AR}}"
+        },
+        contributions: {
+          title: "{{CONTRIBUTIONS_TITLE_AR}}",
+          text: "{{CONTRIBUTIONS_TEXT_AR}}"
+        },
+        death: {
+          title: "{{DEATH_TITLE_AR}}",
+          text: "{{DEATH_TEXT_AR}}"
+        },
+        backLink: "{{BACK_TEXT_AR}}"
+      }
+    };
+
+    // Audio content paths
+    const audioContent = {
+      en: {
+        narration: "{{AUDIO_NARRATION_EN}}",
+        background: "{{AUDIO_BACKGROUND_EN}}"
+      },
+      ar: {
+        narration: "{{AUDIO_NARRATION_AR}}",
+        background: "{{AUDIO_BACKGROUND_AR}}"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      document.documentElement.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+
+      const langContent = content[newLang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+      document.getElementById("birth-title").textContent = langContent.birth.title;
+      document.getElementById("birth-text").textContent = langContent.birth.text;
+      document.getElementById("islam-title").textContent = langContent.islam.title;
+      document.getElementById("islam-text").textContent = langContent.islam.text;
+      document.getElementById("contributions-title").textContent = langContent.contributions.title;
+      document.getElementById("contributions-text").textContent = langContent.contributions.text;
+      document.getElementById("death-title").textContent = langContent.death.title;
+      document.getElementById("death-text").textContent = langContent.death.text;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + langContent.backLink : "← " + langContent.backLink;
+
+      // Update audio content for new language
+      if (window.audioManager) {
+        const storyName = "{{STORY_NAME}}";
+        window.audioManager.loadNarration(storyName, newLang);
+        window.audioManager.setLanguage(newLang);
+      }
+    }
+
+    // Initialize audio when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      const storyName = "{{STORY_NAME}}";
+      const language = document.documentElement.lang || 'en';
+      
+      // Wait for audio manager to be ready
+      const checkAudioManager = setInterval(() => {
+        if (window.audioManager) {
+          window.audioManager.loadNarration(storyName, language);
+          window.audioManager.loadBackgroundMusic();
+          clearInterval(checkAudioManager);
+        }
+      }, 100);
+    });
+  </script>
+</body>
+</html>

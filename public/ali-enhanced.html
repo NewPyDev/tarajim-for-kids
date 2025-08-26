@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali ibn Abi Talib - The Lion of Allah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2E8B57;
+      --secondary-color: #98FB98;
+      --accent-color: #228B22;
+      --background-color: #F0FFF0;
+      --text-color: #006400;
+      --header-bg: #1B4332;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTMwLDAgTDYwLDMwIEwzMCw2MCBMMCwzMCBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyRThCNTciIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    body[dir="rtl"] {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdGggZD0iTTE1LDAgTDQ1LDMwIEwxNSw2MCBNNDUsMCBMNzUsMzAgTS0xNSwwIEwxNSwzMCIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4=');
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--accent-color);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--header-bg);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body[dir="rtl"] .language-toggle {
+      right: auto;
+      left: 20px;
+    }
+
+    .language-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin: 25px 0 15px;
+      padding-left: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    body[dir="rtl"] h3 {
+      padding-left: 0;
+      padding-right: 20px;
+      border-left: none;
+      border-right: 4px solid var(--accent-color);
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    #back-link {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid var(--primary-color);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    body[dir="ltr"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(-5px);
+    }
+
+    body[dir="rtl"] #back-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr">
+  <header>
+    <h1 id="title">Ali ibn Abi Talib</h1>
+    <p id="subtitle">The Lion of Allah - The Fourth Caliph</p>
+    <button class="language-toggle" onclick="toggleLanguage()">عربي / EN</button>
+  </header>
+
+  <div class="container">
+    <h2 id="section-title">The Life of Ali ibn Abi Talib</h2>
+    
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <p id="birth-text">
+      Ali ibn Abi Talib was born in 600 CE in Mecca, the son of Abu Talib, the Prophet's uncle. He was the first male to 
+      accept Islam at the age of 10, becoming the Prophet's closest companion and son-in-law through his marriage to 
+      Fatimah, the Prophet's daughter. Known for his exceptional bravery, wisdom, and knowledge, he was raised in the 
+      Prophet's household and became his standard-bearer in battles.
+    </p>
+    
+    <h3 id="islam-title">Role in Early Islam</h3>
+    <p id="islam-text">
+      Ali played a crucial role in the early Muslim community, participating in all major battles including Badr, Uhud, 
+      and Khaybar. He was renowned for his courage, earning the title "Lion of Allah." He served as the Prophet's 
+      scribe and was entrusted with important missions. After the Prophet's death, he became the fourth Caliph (656-661 CE), 
+      known for his justice, wisdom, and deep knowledge of Islamic jurisprudence.
+    </p>
+    
+    <h3 id="contributions-title">Contributions to Islam</h3>
+    <p id="contributions-text">
+      As Caliph, Ali established principles of justice and equality, implementing reforms to ensure fair distribution 
+      of wealth. He was a master of Arabic language and Islamic law, with his sermons and letters compiled in "Nahj 
+      al-Balagha" (Peak of Eloquence). He founded the city of Kufa and established the first Islamic capital there. 
+      Known for his asceticism and piety, he lived simply despite his position. His teachings on spirituality, justice, 
+      and governance continue to influence Islamic thought.
+    </p>
+    
+    <h3 id="legacy-title">Legacy</h3>
+    <p id="legacy-text">
+      Ali's legacy as a scholar, warrior, and spiritual guide remains central to Islamic civilization. His emphasis 
+      on justice, knowledge, and spiritual purification has influenced Islamic mysticism and jurisprudence. He was 
+      martyred in 661 CE while praying in the mosque of Kufa, becoming a symbol of sacrifice and steadfastness. His 
+      descendants through Fatimah became the lineage of the Prophet's family, and his teachings continue to inspire 
+      millions worldwide. His shrine in Najaf, Iraq, remains a major pilgrimage site.
+    </p>
+    
+    <a href="/public/" id="back-link">← Back to Stories</a>
+  </div>
+
+  <script>
+    let isArabic = false;
+    
+    const translations = {
+      title: {
+        en: "Ali ibn Abi Talib",
+        ar: "علي بن أبي طالب"
+      },
+      subtitle: {
+        en: "The Lion of Allah - The Fourth Caliph",
+        ar: "أسد الله - الخليفة الرابع"
+      },
+      sectionTitle: {
+        en: "The Life of Ali ibn Abi Talib",
+        ar: "حياة علي بن أبي طالب"
+      },
+      birthTitle: {
+        en: "Birth and Early Life",
+        ar: "الميلاد والطفولة"
+      },
+      birthText: {
+        en: "Ali ibn Abi Talib was born in 600 CE in Mecca, the son of Abu Talib, the Prophet's uncle. He was the first male to accept Islam at the age of 10, becoming the Prophet's closest companion and son-in-law through his marriage to Fatimah, the Prophet's daughter. Known for his exceptional bravery, wisdom, and knowledge, he was raised in the Prophet's household and became his standard-bearer in battles.",
+        ar: "وُلد علي بن أبي طالب عام 600 م في مكة، ابن أبي طالب عم النبي. كان أول من أسلم من الرجال في سن العاشرة، وأصبح أقرب أصحاب النبي وصهره من خلال زواجه من فاطمة بنت النبي. عُرف بشجاعته الاستثنائية وحكمته وعلمه، ونشأ في بيت النبي وأصبح حامل رايته في المعارك."
+      },
+      islamTitle: {
+        en: "Role in Early Islam",
+        ar: "دوره في الإسلام المبكر"
+      },
+      islamText: {
+        en: "Ali played a crucial role in the early Muslim community, participating in all major battles including Badr, Uhud, and Khaybar. He was renowned for his courage, earning the title \"Lion of Allah.\" He served as the Prophet's scribe and was entrusted with important missions. After the Prophet's death, he became the fourth Caliph (656-661 CE), known for his justice, wisdom, and deep knowledge of Islamic jurisprudence.",
+        ar: "لعب علي دوراً محورياً في المجتمع الإسلامي المبكر، مشاركاً في جميع المعارك الكبرى بما في ذلك بدر وأحد وخيبر. اشتهر بشجاعته، ولُقّب بـ\"أسد الله\". خدم ككاتب للنبي وُوكلت إليه مهام مهمة. بعد وفاة النبي، أصبح الخليفة الرابع (656-661 م)، معروفاً بعادله وحكمته وعلمه العميق بالفقه الإسلامي."
+      },
+      contributionsTitle: {
+        en: "Contributions to Islam",
+        ar: "إسهاماته في الإسلام"
+      },
+      contributionsText: {
+        en: "As Caliph, Ali established principles of justice and equality, implementing reforms to ensure fair distribution of wealth. He was a master of Arabic language and Islamic law, with his sermons and letters compiled in \"Nahj al-Balagha\" (Peak of Eloquence). He founded the city of Kufa and established the first Islamic capital there. Known for his asceticism and piety, he lived simply despite his position. His teachings on spirituality, justice, and governance continue to influence Islamic thought.",
+        ar: "كخليفة، أسس علي مبادئ العدالة والمساواة، ونفذ إصلاحات لضمان التوزيع العادل للثروة. كان عالماً باللغة العربية والفقه الإسلامي، وقد جُمعت خطبه ورسائله في \"نهج البلاغة\". أسس مدينة الكوفة وجعلها أول عاصمة إسلامية. عُرف بزهده وتقواه، وعاش ببساطة رغم منصبه. تُعد تعاليمه في الروحانية والعدالة والحكم مصدر إلهام للفكر الإسلامي."
+      },
+      legacyTitle: {
+        en: "Legacy",
+        ar: "الإرث"
+      },
+      legacyText: {
+        en: "Ali's legacy as a scholar, warrior, and spiritual guide remains central to Islamic civilization. His emphasis on justice, knowledge, and spiritual purification has influenced Islamic mysticism and jurisprudence. He was martyred in 661 CE while praying in the mosque of Kufa, becoming a symbol of sacrifice and steadfastness. His descendants through Fatimah became the lineage of the Prophet's family, and his teachings continue to inspire millions worldwide. His shrine in Najaf, Iraq, remains a major pilgrimage site.",
+        ar: "يظل إرث علي كعالم ومحارب ومرشد روحي محورياً في الحضارة الإسلامية. لقد أثر تأكيده على العدالة والمعرفة والتطهير الروحي في التصوف والفقه الإسلامي. استُشهد عام 661 م أثناء صلاته في مسجد الكوفة، ليصبح رمزاً للتضحية والثبات. أصبح نسله من فاطمة سلالة آل البيت، وتُعد تعاليمه مصدر إلهام للملايين حول العالم. يبقى مرقده في النجف بالعراق موقعاً رئيسياً للزيارة."
+      },
+      backLink: {
+        en: "← Back to Main Page",
+        ar: "← العودة للصفحة الرئيسية"
+      }
+    };
+
+    function toggleLanguage() {
+      isArabic = !isArabic;
+      document.body.dir = isArabic ? 'rtl' : 'ltr';
+      
+      document.getElementById('title').textContent = translations.title[isArabic ? 'ar' : 'en'];
+      document.getElementById('subtitle').textContent = translations.subtitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('section-title').textContent = translations.sectionTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('birth-title').textContent = translations.birthTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('birth-text').textContent = translations.birthText[isArabic ? 'ar' : 'en'];
+      document.getElementById('islam-title').textContent = translations.islamTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('islam-text').textContent = translations.islamText[isArabic ? 'ar' : 'en'];
+      document.getElementById('contributions-title').textContent = translations.contributionsTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('contributions-text').textContent = translations.contributionsText[isArabic ? 'ar' : 'en'];
+      document.getElementById('legacy-title').textContent = translations.legacyTitle[isArabic ? 'ar' : 'en'];
+      document.getElementById('legacy-text').textContent = translations.legacyText[isArabic ? 'ar' : 'en'];
+      document.getElementById('back-link').textContent = translations.backLink[isArabic ? 'ar' : 'en'];
+    }
+  </script>
+</body>
+</html>
