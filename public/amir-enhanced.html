@@ -269,8 +269,35 @@
             <p>- Amir ibn Fuhayrah</p>
         </div>
 
+        <!-- Audio Player Section -->
+        <div class="section">
+            <h3><span class="section-icon">🎧</span>Listen to the Story</h3>
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <strong>🎧 English Narration</strong>
+                    <p>Professional English audio narration coming soon!</p>
+                    <button onclick="toggleAudio('english')" style="margin-top: 10px; padding: 8px 16px; background: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ Play</button>
+                </div>
+                <div class="lesson-card">
+                    <strong>🎧 Arabic Narration</strong>
+                    <p>Professional Arabic audio narration coming soon!</p>
+                    <button onclick="toggleAudio('arabic')" style="margin-top: 10px; padding: 8px 16px; background: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer;">▶️ تشغيل</button>
+                </div>
+            </div>
+            <p style="text-align: center; font-style: italic; color: var(--secondary-color); margin-top: 15px;">🎵 Audio narrations help children learn pronunciation and enjoy the stories better!</p>
+        </div>
+
         <a href="index.html" class="back-link">← Back to All Stories</a>
     </div>
+
+    <script>
+        // Audio Player Functionality
+        function toggleAudio(lang) {
+            const langName = lang === 'english' ? 'English' : 'Arabic';
+            const characterName = 'Amir ibn Fuhayrah';
+            alert(`🎧 ${langName} Audio Narration\n\nAudio files are not yet available for ${characterName}. To add audio:\n\n1. Record professional narrations in ${langName}\n2. Save as MP3 files in /audio/ folder\n3. Name them: amir-${lang === 'english' ? 'en' : 'ar'}.mp3\n\nThe audio player will work automatically once files are added!`);
+        }
+    </script>
 
 
 </body>
