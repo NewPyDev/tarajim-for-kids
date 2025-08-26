@@ -48,71 +48,107 @@
             font-weight: 300;
         }
 
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 8px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
         }
 
-        .biography-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, var(--accent-color), transparent);
+            border-radius: 50%;
+            opacity: 0.1;
+            transform: translate(50%, -50%);
         }
 
-        .section-title {
-            font-size: 2.2em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .character-icon {
-            font-size: 4em;
-            text-align: center;
-            margin-bottom: 20px;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
         }
 
         .biography-text {
-            font-size: 1.1em;
+            font-size: 1.1rem;
             line-height: 1.8;
-            color: #2c3e50;
             text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .lessons-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            margin-bottom: 1.5rem;
         }
 
         .lessons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
         .lesson-card {
-            background: linear-gradient(135deg, #74b9ff, #0984e3);
-            color: white;
-            padding: 20px;
+            background: var(--background-color);
+            padding: 1.5rem;
             border-radius: 10px;
-            text-align: center;
-            transform: translateY(0);
+            border-left: 4px solid var(--accent-color);
             transition: transform 0.3s ease;
         }
 
@@ -120,165 +156,85 @@
             transform: translateY(-5px);
         }
 
-        .lesson-number {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .lesson-text {
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-
         .quote-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 30px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .quote-section::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
         }
 
         .quote-text {
-            font-size: 1.4em;
+            font-size: 1.3rem;
             font-style: italic;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
-        .quote-author {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            font-weight: bold;
-        }
-
-        .timeline-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #3498db;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-left: 20px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 25px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: #3498db;
-            border: 3px solid white;
-        }
-
-        .timeline-year {
-            font-weight: bold;
-            color: #2c3e50;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-
-        .timeline-event {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .back-button {
+        .back-link {
             display: inline-block;
-            background: linear-gradient(135deg, #00b894, #00a085);
+            background: var(--secondary-color);
             color: white;
-            padding: 15px 30px;
+            padding: 12px 24px;
             text-decoration: none;
             border-radius: 25px;
-            font-size: 1.1em;
-            font-weight: bold;
+            margin-top: 2rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 600;
         }
 
-        .back-button:hover {
+        .back-link:hover {
+            background: var(--primary-color);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .navigation {
-            text-align: center;
-            margin-top: 40px;
         }
 
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.2em;
-            }
-            
-            .subtitle {
-                font-size: 1.2em;
-            }
-            
-            .arabic-name {
-                font-size: 1.5em;
+            .header h1 {
+                font-size: 2rem;
             }
             
             .container {
-                padding: 10px;
+                padding: 1rem;
             }
             
-            .header, .biography-section, .lessons-section, .quote-section, .timeline-section {
-                padding: 20px;
+            .hero-section, .section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="main-title">Amir ibn Fuhayrah</h1>
-            <p class="subtitle">The Shepherd Hero</p>
-            <p class="arabic-name">عامر بن فهيرة</p>
-        </div>
+    <div class="header">
+        <h1>Amir ibn Fuhayrah</h1>
+        <p class="subtitle">The Shepherd Hero</p>
+    </div>
 
-        <div class="content-grid">
-            <div class="biography-section">
-                <h2 class="section-title">His Amazing Story</h2>
-                <div class="character-icon">🐑</div>
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <span class="character-icon">🐑</span>
+                <h2>عامر بن فهيرة</h2>
                 <p class="biography-text">
-                    Amir ibn Fuhayrah's life story represents one of the most inspiring examples of transformation and redemption in Islamic history, demonstrating how faith can elevate a person from the lowest social status to the highest spiritual ranks and how even the humblest occupations can become instruments of divine service and historical significance. Born into slavery in the harsh social environment of pre-Islamic Arabia, where slaves were considered property rather than human beings with rights and dignity, Amir experienced firsthand the brutality and dehumanization that characterized the institution of slavery in Arabian society. His early years were marked by the typical hardships faced by slaves: backbreaking labor, constant humiliation, physical abuse, and the complete absence of personal freedom or hope for a better future. In a society where one's birth determined their entire life trajectory, Amir seemed destined to live and die in bondage, forgotten by history and denied the basic human dignity that should belong to every person regardless of their social circumstances.
+                    Amir ibn Fuhayrah's life story represents one of the most inspiring examples of transformation and redemption in Islamic history, demonstrating how faith can elevate a person from the lowest social status to the highest spiritual ranks and how even the humblest occupations can become instruments of divine service and historical significance. Born into slavery in the harsh social environment of pre-Islamic Arabia, where slaves were considered property rather than human beings with rights and dignity, Amir experienced firsthand the brutality and dehumanization that characterized the institution of slavery in Arabian society.
                 </p>
                 <p class="biography-text">
-                    However, Amir's life took a dramatic turn when he encountered Abu Bakr As-Siddiq, the wealthy merchant who would later become the first Caliph of Islam and who was already known throughout Mecca for his exceptional generosity, moral integrity, and compassionate treatment of the less fortunate members of society. Abu Bakr, who had embraced Islam early in the Prophet's mission and understood the faith's revolutionary message about human equality and dignity, was deeply troubled by the suffering of Muslim slaves who were being tortured by their masters for accepting the new religion. When Abu Bakr learned about Amir ibn Fuhayrah and witnessed his sincere faith despite his difficult circumstances, he immediately purchased him from his master and granted him his freedom, transforming Amir's life in an instant from one of bondage and despair to one of liberty and hope.
+                    However, Amir's life took a dramatic turn when he encountered Abu Bakr As-Siddiq, the wealthy merchant who would later become the first Caliph of Islam and who was already known throughout Mecca for his exceptional generosity, moral integrity, and compassionate treatment of the less fortunate members of society. When Abu Bakr learned about Amir ibn Fuhayrah and witnessed his sincere faith despite his difficult circumstances, he immediately purchased him from his master and granted him his freedom, transforming Amir's life in an instant from one of bondage and despair to one of liberty and hope.
                 </p>
                 <p class="biography-text">
-                    Upon gaining his freedom, Amir made the remarkable decision to dedicate his newfound liberty entirely to serving Islam and supporting the Prophet Muhammad's mission. He chose to become a shepherd, a humble occupation that was often looked down upon by the more prosperous members of society but which would prove to be perfectly suited for the crucial role he would play in one of the most important events in Islamic history. As a shepherd, Amir developed an intimate knowledge of the desert landscape around Mecca, learning every path, cave, and water source in the rugged terrain that surrounded the city. More importantly, his occupation allowed him to move freely throughout the area without attracting suspicion, as shepherds were a common sight in the desert and their movements were rarely questioned by the authorities.
+                    Upon gaining his freedom, Amir made the remarkable decision to dedicate his newfound liberty entirely to serving Islam and supporting the Prophet Muhammad's mission. He chose to become a shepherd, a humble occupation that was often looked down upon by the more prosperous members of society but which would prove to be perfectly suited for the crucial role he would play in one of the most important events in Islamic history. When the Prophet Muhammad received divine command to migrate to Medina, the success of this dangerous journey would depend on the support of trusted allies who could help them evade their pursuers.
                 </p>
                 <p class="biography-text">
-                    When the Prophet Muhammad received divine command to migrate to Medina, the success of this dangerous journey would depend on the support of trusted allies who could help them evade their pursuers. It was in this critical moment that Amir's humble occupation became an instrument of divine providence and historical significance. As the Prophet and Abu Bakr made their way through the desert toward the cave of Thawr where they would hide, Amir followed behind with his flock of sheep, carefully grazing them over the footprints and tracks left by the two fugitives, effectively erasing all evidence of their passage and making it impossible for their enemies to follow their trail. During the three days that the Prophet and Abu Bakr remained hidden in the cave, Amir continued to play a vital role in their survival, bringing them fresh milk from his goats, providing them with news about the search efforts, and serving as their primary link to the outside world.
+                    It was in this critical moment that Amir's humble occupation became an instrument of divine providence and historical significance. As the Prophet and Abu Bakr made their way through the desert toward the cave of Thawr where they would hide, Amir followed behind with his flock of sheep, carefully grazing them over the footprints and tracks left by the two fugitives, effectively erasing all evidence of their passage and making it impossible for their enemies to follow their trail. During the three days that the Prophet and Abu Bakr remained hidden in the cave, Amir continued to play a vital role in their survival, bringing them fresh milk from his goats, providing them with news about the search efforts, and serving as their primary link to the outside world.
                 </p>
                 <p class="biography-text">
                     After the successful migration to Medina, Amir continued to serve the Muslim community with the same dedication and selflessness that had characterized his assistance during the Hijrah. He participated in many of the early battles and expeditions, including the Battle of Uhud, where his courage and loyalty were demonstrated as he fought alongside the Prophet and the other companions. His transformation from a powerless slave to a respected companion and warrior was complete, but he never forgot his humble origins or allowed his elevated status to change his character or his commitment to serving others. Tragically, Amir's life was cut short when he was martyred during the expedition to Bi'r Ma'una in 625 CE, but even in death, his faith remained unshaken, and he was seen smiling as he died, expressing his joy at the prospect of meeting his Lord.
@@ -286,110 +242,36 @@
             </div>
         </div>
 
-        <div class="lessons-section">
-            <h2 class="section-title">Lessons We Learn</h2>
+        <div class="section">
+            <h3><span class="section-icon">📚</span>Lessons We Learn</h3>
             <div class="lessons-grid">
                 <div class="lesson-card">
-                    <div class="lesson-number">1</div>
-                    <div class="lesson-text">Your past doesn't determine your future</div>
+                    <strong>Your past doesn't determine your future</strong>
+                    <p>Amir showed that no matter where you start in life, faith and dedication can transform your destiny.</p>
                 </div>
                 <div class="lesson-card">
-                    <div class="lesson-number">2</div>
-                    <div class="lesson-text">Every job can be used to serve Allah</div>
+                    <strong>Every job can be used to serve Allah</strong>
+                    <p>Even being a simple shepherd became a way to serve Islam and help the Prophet during the most crucial moment.</p>
                 </div>
                 <div class="lesson-card">
-                    <div class="lesson-number">3</div>
-                    <div class="lesson-text">Freedom should be used to help others</div>
+                    <strong>Freedom should be used to help others</strong>
+                    <p>When Amir gained his freedom, he used it not for personal gain but to serve his community and faith.</p>
                 </div>
                 <div class="lesson-card">
-                    <div class="lesson-number">4</div>
-                    <div class="lesson-text">Small acts of service can have huge impacts</div>
+                    <strong>Small acts of service can have huge impacts</strong>
+                    <p>Amir's simple act of grazing sheep over footprints helped ensure the success of the historic Hijrah.</p>
                 </div>
             </div>
         </div>
 
         <div class="quote-section">
-            <h2 class="section-title">His Famous Words</h2>
             <p class="quote-text">"I was a slave, but Islam made me free. I was nothing, but faith made me everything."</p>
-            <p class="quote-author">- Amir ibn Fuhayrah</p>
+            <p>- Amir ibn Fuhayrah</p>
         </div>
 
-        <div class="timeline-section">
-            <h2 class="section-title">Important Events in His Life</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">590 CE</div>
-                    <div class="timeline-event">Born into slavery in Mecca</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">610 CE</div>
-                    <div class="timeline-event">Freed by Abu Bakr and accepted Islam</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">615 CE</div>
-                    <div class="timeline-event">Became a shepherd and dedicated his life to serving Islam</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">622 CE</div>
-                    <div class="timeline-event">Played crucial role in the Prophet's migration (Hijrah) to Medina</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">625 CE</div>
-                    <div class="timeline-event">Martyred at the expedition to Bi'r Ma'una</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="navigation">
-            <a href="index.html" class="back-button">← Back to All Stories</a>
-        </div>
+        <a href="index.html" class="back-link">← Back to All Stories</a>
     </div>
 
-    <script>
-        // Add smooth scrolling and interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate lesson cards on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe lesson cards
-            document.querySelectorAll('.lesson-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-
-            // Observe timeline items
-            document.querySelectorAll('.timeline-item').forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateX(-20px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(item);
-            });
-
-            // Add click sound effect (optional)
-            document.querySelectorAll('.lesson-card, .back-button').forEach(element => {
-                element.addEventListener('click', function() {
-                    // Add a subtle click effect
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
