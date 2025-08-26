@@ -5,26 +5,50 @@
       "name": "Abu Bakr As-Siddiq",
       "nameArabic": "أبو بكر الصديق",
       "description": "The first Caliph and closest companion of the Prophet. He supported the Prophet during the Hijrah and united the Muslim community.",
+      "longBiography": "Abu Bakr As-Siddiq was the Prophet Muhammad's closest friend and the first adult male to accept Islam. Born into the respected Taym tribe in Mecca, he was known for his honesty and gentle nature even before Islam. When the Prophet received his first revelation, Abu Bakr believed immediately without hesitation, earning him the title 'As-Siddiq' (The Truthful). He used his wealth to free Muslim slaves and support the early Muslim community. During the dangerous journey of Hijrah to Medina, he was the Prophet's only companion, showing incredible loyalty and courage. After the Prophet's death, he became the first Caliph and successfully united the Arabian Peninsula under Islam, handling the Ridda wars with wisdom and strength. His two-year rule laid the foundation for Islam's expansion beyond Arabia.",
+      "keyLessons": [
+        "True friendship means supporting others in difficult times",
+        "Believing in truth requires courage and conviction",
+        "Leadership means putting the community's needs first",
+        "Generosity should be used to help those in need"
+      ],
+      "famousQuote": "If you want to destroy any nation without war, make adultery or nudity common in the young generation.",
       "categories": [
         "caliphs"
       ],
       "birthYear": "573",
       "deathYear": "634",
       "slug": "abu-bakr-enhanced",
-      "icon": "1"
+      "icon": "1",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 2,
       "name": "Umar ibn Al-Khattab",
       "nameArabic": "عمر بن الخطاب",
       "description": "The second Caliph known for his justice and strength. Under his leadership, Islam spread far and wide.",
+      "longBiography": "Umar ibn Al-Khattab was initially one of Islam's fiercest opponents, but his dramatic conversion changed the course of Islamic history. Known for his physical strength and fierce personality, he once set out to kill the Prophet Muhammad but instead embraced Islam after hearing Quranic verses. As the second Caliph, he established many governmental systems that are still admired today. He created the first police force, postal system, and welfare state in Islamic history. Under his rule, the Islamic empire expanded to include Persia, Egypt, and much of the Byzantine Empire. Despite his power, he lived simply, often patching his own clothes and sleeping on a palm leaf mat. He was known for walking the streets at night to check on his people's welfare, and his justice was legendary - he once said 'If a dog dies hungry on the banks of the Euphrates, Umar will be responsible for it on the Day of Judgment.'",
+      "keyLessons": [
+        "People can change completely when they find the truth",
+        "True leaders serve their people, not themselves",
+        "Justice must be applied equally to everyone",
+        "Strength should be used to protect the weak"
+      ],
+      "famousQuote": "I fear the day when the disbelievers are proud of their falsehood, and the Muslims are shy of their faith.",
       "categories": [
         "caliphs"
       ],
       "birthYear": "584",
       "deathYear": "644",
       "slug": "umar-enhanced",
-      "icon": "2"
+      "icon": "2",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 3,

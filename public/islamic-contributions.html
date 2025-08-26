@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Islam Brought to the World - Tarajim for Kids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2C5F2D;
+      --secondary-color: #97B270;
+      --accent-color: #FFB067;
+      --background-color: #FFF9E9;
+      --text-color: #234638;
+      --header-bg: #1F4037;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      font-family: 'Quicksand', sans-serif;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+CiAgPHBhdGggZD0iTTI1LDAgTDUwLDI1IEwyNSw1MCBMMCwyNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzVGMkQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--header-bg), var(--primary-color));
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 5px solid var(--accent-color);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+
+    .intro-section {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .intro-section h2 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .intro-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contributions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .contribution-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      border-left: 5px solid var(--accent-color);
+    }
+
+    .contribution-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contribution-card .icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .contribution-card h3 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .contribution-card p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .contribution-card .examples {
+      background: var(--background-color);
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .contribution-card .examples h4 {
+      color: var(--secondary-color);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contribution-card .examples ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contribution-card .examples li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .contribution-card .examples li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 40px 0;
+      padding: 15px 30px;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .contributions-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>What Islam Brought to the World</h1>
+    <p>Discover the amazing contributions of Islamic civilization to humanity</p>
+  </header>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2>A Legacy of Knowledge and Innovation</h2>
+      <p>
+        For over 1,400 years, Islamic civilization has contributed countless innovations, discoveries, and ideas that have shaped our modern world. From mathematics and medicine to art and architecture, Muslim scholars, scientists, and inventors have left an incredible legacy that continues to benefit humanity today.
+      </p>
+    </div>
+
+    <div class="contributions-grid">
+      <div class="contribution-card">
+        <span class="icon">🔢</span>
+        <h3>Mathematics & Numbers</h3>
+        <p>Islamic mathematicians revolutionized how we understand and use numbers, creating systems we still use today.</p>
+        <div class="examples">
+          <h4>Amazing Contributions:</h4>
+          <ul>
+            <li>Introduced the number zero to Europe</li>
+            <li>Developed algebra (from Arabic "al-jabr")</li>
+            <li>Created the decimal system</li>
+            <li>Advanced geometry and trigonometry</li>
+            <li>Invented algorithms (named after Al-Khwarizmi)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🏥</span>
+        <h3>Medicine & Healthcare</h3>
+        <p>Muslim physicians created the foundation of modern medicine with hospitals, surgical techniques, and medical education.</p>
+        <div class="examples">
+          <h4>Medical Breakthroughs:</h4>
+          <ul>
+            <li>Built the first hospitals with medical schools</li>
+            <li>Performed the first cataract surgeries</li>
+            <li>Discovered blood circulation</li>
+            <li>Created medical encyclopedias</li>
+            <li>Developed anesthesia for surgery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🌟</span>
+        <h3>Astronomy & Navigation</h3>
+        <p>Islamic astronomers mapped the stars, improved navigation, and helped explorers discover new lands.</p>
+        <div class="examples">
+          <h4>Stellar Achievements:</h4>
+          <ul>
+            <li>Named many stars (Aldebaran, Altair, Vega)</li>
+            <li>Improved the astrolabe for navigation</li>
+            <li>Calculated Earth's circumference accurately</li>
+            <li>Created detailed star maps</li>
+            <li>Built the first observatories</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🏛️</span>
+        <h3>Architecture & Engineering</h3>
+        <p>Islamic architects created stunning buildings and engineering marvels that inspire architects today.</p>
+        <div class="examples">
+          <h4>Architectural Wonders:</h4>
+          <ul>
+            <li>Invented the pointed arch</li>
+            <li>Created beautiful geometric patterns</li>
+            <li>Built magnificent domes and minarets</li>
+            <li>Developed advanced water systems</li>
+            <li>Designed earthquake-resistant buildings</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">📚</span>
+        <h3>Education & Libraries</h3>
+        <p>Muslims established the world's first universities and preserved knowledge from ancient civilizations.</p>
+        <div class="examples">
+          <h4>Educational Legacy:</h4>
+          <ul>
+            <li>Founded the first universities (Al-Azhar, Al-Qarawiyyin)</li>
+            <li>Created the largest libraries in history</li>
+            <li>Translated and preserved Greek philosophy</li>
+            <li>Developed the scientific method</li>
+            <li>Established degree-granting institutions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🧪</span>
+        <h3>Chemistry & Science</h3>
+        <p>Islamic scientists laid the foundation for modern chemistry and scientific experimentation.</p>
+        <div class="examples">
+          <h4>Scientific Discoveries:</h4>
+          <ul>
+            <li>Invented distillation and laboratory equipment</li>
+            <li>Discovered many chemical processes</li>
+            <li>Created the first chemistry textbooks</li>
+            <li>Developed experimental methods</li>
+            <li>Advanced optics and physics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🎨</span>
+        <h3>Art & Culture</h3>
+        <p>Islamic art and culture enriched the world with beautiful patterns, calligraphy, and cultural exchange.</p>
+        <div class="examples">
+          <h4>Cultural Gifts:</h4>
+          <ul>
+            <li>Developed Arabic calligraphy as an art form</li>
+            <li>Created intricate geometric art</li>
+            <li>Preserved and shared world literature</li>
+            <li>Influenced music and poetry</li>
+            <li>Promoted cultural tolerance and exchange</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contribution-card">
+        <span class="icon">🌍</span>
+        <h3>Geography & Exploration</h3>
+        <p>Muslim explorers and geographers mapped the world and connected different civilizations through trade.</p>
+        <div class="examples">
+          <h4>Global Connections:</h4>
+          <ul>
+            <li>Created the most accurate world maps</li>
+            <li>Established global trade networks</li>
+            <li>Explored Africa, Asia, and Europe</li>
+            <li>Documented different cultures and peoples</li>
+            <li>Connected East and West through commerce</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-section">
+      <h2>A Continuing Legacy</h2>
+      <p>
+        These contributions show how Islamic civilization has been a bridge between cultures, preserving ancient knowledge while creating new discoveries. Today, we continue to benefit from these innovations in our schools, hospitals, technology, and daily lives. The spirit of learning, discovery, and sharing knowledge remains an important part of Islamic values.
+      </p>
+    </div>
+
+    <a href="/public/" class="back-link">← Back to Stories</a>
+  </div>
+</body>
+</html>

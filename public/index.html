@@ -263,6 +263,7 @@
     <a href="javascript:void(0)" id="nav-bravery" onclick="filterCards('bravery')">Bravery</a>
     <a href="javascript:void(0)" id="nav-kindness" onclick="filterCards('kindness')">Kindness</a>
     <a href="javascript:void(0)" id="nav-loyalty" onclick="filterCards('loyalty')">Loyalty</a>
+    <a href="/public/islamic-contributions.html" id="nav-contributions">Islamic Legacy</a>
     <a href="javascript:void(0)" id="nav-all" onclick="filterCards('all')">All</a>
   </nav>
   <div class="container">
@@ -281,7 +282,7 @@
       en: {
         title: "Tarajim for Kids",
         subtitle: "Explore the lives of the Sahabah in a fun and colorful way!",
-        nav: { caliphs: "Caliphs", bravery: "Bravery", kindness: "Kindness", loyalty: "Loyalty" },
+        nav: { caliphs: "Caliphs", bravery: "Bravery", kindness: "Kindness", loyalty: "Loyalty", contributions: "Islamic Legacy" },
         sectionTitle: "Stories of the Sahabah",
         abuBakr: { title: "Abu Bakr As-Siddiq (أبو بكر الصديق)", desc: "Abu Bakr was the first Caliph and closest companion of the Prophet. He supported the Prophet during the Hijrah and united the Muslim community." },
         umar: { title: "Umar ibn Al-Khattab (عمر بن الخطاب)", desc: "Umar was the second Caliph, known for his justice and strength. He expanded the Islamic empire and protected the weak." },
@@ -298,7 +299,7 @@
       ar: {
         title: "تراجم للأطفال",
         subtitle: "تعرف على حياة الصحابة بطريقة ممتعة وملونة!",
-        nav: { caliphs: "الخلفاء", bravery: "الشجاعة", kindness: "الطيبة", loyalty: "الوفاء" },
+        nav: { caliphs: "الخلفاء", bravery: "الشجاعة", kindness: "الطيبة", loyalty: "الوفاء", contributions: "الإرث الإسلامي" },
         sectionTitle: "قصص الصحابة",
         abuBakr: { title: "أبو بكر الصديق (Abu Bakr As-Siddiq)", desc: "كان أبو بكر أول خليفة وأقرب صحابي للنبي. دعم النبي أثناء الهجرة ووحد الأمة الإسلامية." },
         umar: { title: "عمر بن الخطاب (Umar ibn Al-Khattab)", desc: "كان عمر الخليفة الثاني، اشتهر بالعدل والقوة. وسّع الإمبراطورية الإسلامية وحمى الضعفاء." },
@@ -327,6 +328,7 @@
       document.getElementById("nav-bravery").textContent = langContent.nav.bravery;
       document.getElementById("nav-kindness").textContent = langContent.nav.kindness;
       document.getElementById("nav-loyalty").textContent = langContent.nav.loyalty;
+      document.getElementById("nav-contributions").textContent = langContent.nav.contributions;
       document.getElementById("section-title").textContent = langContent.sectionTitle;
       document.getElementById("abu-bakr-title").textContent = langContent.abuBakr.title;
       document.getElementById("abu-bakr-desc").textContent = langContent.abuBakr.desc;
@@ -418,5 +420,128 @@
       container.innerHTML = html;
     }
   </script>
+
+  <!-- Donation Section -->
+  <section class="donation-section">
+    <div class="container">
+      <h2 data-en="Support This Project" data-ar="ادعم هذا المشروع">Support This Project</h2>
+      <div class="donation-content">
+        <p data-en="Help us keep this educational content free for all children around the world. Your support helps us create more stories and improve the platform." 
+           data-ar="ساعدنا في الحفاظ على هذا المحتوى التعليمي مجانًا لجميع الأطفال حول العالم. دعمكم يساعدنا في إنشاء المزيد من القصص وتحسين المنصة.">
+           Help us keep this educational content free for all children around the world. Your support helps us create more stories and improve the platform.
+        </p>
+        <div class="donation-buttons">
+          <a href="https://www.buymeacoffee.com/tarajimforkids" target="_blank" class="donation-btn coffee-btn">
+            <span class="btn-icon">☕</span>
+            <span data-en="Buy me a coffee" data-ar="اشتري لي قهوة">Buy me a coffee</span>
+          </a>
+          <a href="https://ko-fi.com/tarajimforkids" target="_blank" class="donation-btn kofi-btn">
+            <span class="btn-icon">💝</span>
+            <span data-en="Support on Ko-fi" data-ar="ادعم على Ko-fi">Support on Ko-fi</span>
+          </a>
+          <a href="https://paypal.me/tarajimforkids" target="_blank" class="donation-btn paypal-btn">
+            <span class="btn-icon">💳</span>
+            <span data-en="Donate via PayPal" data-ar="تبرع عبر PayPal">Donate via PayPal</span>
+          </a>
+        </div>
+        <p class="donation-note" data-en="Every contribution, no matter how small, makes a difference!" 
+           data-ar="كل مساهمة، مهما كانت صغيرة، تحدث فرقًا!">
+           Every contribution, no matter how small, makes a difference!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .donation-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 60px 0;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .donation-section h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .donation-section h2::after {
+      background-color: var(--accent-color);
+    }
+
+    .donation-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+
+    .donation-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .donation-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .coffee-btn {
+      background: #FFDD00;
+      color: #333;
+    }
+
+    .kofi-btn {
+      background: #FF5E5B;
+      color: white;
+    }
+
+    .paypal-btn {
+      background: #0070BA;
+      color: white;
+    }
+
+    .donation-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-icon {
+      font-size: 1.3rem;
+    }
+
+    .donation-note {
+      font-style: italic;
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .donation-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .donation-btn {
+        width: 250px;
+        justify-content: center;
+      }
+    }
+  </style>
+
 </body>
 </html>.
