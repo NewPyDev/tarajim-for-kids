@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Az-Zubayr ibn Al-Awwam - The Young Warrior | Tarajim for Kids</title>
+  <style>
+    :root {
+      --primary-color: #2c5530;
+      --secondary-color: #97b270;
+      --accent-color: #a8c686;
+      --background-color: #f8f9f6;
+      --text-color: #2c3e50;
+      --border-color: #e8f5e8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .header .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .language-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-left: 8px solid var(--accent-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(45deg, var(--accent-color), transparent);
+      border-radius: 50%;
+      opacity: 0.1;
+      transform: translate(50%, -50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .character-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section {
+      background: white;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--secondary-color);
+    }
+
+    .section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .biography-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .lesson-card {
+      background: var(--background-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .quote-section::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .quote-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .language-toggle {
+        position: static;
+        margin: 1rem auto;
+        display: block;
+        width: fit-content;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .hero-section {
+        padding: 2rem;
+      }
+      
+      .lessons-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button class="language-toggle" onclick="toggleLanguage()" id="lang-toggle">العربية</button>
+    <h1 id="main-title">Az-Zubayr ibn Al-Awwam</h1>
+    <p class="subtitle" id="subtitle">The Young Warrior</p>
+  </div>
+
+  <div class="container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <span class="character-icon">⚔️</span>
+        <p class="biography-text" id="main-bio">
+          Az-Zubayr ibn Al-Awwam was the Prophet's cousin and one of the ten companions promised Paradise. He was famous for his exceptional courage and was considered one of the best swordsmen of his time. He accepted Islam when he was very young - only 15 years old - and immediately faced persecution from his uncle who would wrap him in a mat and light a fire under it, trying to make him give up his faith. But young Zubayr never wavered. He was the first person to draw his sword in defense of Islam and participated in all the major battles.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="lessons-title"><span class="section-icon">💡</span> Lessons We Learn</h3>
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <strong id="lesson1">Young people can show incredible courage for their faith</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson2">Skill in fighting should be used to defend what's right</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson3">Persecution in youth can build strong character</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson4">Success in battle should be paired with humility</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <p class="quote-text" id="quote-text">
+        "I draw my sword only in the path of Allah and for the protection of His Messenger."
+      </p>
+      <p id="quote-attribution">- Az-Zubayr ibn Al-Awwam</p>
+    </div>
+
+    <a href="index.html" class="back-link" id="back-link">← Back to All Stories</a>
+  </div>
+
+  <script>
+    const langContent = {
+      en: {
+        mainTitle: "Az-Zubayr ibn Al-Awwam",
+        subtitle: "The Young Warrior",
+        mainBio: "Az-Zubayr ibn Al-Awwam was the Prophet's cousin and one of the ten companions promised Paradise. He was famous for his exceptional courage and was considered one of the best swordsmen of his time. He accepted Islam when he was very young - only 15 years old - and immediately faced persecution from his uncle who would wrap him in a mat and light a fire under it, trying to make him give up his faith. But young Zubayr never wavered. He was the first person to draw his sword in defense of Islam and participated in all the major battles.",
+        lessonsTitle: "Lessons We Learn",
+        lesson1: "Young people can show incredible courage for their faith",
+        lesson2: "Skill in fighting should be used to defend what's right",
+        lesson3: "Persecution in youth can build strong character",
+        lesson4: "Success in battle should be paired with humility",
+        quoteText: "I draw my sword only in the path of Allah and for the protection of His Messenger.",
+        quoteAttribution: "- Az-Zubayr ibn Al-Awwam",
+        backLink: "Back to All Stories"
+      },
+      ar: {
+        mainTitle: "الزبير بن العوام",
+        subtitle: "المحارب الشاب",
+        mainBio: "كان الزبير بن العوام ابن عم النبي وأحد العشرة المبشرين بالجنة. كان مشهوراً بشجاعته الاستثنائية واعتُبر من أفضل المبارزين في عصره. أسلم وهو صغير جداً - في سن الخامسة عشرة فقط - وواجه فوراً اضطهاداً من عمه الذي كان يلفه في حصيرة ويشعل النار تحتها، محاولاً جعله يتخلى عن إيمانه. لكن الزبير الشاب لم يتزعزع أبداً. كان أول شخص يسل سيفه دفاعاً عن الإسلام وشارك في جميع المعارك الكبرى.",
+        lessonsTitle: "الدروس التي نتعلمها",
+        lesson1: "يمكن للشباب إظهار شجاعة مذهلة من أجل إيمانهم",
+        lesson2: "يجب استخدام مهارة القتال للدفاع عن الحق",
+        lesson3: "الاضطهاد في الشباب يمكن أن يبني شخصية قوية",
+        lesson4: "النجاح في المعركة يجب أن يقترن بالتواضع",
+        quoteText: "لا أسل سيفي إلا في سبيل الله ولحماية رسوله.",
+        quoteAttribution: "- الزبير بن العوام",
+        backLink: "العودة إلى جميع القصص"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      
+      document.documentElement.lang = newLang;
+      document.getElementById("lang-toggle").textContent = newLang === "en" ? "العربية" : "English";
+      
+      const content = langContent[newLang];
+      document.getElementById("main-title").textContent = content.mainTitle;
+      document.getElementById("subtitle").textContent = content.subtitle;
+      document.getElementById("main-bio").textContent = content.mainBio;
+      document.getElementById("lessons-title").innerHTML = `<span class="section-icon">💡</span> ${content.lessonsTitle}`;
+      document.getElementById("lesson1").textContent = content.lesson1;
+      document.getElementById("lesson2").textContent = content.lesson2;
+      document.getElementById("lesson3").textContent = content.lesson3;
+      document.getElementById("lesson4").textContent = content.lesson4;
+      document.getElementById("quote-text").textContent = content.quoteText;
+      document.getElementById("quote-attribution").textContent = content.quoteAttribution;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + content.backLink : "← " + content.backLink;
+    }
+  </script>
+</body>
+</html>

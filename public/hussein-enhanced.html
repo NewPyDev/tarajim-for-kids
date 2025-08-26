@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hussein ibn Ali - The Courageous Martyr | Tarajim for Kids</title>
+  <style>
+    :root {
+      --primary-color: #2c5530;
+      --secondary-color: #97b270;
+      --accent-color: #a8c686;
+      --background-color: #f8f9f6;
+      --text-color: #2c3e50;
+      --border-color: #e8f5e8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .header .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .language-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero-section {
+      background: white;
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-left: 8px solid var(--accent-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(45deg, var(--accent-color), transparent);
+      border-radius: 50%;
+      opacity: 0.1;
+      transform: translate(50%, -50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .character-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section {
+      background: white;
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--secondary-color);
+    }
+
+    .section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .biography-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .lesson-card {
+      background: var(--background-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+    }
+
+    .quote-section::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      opacity: 0.3;
+    }
+
+    .quote-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      background: var(--primary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Audio Player Styles */
+    .audio-section {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid var(--accent-color);
+    }
+
+    .audio-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .audio-players {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .audio-player {
+      background: var(--background-color);
+      border-radius: 10px;
+      padding: 20px;
+      border: 2px solid var(--secondary-color);
+    }
+
+    .audio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .audio-lang {
+      font-weight: 600;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+
+    .audio-duration {
+      background: var(--accent-color);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .play-btn {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      min-width: 100px;
+    }
+
+    .play-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    .progress-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 200px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: #ddd;
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent-color);
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+
+    .time-display {
+      font-size: 0.9rem;
+      color: var(--text-color);
+      min-width: 80px;
+    }
+
+    .download-btn {
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: var(--primary-color);
+      transform: translateY(-1px);
+    }
+
+    .audio-note {
+      text-align: center;
+      font-style: italic;
+      color: var(--secondary-color);
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(151, 178, 112, 0.1);
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .language-toggle {
+        position: static;
+        margin: 1rem auto;
+        display: block;
+        width: fit-content;
+      }
+      
+      .container {
+        padding: 1rem;
+      }
+      
+      .hero-section {
+        padding: 2rem;
+      }
+      
+      .lessons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audio-controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .progress-container {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button class="language-toggle" onclick="toggleLanguage()" id="lang-toggle">العربية</button>
+    <h1 id="main-title">Hussein ibn Ali</h1>
+    <p class="subtitle" id="subtitle">The Courageous Martyr & Leader of Paradise Youth</p>
+  </div>
+
+  <div class="container">
+    <h2 id="section-title">The Life of Hussein ibn Ali</h2>
+    
+    <!-- Audio Player Section -->
+    <div class="audio-section">
+      <h3 id="audio-title">Listen to the Story</h3>
+      <div class="audio-players">
+        <div class="audio-player">
+          <div class="audio-header">
+            <span class="audio-lang">🎧 English Narration</span>
+            <span class="audio-duration">7:00</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" onclick="toggleAudio('english')" id="play-btn-en">
+              <span class="play-icon">▶️</span>
+              <span class="play-text">Play</span>
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-en">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="time-display">0:00 / 7:00</span>
+            </div>
+            <button class="download-btn" onclick="downloadAudio('english')">
+              <span>📥 Download</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="audio-player">
+          <div class="audio-header">
+            <span class="audio-lang">🎧 Arabic Narration</span>
+            <span class="audio-duration">7:30</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" onclick="toggleAudio('arabic')" id="play-btn-ar">
+              <span class="play-icon">▶️</span>
+              <span class="play-text">تشغيل</span>
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-ar">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="time-display">0:00 / 7:30</span>
+            </div>
+            <button class="download-btn" onclick="downloadAudio('arabic')">
+              <span>📥 تحميل</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="audio-note">
+        <span id="audio-note-text">🎵 Audio narrations help children learn pronunciation and enjoy the stories better!</span>
+      </p>
+    </div>
+    
+    <h3 id="birth-title">Birth and Early Life</h3>
+    <div class="hero-section">
+      <div class="hero-content">
+        <span class="character-icon">⚔️</span>
+        <p class="biography-text" id="birth-text">
+          Hussein ibn Ali was born in 626 CE as the younger son of Ali ibn Abi Talib and Fatimah, making him the Prophet's cherished grandson. Like his brother Hassan, he was deeply loved by the Prophet, who called both of them 'the leaders of the youth of Paradise.'
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="life-title"><span class="section-icon">🛡️</span> His Courageous Stand</h3>
+      <p class="biography-text" id="life-text">
+        Hussein was known for his courage, strong sense of justice, and unwavering commitment to Islamic principles. When he saw corruption and injustice spreading in the Muslim community, he refused to remain silent. Despite knowing the dangers, he stood up against tyranny and oppression, choosing to uphold what was right even when it meant facing great danger.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3 id="achievements-title"><span class="section-icon">⚖️</span> The Ultimate Sacrifice</h3>
+      <p class="biography-text" id="achievements-text">
+        Hussein's famous stand at Karbala, where he chose death over compromising his principles, became a symbol of courage and sacrifice for justice. He showed that some principles are worth sacrificing everything for, and that true leadership means protecting the weak and oppressed. His sacrifice teaches us that faith gives strength to face any challenge.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3 id="lessons-title"><span class="section-icon">💡</span> Lessons We Learn</h3>
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <strong id="lesson1">Standing up for justice requires great courage</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson2">Some principles are worth sacrificing everything for</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson3">True leadership means protecting the weak and oppressed</strong>
+        </div>
+        <div class="lesson-card">
+          <strong id="lesson4">Faith gives strength to face any challenge</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <p class="quote-text" id="quote-text">
+        "Death with dignity is better than life with humiliation."
+      </p>
+      <p id="quote-attribution">- Hussein ibn Ali</p>
+    </div>
+
+    <div class="section">
+      <h3 id="death-title"><span class="section-icon">🕊️</span> His Eternal Legacy</h3>
+      <p class="biography-text" id="death-text">
+        Hussein was martyred in 680 CE at the age of 54 at the Battle of Karbala. His sacrifice became a symbol of standing up for justice and truth, no matter the cost. He is remembered as a hero who chose principles over life, and his courage continues to inspire people around the world to stand up for what is right.
+      </p>
+    </div>
+
+    <a href="index.html" class="back-link" id="back-link">← Back to All Stories</a>
+  </div>
+
+  <script>
+    const langContent = {
+      en: {
+        mainTitle: "Hussein ibn Ali",
+        subtitle: "The Courageous Martyr & Leader of Paradise Youth",
+        sectionTitle: "The Life of Hussein ibn Ali",
+        birthTitle: "Birth and Early Life",
+        birthText: "Hussein ibn Ali was born in 626 CE as the younger son of Ali ibn Abi Talib and Fatimah, making him the Prophet's cherished grandson. Like his brother Hassan, he was deeply loved by the Prophet, who called both of them 'the leaders of the youth of Paradise.'",
+        lifeTitle: "His Courageous Stand",
+        lifeText: "Hussein was known for his courage, strong sense of justice, and unwavering commitment to Islamic principles. When he saw corruption and injustice spreading in the Muslim community, he refused to remain silent. Despite knowing the dangers, he stood up against tyranny and oppression, choosing to uphold what was right even when it meant facing great danger.",
+        achievementsTitle: "The Ultimate Sacrifice",
+        achievementsText: "Hussein's famous stand at Karbala, where he chose death over compromising his principles, became a symbol of courage and sacrifice for justice. He showed that some principles are worth sacrificing everything for, and that true leadership means protecting the weak and oppressed. His sacrifice teaches us that faith gives strength to face any challenge.",
+        lessonsTitle: "Lessons We Learn",
+        lesson1: "Standing up for justice requires great courage",
+        lesson2: "Some principles are worth sacrificing everything for",
+        lesson3: "True leadership means protecting the weak and oppressed",
+        lesson4: "Faith gives strength to face any challenge",
+        quoteText: "Death with dignity is better than life with humiliation.",
+        quoteAttribution: "- Hussein ibn Ali",
+        deathTitle: "His Eternal Legacy",
+        deathText: "Hussein was martyred in 680 CE at the age of 54 at the Battle of Karbala. His sacrifice became a symbol of standing up for justice and truth, no matter the cost. He is remembered as a hero who chose principles over life, and his courage continues to inspire people around the world to stand up for what is right.",
+        backLink: "Back to All Stories"
+      },
+      ar: {
+        mainTitle: "الحسين بن علي",
+        subtitle: "الشهيد الشجاع وسيد شباب أهل الجنة",
+        sectionTitle: "حياة الحسين بن علي",
+        birthTitle: "الولادة والحياة المبكرة",
+        birthText: "وُلد الحسين بن علي عام 626 م كأصغر أبناء علي بن أبي طالب وفاطمة، مما جعله حفيد النبي العزيز. مثل أخيه الحسن، أحبه النبي كثيراً وأطلق عليهما 'سيدا شباب أهل الجنة'.",
+        lifeTitle: "موقفه الشجاع",
+        lifeText: "كان الحسين معروفاً بشجاعته وحسه القوي بالعدالة والتزامه الثابت بالمبادئ الإسلامية. عندما رأى الفساد والظلم ينتشر في المجتمع المسلم، رفض أن يبقى صامتاً. رغم معرفته بالمخاطر، وقف ضد الطغيان والظلم، مختاراً التمسك بما هو صحيح حتى لو كان ذلك يعني مواجهة خطر عظيم.",
+        achievementsTitle: "التضحية العظمى",
+        achievementsText: "موقف الحسين الشهير في كربلاء، حيث اختار الموت على التنازل عن مبادئه، أصبح رمزاً للشجاعة والتضحية من أجل العدالة. أظهر أن بعض المبادئ تستحق التضحية بكل شيء من أجلها، وأن القيادة الحقيقية تعني حماية الضعفاء والمظلومين. تضحيته تعلمنا أن الإيمان يعطي القوة لمواجهة أي تحدٍ.",
+        lessonsTitle: "الدروس التي نتعلمها",
+        lesson1: "الوقوف من أجل العدالة يتطلب شجاعة عظيمة",
+        lesson2: "بعض المبادئ تستحق التضحية بكل شيء من أجلها",
+        lesson3: "القيادة الحقيقية تعني حماية الضعفاء والمظلومين",
+        lesson4: "الإيمان يعطي القوة لمواجهة أي تحدٍ",
+        quoteText: "الموت بكرامة خير من الحياة بذل.",
+        quoteAttribution: "- الحسين بن علي",
+        deathTitle: "إرثه الخالد",
+        deathText: "استُشهد الحسين عام 680 م عن عمر يناهز 54 عاماً في معركة كربلاء. أصبحت تضحيته رمزاً للوقوف من أجل العدالة والحق، مهما كان الثمن. يُذكر كبطل اختار المبادئ على الحياة، وشجاعته لا تزال تلهم الناس حول العالم للوقوف من أجل ما هو صحيح.",
+        backLink: "العودة إلى جميع القصص"
+      }
+    };
+
+    function toggleLanguage() {
+      const currentLang = document.documentElement.lang;
+      const newLang = currentLang === "en" ? "ar" : "en";
+      
+      document.documentElement.lang = newLang;
+      document.getElementById("lang-toggle").textContent = newLang === "en" ? "العربية" : "English";
+      
+      const content = langContent[newLang];
+      document.getElementById("main-title").textContent = content.mainTitle;
+      document.getElementById("subtitle").textContent = content.subtitle;
+      document.getElementById("section-title").textContent = content.sectionTitle;
+      document.getElementById("birth-title").textContent = content.birthTitle;
+      document.getElementById("birth-text").textContent = content.birthText;
+      document.getElementById("life-title").innerHTML = `<span class="section-icon">🛡️</span> ${content.lifeTitle}`;
+      document.getElementById("life-text").textContent = content.lifeText;
+      document.getElementById("achievements-title").innerHTML = `<span class="section-icon">⚖️</span> ${content.achievementsTitle}`;
+      document.getElementById("achievements-text").textContent = content.achievementsText;
+      document.getElementById("lessons-title").innerHTML = `<span class="section-icon">💡</span> ${content.lessonsTitle}`;
+      document.getElementById("lesson1").textContent = content.lesson1;
+      document.getElementById("lesson2").textContent = content.lesson2;
+      document.getElementById("lesson3").textContent = content.lesson3;
+      document.getElementById("lesson4").textContent = content.lesson4;
+      document.getElementById("quote-text").textContent = content.quoteText;
+      document.getElementById("quote-attribution").textContent = content.quoteAttribution;
+      document.getElementById("death-title").innerHTML = `<span class="section-icon">🕊️</span> ${content.deathTitle}`;
+      document.getElementById("death-text").textContent = content.deathText;
+      document.getElementById("back-link").textContent = newLang === "ar" ? "→ " + content.backLink : "← " + content.backLink;
+      
+      // Update audio section text
+      const audioTitles = {
+        en: "Listen to the Story",
+        ar: "استمع إلى القصة"
+      };
+      const audioNotes = {
+        en: "🎵 Audio narrations help children learn pronunciation and enjoy the stories better!",
+        ar: "🎵 السرد الصوتي يساعد الأطفال على تعلم النطق والاستمتاع بالقصص بشكل أفضل!"
+      };
+      
+      document.getElementById("audio-title").textContent = audioTitles[newLang];
+      document.getElementById("audio-note-text").textContent = audioNotes[newLang];
+    }
+
+    // Audio Player Functionality
+    function toggleAudio(lang) {
+      // Since no audio files are uploaded yet, show helpful message
+      const langName = lang === 'english' ? 'English' : 'Arabic';
+      const characterName = 'Hussein ibn Ali';
+      alert(`🎧 ${langName} Audio Narration\n\nAudio files are not yet available for ${characterName}. To add audio:\n\n1. Record professional narrations in ${langName}\n2. Save as MP3 files in /audio/ folder\n3. Name them: hussein-${lang === 'english' ? 'en' : 'ar'}.mp3\n\nThe audio player will work automatically once files are added!`);
+    }
+
+    function downloadAudio(lang) {
+      const langName = lang === 'english' ? 'English' : 'Arabic';
+      alert(`📥 Download ${langName} Audio\n\nDownload feature will be available once audio files are uploaded.\n\nTo enable downloads:\n1. Upload audio files to /audio/ folder\n2. Update download links in the code`);
+    }
+  </script>
+</body>
+</html>

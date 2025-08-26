@@ -55,117 +55,685 @@
       "name": "Uthman ibn Affan",
       "nameArabic": "عثمان بن عفان",
       "description": "The third Caliph, known for his generosity and modesty. He preserved the Quran by compiling it into one standardized version.",
+      "longBiography": "Uthman ibn Affan was known as 'Dhun-Nurayn' (The Possessor of Two Lights) because he married two daughters of the Prophet Muhammad - first Ruqayyah, and after her death, Umm Kulthum. He was one of the earliest converts to Islam and one of the ten companions promised Paradise. Born into the wealthy Umayyad clan, Uthman was known for his exceptional generosity and modesty even before Islam. He used his vast wealth to support the Muslim community, buying the well of Rumah to provide free water for Muslims, and financing the army during difficult times. As the third Caliph, his greatest achievement was preserving the Quran by compiling it into one standardized version, ensuring that the holy book would remain unchanged for all time. He expanded the Islamic empire significantly, but his later years were marked by political challenges. Despite facing rebellion, he chose not to fight back to avoid bloodshed among Muslims, showing his deep concern for unity. He was martyred while reading the Quran, and his blood is said to have fallen on the verse 'Allah will suffice you against them.'",
+      "keyLessons": [
+        "Generosity and wealth should be used to serve Allah and the community",
+        "Preserving religious knowledge is one of the greatest services to humanity",
+        "Sometimes avoiding conflict is more important than defending yourself",
+        "Modesty and humility are beautiful qualities even for leaders"
+      ],
+      "famousQuote": "The best of people are those who benefit others, and Allah loves those who are useful to His creation.",
       "categories": [
         "caliphs"
       ],
       "birthYear": "576",
       "deathYear": "656",
       "slug": "uthman-enhanced",
-      "icon": "3"
+      "icon": "3",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 4,
       "name": "Ali ibn Abi Talib",
       "nameArabic": "علي بن أبي طالب",
       "description": "The fourth Caliph, known for his bravery and wisdom. He was a close family member of the Prophet and a just leader.",
+      "longBiography": "Ali ibn Abi Talib was the cousin and son-in-law of Prophet Muhammad, and the fourth Caliph of Islam. He was the first child to accept Islam and grew up in the Prophet's household. Known for his exceptional bravery, wisdom, and knowledge, Ali was called 'Asad Allah al-Ghalib' (The Victorious Lion of Allah). He was famous for his skill in battle, never losing a single combat, and his sword Zulfiqar became legendary. The Prophet said 'I am the city of knowledge and Ali is its gate,' highlighting his deep understanding of Islamic teachings. Ali was known for his justice as a judge and his eloquent speeches that are still studied today. He married Fatimah, the Prophet's beloved daughter, and became the father of Hassan and Hussein. As Caliph, he faced many challenges including civil wars, but he always prioritized justice and the welfare of all people, regardless of their tribe or status. His famous saying 'Be an enemy to the oppressor and a helper to the oppressed' reflects his commitment to justice. He was martyred while praying in the mosque, and his last words were about forgiveness and following the Quran and Sunnah.",
+      "keyLessons": [
+        "True courage means standing up for what is right, even when it's difficult",
+        "Knowledge and wisdom are more valuable than physical strength",
+        "Justice should be applied equally to all people",
+        "A leader should be humble and accessible to everyone"
+      ],
+      "famousQuote": "Be an enemy to the oppressor and a helper to the oppressed.",
       "categories": [
         "caliphs"
       ],
       "birthYear": "601",
       "deathYear": "661",
       "slug": "ali-enhanced",
-      "icon": "4"
+      "icon": "4",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 5,
       "name": "Khalid ibn Al-Walid",
       "nameArabic": "خالد بن الوليد",
       "description": "Known as the 'Sword of Allah', Khalid was an exceptional military commander who never lost a battle.",
+      "longBiography": "Khalid ibn Al-Walid was one of the greatest military strategists in history, earning the title 'Sayf Allah al-Maslul' (The Drawn Sword of Allah) from Prophet Muhammad. Initially, he was one of Islam's fiercest enemies and led the cavalry that caused significant damage to the Muslim army at the Battle of Uhud. However, his conversion to Islam marked a turning point in Islamic military history. Once he embraced Islam, he never lost a single battle in over 100 engagements. His tactical genius was evident in battles like Muta, where he saved the Muslim army from complete destruction through brilliant maneuvering, and later in the conquest of Iraq and Syria. Khalid was known for his innovative battle strategies, including the famous pincer movement at the Battle of Yarmuk that led to a decisive victory against the Byzantine Empire. Despite his military prowess, he was humble and deeply religious. When Caliph Umar relieved him of command, fearing that people might start relying on Khalid instead of Allah, Khalid accepted the decision without complaint. He famously said on his deathbed that he regretted dying in bed rather than as a martyr in battle, showing his dedication to jihad in the path of Allah.",
+      "keyLessons": [
+        "Past mistakes don't define your future if you sincerely repent and change",
+        "True strength comes from combining skill with humility",
+        "A good leader adapts their strategy to different situations",
+        "Accepting difficult decisions with grace shows true character"
+      ],
+      "famousQuote": "I have fought in so many battles seeking martyrdom that there is no spot on my body without a scar from a sword, spear, or arrow. Yet here I am, dying in my bed like a camel. May the eyes of cowards never sleep.",
       "categories": [
         "bravery"
       ],
       "birthYear": "592",
       "deathYear": "638",
       "slug": "khalid-enhanced",
-      "icon": "⚔️"
+      "icon": "⚔️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 6,
       "name": "Bilal ibn Rabah",
       "nameArabic": "بلال بن رباح",
       "description": "The first muezzin in Islam, known for his beautiful voice and unwavering faith despite persecution.",
+      "longBiography": "Bilal ibn Rabah was born into slavery in Mecca, but his story became one of the most inspiring examples of faith triumphing over oppression. When he accepted Islam, his master Umayyah ibn Khalaf subjected him to severe torture, placing heavy rocks on his chest under the scorching desert sun and demanding he renounce his faith. But Bilal would only repeat 'Ahad, Ahad' (One, One), affirming his belief in the oneness of Allah. Abu Bakr eventually bought and freed him, and Bilal became one of the Prophet's closest companions. His beautiful, powerful voice led the Prophet to choose him as the first muezzin (caller to prayer) in Islam. The sound of Bilal's call to prayer became a symbol of the new faith. He was also the Prophet's personal attendant and treasurer, showing the trust placed in him. After the Prophet's death, Bilal was so grief-stricken that he could barely call the adhan, as it reminded him too much of his beloved Prophet. He moved to Syria where he lived until his death. His story shows that in Islam, a person's worth is measured by their faith and character, not their social status or race.",
+      "keyLessons": [
+        "Faith can give you strength to endure any hardship",
+        "Your background doesn't determine your worth in Allah's eyes",
+        "Loyalty and dedication are rewarded by Allah",
+        "A beautiful voice should be used to serve Allah and call people to prayer"
+      ],
+      "famousQuote": "I would rather die than give up my faith in Allah, even if you place the mountains on my chest.",
       "categories": [
         "loyalty"
       ],
       "birthYear": "580",
       "deathYear": "640",
       "slug": "bilal-enhanced",
-      "icon": "🕌"
+      "icon": "🕌",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 7,
       "name": "Salman Al-Farisi",
       "nameArabic": "سلمان الفارسي",
       "description": "A Persian companion who traveled far in search of truth. His suggestion of digging a trench helped Muslims defend Medina.",
+      "longBiography": "Salman Al-Farisi's journey to Islam is one of the most remarkable stories of seeking truth. Born into a wealthy Persian Zoroastrian family, he became dissatisfied with his religion and began searching for the truth. He converted to Christianity and traveled from Persia to Syria, then to various places, always seeking a teacher who could guide him to the true religion. He was told by a Christian monk about a coming prophet in Arabia who would have specific signs. Through a series of events involving betrayal and slavery, Salman ended up as a slave in Medina just as the Prophet Muhammad arrived. When he met the Prophet, he tested him with the signs he had been told about and became convinced that this was the final messenger. The Prophet helped arrange for his freedom, and Salman became a beloved companion. His most famous contribution was suggesting the digging of a trench around Medina during the Battle of the Trench (Khandaq), a Persian military tactic that saved the Muslim community. The Prophet said 'Salman is from us, the family of the Prophet,' showing the high esteem in which he was held. Despite his foreign origin, he became fully integrated into the Muslim community and was known for his wisdom, humility, and deep spirituality.",
+      "keyLessons": [
+        "Seeking truth requires patience and perseverance",
+        "Allah guides those who sincerely search for Him",
+        "Your ethnic background doesn't matter in Islam - faith makes you family",
+        "Knowledge from different cultures can benefit the Muslim community"
+      ],
+      "famousQuote": "I searched for truth in many lands and among many peoples, until Allah guided me to the final truth through His Messenger.",
       "categories": [
         "kindness"
       ],
       "birthYear": "568",
       "deathYear": "656",
       "slug": "salman-enhanced",
-      "icon": "🏰"
+      "icon": "🏰",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 8,
       "name": "Sa'ad ibn Abi Waqqas",
       "nameArabic": "سعد بن أبي وقاص",
       "description": "A skilled archer and military commander who led the conquest of Persia. He was among the first to accept Islam.",
+      "longBiography": "Sa'ad ibn Abi Waqqas was one of the earliest converts to Islam and one of the ten companions promised Paradise. He was the Prophet's maternal uncle and was known as one of the best archers of his time. The Prophet once said 'Shoot, Sa'ad! May my father and mother be sacrificed for you!' during the Battle of Uhud, showing his exceptional skill and the Prophet's confidence in him. Sa'ad was among the first seven people to accept Islam and faced persecution in Mecca for his faith. His mother tried to force him to abandon Islam by refusing to eat or drink, but Sa'ad remained firm, saying he would not leave Islam even if she had a thousand souls and they departed one by one. As a military commander, Sa'ad led the conquest of Iraq and Persia, achieving decisive victories at the battles of Qadisiyyah and other campaigns. He was known for his strategic brilliance and his ability to inspire his troops. Despite his military success, he remained humble and pious. When he became wealthy from the conquests, he used his wealth generously for charitable causes. He was also known for his prayers being answered by Allah, and people would ask him to pray for them. He lived a long life and was the last of the ten promised Paradise to die.",
+      "keyLessons": [
+        "Skills and talents should be used in service of Allah",
+        "Sometimes you must choose faith over family pressure",
+        "Success in this world should not make you forget the afterlife",
+        "A righteous person's prayers have special power"
+      ],
+      "famousQuote": "By Allah, I will not leave my religion even if you have a thousand souls and they depart one by one.",
       "categories": [
         "bravery"
       ],
       "birthYear": "595",
       "deathYear": "674",
       "slug": "saad",
-      "icon": "🏹"
+      "icon": "🏹",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 9,
       "name": "Zaid ibn Thabit",
       "nameArabic": "زيد بن ثابت",
       "description": "The chief scribe of the Prophet and compiler of the Quran. His intelligence helped preserve the divine message.",
+      "longBiography": "Zaid ibn Thabit was one of the most intelligent and learned companions of the Prophet Muhammad. When he was just 11 years old, he came to the Prophet wanting to participate in the Battle of Badr, but was turned away due to his young age. However, the Prophet recognized his exceptional intelligence and made him his personal scribe. Zaid had an amazing ability to learn languages quickly - the Prophet asked him to learn Hebrew and Syriac, which he mastered in just a few weeks. This linguistic skill made him invaluable for communicating with Jewish and Christian communities. As the Prophet's chief scribe, Zaid wrote down the Quranic revelations as they came, ensuring their accurate preservation. After the Prophet's death, when many Quran memorizers were killed in the Battle of Yamama, Abu Bakr commissioned Zaid to compile the Quran into a single book. Later, during Uthman's caliphate, Zaid led the committee that created the standardized version of the Quran that we have today. His meticulous work and attention to detail ensured that the Quran was preserved exactly as it was revealed. He was also known for his humility, piety, and his expertise in Islamic law and inheritance laws. The Prophet said about him, 'The most knowledgeable of my Ummah in matters of inheritance is Zaid ibn Thabit.'",
+      "keyLessons": [
+        "Intelligence and learning should be used to serve Allah and preserve His message",
+        "Young people can make important contributions if they are dedicated",
+        "Attention to detail is crucial when handling sacred responsibilities",
+        "Learning multiple languages can help you serve your community better"
+      ],
+      "famousQuote": "I will not add a single letter to the Quran, nor will I remove one, for it is the word of Allah that must be preserved exactly as revealed.",
       "categories": [
         "loyalty"
       ],
       "birthYear": "610",
       "deathYear": "665",
       "slug": "zaid",
-      "icon": "📜"
+      "icon": "📜",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 10,
       "name": "Abu Ubaidah ibn Al-Jarrah",
       "nameArabic": "أبو عبيدة بن الجراح",
       "description": "Known as the Trustworthy One of the Ummah, he led the conquest of Syria and was one of the ten promised Paradise.",
+      "longBiography": "Abu Ubaidah ibn Al-Jarrah was given the title 'Amin al-Ummah' (The Trustworthy One of the Ummah) by Prophet Muhammad, which speaks volumes about his character and integrity. He was one of the earliest converts to Islam and one of the ten companions promised Paradise. Abu Ubaidah was known for his exceptional honesty, humility, and selflessness. During the Battle of Uhud, when the Prophet was injured and his helmet was embedded in his face, Abu Ubaidah carefully removed the helmet pieces with his teeth, losing two of his front teeth in the process, but he was more concerned about the Prophet's wellbeing than his own pain. He was chosen by the Prophet to lead the expedition to the coast, and later became the supreme commander of the Muslim forces in Syria. His military leadership was marked by both strategic brilliance and remarkable fairness in dealing with conquered populations. He was so trusted that when there was a dispute about leadership between the Muhajirun and Ansar, both groups agreed that Abu Ubaidah should be the Caliph, though he declined in favor of Abu Bakr. He lived very simply despite his high position, and when Umar visited him in Syria, he found Abu Ubaidah living in a simple tent with only basic necessities. He died during a plague in Syria, and his last words were advice to his soldiers to remain steadfast in their faith.",
+      "keyLessons": [
+        "Trustworthiness is one of the most valuable qualities a person can have",
+        "True leadership means serving others, not seeking personal gain",
+        "Humility and simple living are signs of a strong character",
+        "Putting others' needs before your own shows true nobility"
+      ],
+      "famousQuote": "I am just one of you, no better than any of you. If I do right, help me; if I do wrong, correct me.",
       "categories": [
         "loyalty"
       ],
       "birthYear": "583",
       "deathYear": "639",
       "slug": "abu-ubaidah",
-      "icon": "🛡️"
+      "icon": "🛡️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     },
     {
       "id": 11,
       "name": "Abu Dhar Al-Ghifari",
       "nameArabic": "أبو ذر الغفاري",
       "description": "Known for his strict honesty and speaking truth to power, described by the Prophet as the most truthful person under the sky.",
+      "longBiography": "Abu Dhar Al-Ghifari was known for his uncompromising honesty and his courage in speaking the truth, regardless of the consequences. The Prophet Muhammad said about him, 'The sky has not shaded, nor has the earth carried, anyone more truthful than Abu Dhar.' He was among the earliest converts to Islam, accepting the faith even before meeting the Prophet in person, based solely on what he had heard about the message. Abu Dhar was a Bedouin from the Ghifar tribe who lived a simple, ascetic lifestyle and had no interest in worldly possessions. He was known for his direct manner of speaking and his willingness to criticize anyone, regardless of their status, if he felt they were doing wrong. This sometimes put him at odds with the authorities, including during the caliphate of Uthman, when he criticized the accumulation of wealth by some officials. His commitment to social justice and his concern for the poor were legendary. He would give away everything he had and live in poverty himself rather than see others in need. The Prophet had a special affection for Abu Dhar and would often seek his company. Abu Dhar's famous saying 'I love poverty more than wealth, and sickness more than health' reflected his belief that hardships in this world would bring rewards in the afterlife. He spent his final years in exile in the desert, where he died as he had lived - with nothing but his faith.",
+      "keyLessons": [
+        "Speaking the truth is more important than pleasing people",
+        "Simplicity and contentment bring true happiness",
+        "Standing up for social justice is a religious duty",
+        "Worldly possessions should not be the goal of life"
+      ],
+      "famousQuote": "I love poverty more than wealth, and sickness more than health, because whatever Allah chooses for me is better than what I choose for myself.",
       "categories": [
         "kindness"
       ],
       "birthYear": "568",
       "deathYear": "652",
       "slug": "abu-dhar",
-      "icon": "💎"
+      "icon": "💎",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 12,
+      "name": "Aisha bint Abu Bakr",
+      "nameArabic": "عائشة بنت أبي بكر",
+      "description": "The Prophet's beloved wife, known as the Mother of Believers. She was a great scholar who taught many companions and preserved thousands of Hadiths.",
+      "longBiography": "Aisha bint Abu Bakr was the daughter of Abu Bakr As-Siddiq and became one of the most important figures in Islamic history. Known as Umm al-Mu'minin (Mother of the Believers), she was the Prophet's youngest wife and his most beloved after Khadijah. Aisha was highly intelligent and had an exceptional memory. She memorized and transmitted over 2,000 Hadiths, making her one of the most important sources of Islamic knowledge. After the Prophet's death, she became a teacher and scholar, with many companions coming to learn from her. She was known for her quick wit, deep understanding of Islamic law, and her role in preserving the Prophet's teachings. Her house was where the Prophet was buried, and she spent her later years teaching and guiding the Muslim community. She was particularly known for her knowledge of poetry, medicine, and Islamic jurisprudence.",
+      "keyLessons": [
+        "Education and knowledge are precious gifts from Allah",
+        "Women can be great scholars and teachers",
+        "Preserving and sharing knowledge is a noble duty",
+        "Intelligence and memory should be used to serve Islam"
+      ],
+      "famousQuote": "Do not belittle any good deed, even meeting your brother with a cheerful face.",
+      "categories": ["scholars", "kindness"],
+      "birthYear": "613",
+      "deathYear": "678",
+      "slug": "aisha-enhanced",
+      "icon": "📚",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 13,
+      "name": "Fatimah bint Muhammad",
+      "nameArabic": "فاطمة بنت محمد",
+      "description": "The Prophet's beloved daughter, known for her piety and devotion. She was the mother of Hassan and Hussein and is called the leader of women in Paradise.",
+      "longBiography": "Fatimah bint Muhammad was the youngest daughter of Prophet Muhammad and Khadijah, and she held a special place in her father's heart. Known as Az-Zahra (The Radiant One), she was famous for her piety, patience, and devotion to her family. She married Ali ibn Abi Talib and became the mother of Hassan and Hussein, the Prophet's beloved grandsons. Despite facing many hardships, including poverty and the loss of her father, she remained steadfast in her faith. The Prophet said she would be the leader of women in Paradise. Fatimah was known for her generosity - she would often give away her food to the needy even when her own family was hungry. She supported her husband Ali and raised her children with Islamic values. Her life was a perfect example of how to balance being a devoted daughter, loving wife, and caring mother while maintaining strong faith.",
+      "keyLessons": [
+        "Family bonds and respect for parents are sacred",
+        "Patience during hardship brings great reward",
+        "Generosity and helping others is more important than personal comfort",
+        "Women can be leaders and examples for others"
+      ],
+      "famousQuote": "Allah is pleased when a mother is pleased, and Allah is displeased when a mother is displeased.",
+      "categories": ["kindness", "family"],
+      "birthYear": "605",
+      "deathYear": "632",
+      "slug": "fatimah-enhanced",
+      "icon": "🌹",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 14,
+      "name": "Hassan ibn Ali",
+      "nameArabic": "الحسن بن علي",
+      "description": "The Prophet's eldest grandson, known for his wisdom and peacemaking. He chose unity over conflict to preserve the Muslim community.",
+      "longBiography": "Hassan ibn Ali was the eldest son of Ali ibn Abi Talib and Fatimah, making him the Prophet's beloved grandson. The Prophet loved him dearly and often carried him on his shoulders during prayers. Hassan was known for his striking resemblance to the Prophet and his gentle, wise nature. When he became Caliph after his father's death, he faced a difficult situation with civil war threatening the Muslim community. In a remarkable act of wisdom and sacrifice, he gave up his position to Muawiya to prevent bloodshed among Muslims. This act of peacemaking earned him the title 'Sayyid Shabab Ahl al-Jannah' (Leader of the Youth of Paradise). Hassan was also known for his generosity - he gave away his wealth multiple times in his life and was famous for his beautiful recitation of the Quran. His decision to prioritize unity over power showed his deep understanding of Islamic values.",
+      "keyLessons": [
+        "Sometimes sacrifice is needed for the greater good",
+        "Peace and unity are more valuable than power",
+        "Wisdom means knowing when to step back",
+        "Following the Prophet's example in kindness and generosity"
+      ],
+      "famousQuote": "I never competed with anyone in worldly matters, for if they were believers, I would not want to compete with my brothers, and if they were disbelievers, I would not lower myself to their level.",
+      "categories": ["wisdom", "peace"],
+      "birthYear": "625",
+      "deathYear": "670",
+      "slug": "hassan-enhanced",
+      "icon": "🕊️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 15,
+      "name": "Hussein ibn Ali",
+      "nameArabic": "الحسين بن علي",
+      "description": "The Prophet's younger grandson, known for his courage and sacrifice. He stood up for justice and truth even when facing great danger.",
+      "longBiography": "Hussein ibn Ali was the younger son of Ali ibn Abi Talib and Fatimah, and the Prophet's cherished grandson. Like his brother Hassan, he was deeply loved by the Prophet, who called both of them 'the leaders of the youth of Paradise.' Hussein was known for his courage, strong sense of justice, and unwavering commitment to Islamic principles. When he saw corruption and injustice spreading in the Muslim community, he refused to remain silent. Despite knowing the dangers, he stood up against tyranny and oppression. His famous stand at Karbala, where he chose death over compromising his principles, became a symbol of courage and sacrifice for justice. Hussein was also known for his deep spirituality, spending long hours in prayer and remembrance of Allah. His life teaches us that sometimes we must make difficult choices to uphold what is right, even if it costs us everything.",
+      "keyLessons": [
+        "Standing up for justice requires great courage",
+        "Some principles are worth sacrificing everything for",
+        "True leadership means protecting the weak and oppressed",
+        "Faith gives strength to face any challenge"
+      ],
+      "famousQuote": "Death with dignity is better than life with humiliation.",
+      "categories": ["courage", "justice"],
+      "birthYear": "626",
+      "deathYear": "680",
+      "slug": "hussein-enhanced",
+      "icon": "⚔️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 16,
+      "name": "Abdullah ibn Umar",
+      "nameArabic": "عبد الله بن عمر",
+      "description": "Son of Umar ibn Al-Khattab, known for his precise following of the Prophet's Sunnah and his deep knowledge of Islamic law.",
+      "longBiography": "Abdullah ibn Umar was the son of the second Caliph Umar ibn Al-Khattab, but he earned respect through his own piety and knowledge, not just his father's position. He was known for following the Prophet's Sunnah more precisely than almost anyone else. If the Prophet walked on a certain side of the road, Abdullah would walk on the same side. If the Prophet stopped at a particular place, Abdullah would stop there too. This wasn't just imitation - it showed his deep love and respect for the Prophet. He was one of the most knowledgeable companions in Islamic law and Hadith, and many people came to him for religious guidance. Despite his father being Caliph, Abdullah lived a simple life and was known for his humility. He was very careful about money and would not accept gifts from rulers, preferring to earn his living through trade. His life shows us the importance of following the Prophet's example in every aspect of our lives.",
+      "keyLessons": [
+        "Following the Prophet's example in small details shows true love",
+        "Knowledge should be paired with humility",
+        "Independence and earning honest living is important",
+        "Piety is more valuable than family status"
+      ],
+      "famousQuote": "Be in this world as if you were a stranger or a traveler along a path.",
+      "categories": ["scholars", "piety"],
+      "birthYear": "610",
+      "deathYear": "693",
+      "slug": "abdullah-umar-enhanced",
+      "icon": "📖",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 17,
+      "name": "Anas ibn Malik",
+      "nameArabic": "أنس بن مالك",
+      "description": "The Prophet's young servant who lived the longest among the companions. He served the Prophet for 10 years and narrated many Hadiths.",
+      "longBiography": "Anas ibn Malik was just a young boy when his mother brought him to serve the Prophet Muhammad in Medina. For ten years, from age 10 to 20, he had the incredible privilege of living in the Prophet's household and serving him daily. This close relationship gave him unique insights into the Prophet's character and daily habits. Anas was known for his excellent memory and kind heart. He narrated over 2,000 Hadiths, making him one of the most important sources of the Prophet's teachings. The Prophet never scolded him in all those years of service, showing remarkable patience and kindness. Anas lived an exceptionally long life - he was the last of the major companions to die, living to be over 100 years old. This meant he was able to teach many generations about the Prophet's life and character. His stories give us wonderful details about how the Prophet ate, slept, prayed, and interacted with people.",
+      "keyLessons": [
+        "Serving others with a good heart brings great blessings",
+        "Young people can make important contributions",
+        "Good memory should be used to preserve valuable knowledge",
+        "Long life is a gift that should be used to benefit others"
+      ],
+      "famousQuote": "I served the Prophet for ten years, and he never said 'Uff' to me, nor did he ask why I did something or why I didn't do something.",
+      "categories": ["service", "loyalty"],
+      "birthYear": "612",
+      "deathYear": "712",
+      "slug": "anas-enhanced",
+      "icon": "👦",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 18,
+      "name": "Amir ibn Fuhayrah",
+      "nameArabic": "عامر بن فهيرة",
+      "description": "A former slave freed by Abu Bakr, he became a shepherd and loyal companion who helped during the Prophet's migration to Medina.",
+      "longBiography": "Amir ibn Fuhayrah was born into slavery but his life changed completely when Abu Bakr freed him and he accepted Islam. As a freed slave, he could have chosen an easy life, but instead he dedicated himself to serving Islam and the Prophet. He became a shepherd, and this simple job played a crucial role in Islamic history. During the Prophet's dangerous migration (Hijrah) from Mecca to Medina, Amir used his flock of sheep to help hide the Prophet and Abu Bakr's tracks. He would graze his sheep over their footprints, making it impossible for their enemies to follow them. He also brought them fresh milk and news from Mecca. Later, he participated in many battles and was known for his bravery and loyalty. His story shows that no matter what background you come from - even slavery - you can become a hero through faith and dedication. He proved that every job, even being a shepherd, can be used to serve Allah and help others.",
+      "keyLessons": [
+        "Your past doesn't determine your future",
+        "Every job can be used to serve Allah",
+        "Freedom should be used to help others",
+        "Small acts of service can have huge impacts"
+      ],
+      "famousQuote": "I was a slave, but Islam made me free. I was nothing, but faith made me everything.",
+      "categories": ["freedom", "service"],
+      "birthYear": "590",
+      "deathYear": "625",
+      "slug": "amir-enhanced",
+      "icon": "🐑",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 19,
+      "name": "Sumayyah bint Khayyat",
+      "nameArabic": "سمية بنت خياط",
+      "description": "The first martyr in Islam, a brave woman who refused to give up her faith despite torture. She was the mother of Ammar ibn Yasir.",
+      "longBiography": "Sumayyah bint Khayyat holds the honor of being the first martyr in Islamic history. She was originally from Abyssinia (Ethiopia) and came to Mecca where she married Yasir ibn Amir. When she and her family accepted Islam, they faced terrible persecution from the Meccan tribes. As a woman and a former slave, she was considered an easy target for torture and abuse. The enemies of Islam tortured her and her family in the desert heat, trying to force them to give up their new faith. Despite the pain and suffering, Sumayyah refused to say anything against Islam or the Prophet Muhammad. She showed incredible courage and strength, choosing to die rather than abandon her beliefs. Her sacrifice inspired many other Muslims to remain steadfast in their faith during difficult times. The Prophet himself saw her suffering and promised her Paradise. Her story teaches us that faith is more precious than life itself, and that women can be just as brave and strong as men when it comes to standing up for what's right.",
+      "keyLessons": [
+        "Faith is worth any sacrifice",
+        "Women can be incredibly brave and strong",
+        "Standing up for beliefs requires great courage",
+        "The first to sacrifice often inspire many others"
+      ],
+      "famousQuote": "I will never abandon my faith, even if it costs me my life.",
+      "categories": ["courage", "martyrdom"],
+      "birthYear": "550",
+      "deathYear": "615",
+      "slug": "sumayyah-enhanced",
+      "icon": "👩",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 20,
+      "name": "Khadijah bint Khuwaylid",
+      "nameArabic": "خديجة بنت خويلد",
+      "description": "The Prophet's first wife and the first person to believe in Islam. She was a successful businesswoman who supported the Prophet with her wealth and love.",
+      "longBiography": "Khadijah bint Khuwaylid was a remarkable woman who played a crucial role in the early days of Islam. She was a successful businesswoman in Mecca, known for her intelligence, integrity, and wealth. When she hired the young Muhammad to manage her trade caravans, she was impressed by his honesty and character. Despite being 15 years older than him, she proposed marriage, and they had a loving partnership for 25 years. When the Prophet received his first revelation and was frightened and confused, Khadijah was the first person to believe in him and comfort him. She said the famous words: 'Allah would never disgrace you, for you maintain family ties, help the poor, serve your guests generously, and assist those afflicted by calamity.' She used her wealth to support the early Muslim community and never complained about the hardships that came with following Islam. The Prophet loved her so much that even after her death, he would remember her kindness and speak of her with great affection.",
+      "keyLessons": [
+        "Supporting others in their mission is a noble calling",
+        "Women can be successful in business and leadership",
+        "True love means believing in your partner's dreams",
+        "Wealth should be used to help others and support good causes"
+      ],
+      "famousQuote": "Allah would never disgrace you, for you maintain family ties, help the poor, serve your guests generously, and assist those afflicted by calamity.",
+      "categories": ["support", "business"],
+      "birthYear": "555",
+      "deathYear": "619",
+      "slug": "khadijah-enhanced",
+      "icon": "💼",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 21,
+      "name": "Hamza ibn Abdul-Muttalib",
+      "nameArabic": "حمزة بن عبد المطلب",
+      "description": "The Prophet's uncle, known as the 'Lion of Allah' for his bravery in battle. His conversion to Islam strengthened the Muslim community.",
+      "longBiography": "Hamza ibn Abdul-Muttalib was the Prophet Muhammad's uncle and one of the bravest warriors in Arabian history. Known as 'Asad Allah' (Lion of Allah), he was famous for his strength, courage, and skill in battle. Initially, Hamza wasn't interested in Islam, but when he heard that Abu Jahl had insulted his nephew Muhammad, he became furious. He went straight to the Kaaba, found Abu Jahl, and declared his conversion to Islam right there, challenging anyone who had a problem with it. His conversion was a turning point for the early Muslim community because his reputation as a fearless warrior gave them protection and confidence. In the Battle of Uhud, he fought like a lion, killing many enemies before he was martyred by Wahshi, a slave who had been promised freedom for killing him. The Prophet was deeply saddened by his death and called him 'the best of martyrs.' Hamza's story shows us that family loyalty, when combined with faith, can create incredible strength.",
+      "keyLessons": [
+        "Protecting family honor is important",
+        "Courage in battle should be matched by courage in faith",
+        "Strong people should use their strength to protect the weak",
+        "Converting to Islam can inspire and protect others"
+      ],
+      "famousQuote": "I am on the religion of my nephew Muhammad, and I believe in what he believes.",
+      "categories": ["courage", "family"],
+      "birthYear": "568",
+      "deathYear": "625",
+      "slug": "hamza-enhanced",
+      "icon": "🦁",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 22,
+      "name": "Ammar ibn Yasir",
+      "nameArabic": "عمار بن ياسر",
+      "description": "Son of the first martyrs in Islam, known for his unwavering faith and loyalty. The Prophet said Paradise yearns for him.",
+      "longBiography": "Ammar ibn Yasir was the son of Yasir ibn Amir and Sumayyah bint Khayyat, making him the child of the first martyrs in Islamic history. He grew up witnessing his parents' incredible sacrifice for their faith, which shaped his own unwavering commitment to Islam. Despite facing severe torture and persecution in Mecca, Ammar never wavered in his beliefs. The Prophet Muhammad had special affection for him and said 'Paradise yearns for three people: Ali, Ammar, and Salman.' He was known for his simple lifestyle, deep spirituality, and complete loyalty to the Prophet and later to Ali ibn Abi Talib. Ammar participated in all the major battles alongside the Prophet and was known for his courage and skill in combat. He lived a long life and continued to fight for justice even in his old age. At the Battle of Siffin, when he was over 90 years old, he fought on Ali's side and was martyred. His last words were about his eagerness to meet the Prophet and his parents in Paradise.",
+      "keyLessons": [
+        "Children of martyrs can carry on their parents' legacy",
+        "Faith tested by hardship becomes stronger",
+        "Age should not stop us from fighting for what's right",
+        "Paradise is earned through sacrifice and dedication"
+      ],
+      "famousQuote": "We have believed in Allah and His Messenger, and we will never change our faith even if we are cut into pieces.",
+      "categories": ["courage", "loyalty"],
+      "birthYear": "594",
+      "deathYear": "657",
+      "slug": "ammar-enhanced",
+      "icon": "⚔️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 23,
+      "name": "Ja'far ibn Abi Talib",
+      "nameArabic": "جعفر بن أبي طالب",
+      "description": "Ali's brother and the Prophet's cousin, known for his eloquent speech and leadership of the migration to Abyssinia.",
+      "longBiography": "Ja'far ibn Abi Talib was the older brother of Ali ibn Abi Talib and cousin of the Prophet Muhammad. He was known for his handsome appearance, eloquent speech, and generous nature. When the early Muslims faced severe persecution in Mecca, the Prophet chose Ja'far to lead the first migration to Abyssinia (Ethiopia). There, he delivered a famous speech to the Negus (king) explaining Islam, which was so moving that the Christian king granted the Muslims protection. Ja'far's speech showed his deep understanding of Islam and his ability to communicate its beauty to people of other faiths. He spent many years in Abyssinia, missing the early battles, but when he returned to Medina, the Prophet was so happy that he said he didn't know what made him happier - the conquest of Khaybar or Ja'far's return. At the Battle of Mu'tah, when the Muslim commanders were killed one by one, Ja'far took the flag and fought bravely until he was martyred. The Prophet said Allah had given him wings in Paradise to fly wherever he wished.",
+      "keyLessons": [
+        "Good communication can protect entire communities",
+        "Leadership means taking care of others in difficult times",
+        "Sacrifice for the community brings eternal rewards",
+        "Understanding your faith deeply helps you explain it to others"
+      ],
+      "famousQuote": "We worship Allah alone, we pray to Him, we are truthful and trustworthy, and we maintain family ties.",
+      "categories": ["leadership", "eloquence"],
+      "birthYear": "590",
+      "deathYear": "629",
+      "slug": "jafar-enhanced",
+      "icon": "🕊️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 24,
+      "name": "Abdur-Rahman ibn Awf",
+      "nameArabic": "عبد الرحمن بن عوف",
+      "description": "One of the ten promised Paradise, known for his business success and incredible generosity to the Muslim community.",
+      "longBiography": "Abdur-Rahman ibn Awf was one of the wealthiest companions and a brilliant businessman, but more importantly, he was incredibly generous with his wealth. He was one of the ten companions promised Paradise by the Prophet. When he migrated to Medina, he started with nothing but quickly built a successful trading business through hard work and honesty. Despite his wealth, he lived simply and gave away most of his money to help the poor and support Islamic causes. He once donated half of his entire wealth - 4,000 gold coins - to the Muslim army. On another occasion, he provided 700 camels loaded with supplies for the poor. The Prophet said that Abdur-Rahman would enter Paradise crawling because of his wealth, but his generosity would help him. He was also known for his wisdom and was chosen by Umar ibn Al-Khattab to be part of the council that would select the next Caliph. His life shows that wealth is not evil if it's earned honestly and used to help others.",
+      "keyLessons": [
+        "Wealth should be earned through honest work",
+        "Success in business should lead to helping others",
+        "Generosity brings you closer to Paradise",
+        "Money is a tool to serve Allah and the community"
+      ],
+      "famousQuote": "I do not want to be the richest man in the graveyard. I want to go to bed knowing I helped someone today.",
+      "categories": ["generosity", "business"],
+      "birthYear": "580",
+      "deathYear": "654",
+      "slug": "abdur-rahman-enhanced",
+      "icon": "💰",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 25,
+      "name": "Talha ibn Ubaydullah",
+      "nameArabic": "طلحة بن عبيد الله",
+      "description": "One of the ten promised Paradise, known as 'The Living Martyr' for his bravery in defending the Prophet at the Battle of Uhud.",
+      "longBiography": "Talha ibn Ubaydullah was one of the ten companions promised Paradise and earned the nickname 'The Living Martyr' for his incredible bravery at the Battle of Uhud. When the Muslim army was in chaos and the Prophet was in danger, Talha threw himself between the Prophet and the enemy arrows. He used his hand to shield the Prophet's face, and his hand was paralyzed for the rest of his life from the injuries. The Prophet said 'Whoever wants to see a martyr walking on earth, let him look at Talha.' He was also very wealthy and extremely generous, often giving away large amounts of money to help the poor and needy. Talha was known for his handsome appearance, kind heart, and business skills. He was one of the early converts to Islam and faced persecution in Mecca before migrating to Medina. Throughout his life, he remained close to the Prophet and was always ready to sacrifice everything for Islam. His courage and generosity made him beloved by all the companions.",
+      "keyLessons": [
+        "True friendship means being willing to sacrifice for others",
+        "Physical courage should be matched by generosity of heart",
+        "Protecting the Prophet and Islam is worth any sacrifice",
+        "Wealth and bravery together can serve great purposes"
+      ],
+      "famousQuote": "I would give my life and everything I own to protect the Messenger of Allah.",
+      "categories": ["courage", "generosity"],
+      "birthYear": "594",
+      "deathYear": "656",
+      "slug": "talha-enhanced",
+      "icon": "🛡️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 26,
+      "name": "Az-Zubayr ibn Al-Awwam",
+      "nameArabic": "الزبير بن العوام",
+      "description": "One of the ten promised Paradise and the Prophet's cousin, known for his exceptional courage and skill with the sword.",
+      "longBiography": "Az-Zubayr ibn Al-Awwam was the Prophet's cousin and one of the ten companions promised Paradise. He was famous for his exceptional courage and was considered one of the best swordsmen of his time. He accepted Islam when he was very young - only 15 years old - and immediately faced persecution from his uncle who would wrap him in a mat and light a fire under it, trying to make him give up his faith. But young Zubayr never wavered. He was the first person to draw his sword in defense of Islam and participated in all the major battles. At the Battle of Yarmuk, he broke through the enemy lines so fiercely that he came out the other side covered in wounds but victorious. The Prophet gave him the title 'Hawari' (disciple), the same title given to the disciples of Jesus. Despite his wealth and status, he was known for his humility and generosity. He was also a successful businessman and used his wealth to help the Muslim community. His son Abdullah became one of the great scholars of Islam.",
+      "keyLessons": [
+        "Young people can show incredible courage for their faith",
+        "Skill in fighting should be used to defend what's right",
+        "Persecution in youth can build strong character",
+        "Success in battle should be paired with humility"
+      ],
+      "famousQuote": "I draw my sword only in the path of Allah and for the protection of His Messenger.",
+      "categories": ["courage", "youth"],
+      "birthYear": "594",
+      "deathYear": "656",
+      "slug": "zubayr-enhanced",
+      "icon": "⚔️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 27,
+      "name": "Sa'id ibn Zayd",
+      "nameArabic": "سعيد بن زيد",
+      "description": "One of the ten promised Paradise, he was an early convert who helped Umar ibn Al-Khattab embrace Islam.",
+      "longBiography": "Sa'id ibn Zayd was one of the ten companions promised Paradise and played a crucial role in one of the most important conversions in Islamic history. He was married to Fatimah bint Al-Khattab, who was the sister of Umar ibn Al-Khattab. Both Sa'id and his wife secretly converted to Islam before Umar did. One day, when Umar came to their house in anger, planning to harm them for becoming Muslims, he found them reading the Quran. The beauty of the verses he heard that day contributed to Umar's own conversion to Islam. Sa'id was known for his gentle nature, deep faith, and strong character. He was one of the early converts who faced persecution in Mecca but remained steadfast. He participated in many battles and was known for his bravery and loyalty. Despite being promised Paradise, he remained humble and continued to worship Allah with fear and hope. His life shows how one person's faith can influence others and change the course of history.",
+      "keyLessons": [
+        "Your faith can influence your family members",
+        "Sometimes the best da'wah is through good example",
+        "Being promised Paradise should increase humility, not pride",
+        "Secret faith sometimes prepares for public impact"
+      ],
+      "famousQuote": "The best of people are those who benefit others, and the worst are those who harm others.",
+      "categories": ["influence", "family"],
+      "birthYear": "593",
+      "deathYear": "673",
+      "slug": "said-enhanced",
+      "icon": "📖",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 28,
+      "name": "Abu Hurairah",
+      "nameArabic": "أبو هريرة",
+      "description": "Known for his exceptional memory, he narrated more Hadiths than any other companion, preserving the Prophet's teachings for future generations.",
+      "longBiography": "Abu Hurairah, whose real name was Abd al-Rahman ibn Sakhr, got his nickname because he used to carry a small cat (hurairah means 'little cat' in Arabic) and was very kind to animals. He came to Islam relatively late, only three years before the Prophet's death, but he made the most of that time. He had an incredible memory and spent every possible moment with the Prophet, listening to his teachings and memorizing his words. While other companions were busy with trade or family, Abu Hurairah dedicated his life to learning. He narrated over 5,000 Hadiths, more than any other companion. The Prophet once prayed for Abu Hurairah's memory to be blessed, and after that, he never forgot anything he heard. He was very poor and often went hungry, but he chose knowledge over wealth. After the Prophet's death, he became one of the most important teachers in the Muslim community. His dedication to preserving the Prophet's teachings has benefited Muslims for over 1,400 years.",
+      "keyLessons": [
+        "It's never too late to start learning",
+        "Good memory is a gift that should be used to help others",
+        "Sometimes poverty can lead to greater spiritual wealth",
+        "Dedication to learning brings lasting benefits"
+      ],
+      "famousQuote": "I have memorized two vessels of knowledge from the Messenger of Allah. I have spread one, but if I spread the other, you would cut my throat.",
+      "categories": ["knowledge", "memory"],
+      "birthYear": "603",
+      "deathYear": "681",
+      "slug": "abu-hurairah-enhanced",
+      "icon": "🐱",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 29,
+      "name": "Mu'adh ibn Jabal",
+      "nameArabic": "معاذ بن جبل",
+      "description": "Known as the most knowledgeable companion in matters of halal and haram, he was sent by the Prophet to teach Islam in Yemen.",
+      "longBiography": "Mu'adh ibn Jabal was one of the youngest companions but also one of the most knowledgeable in Islamic law. The Prophet said 'The most knowledgeable of my Ummah in matters of halal and haram is Mu'adh ibn Jabal.' Despite his young age, the Prophet trusted him so much that he sent him to Yemen as a governor and teacher. Before he left, the Prophet gave him famous advice about how to judge between people, telling him to use the Quran first, then the Sunnah, then his own reasoning. This became a foundation for Islamic jurisprudence. Mu'adh was known for his deep understanding of the Quran, his beautiful recitation, and his ability to explain complex religious matters in simple terms. He was also very humble despite his knowledge and would often cry during his prayers out of fear of Allah. When he was dying of plague, he said he was happy to meet Allah and the Prophet. His students included many great scholars who spread his teachings throughout the Muslim world.",
+      "keyLessons": [
+        "Young people can achieve great knowledge and wisdom",
+        "True knowledge leads to humility and fear of Allah",
+        "Teaching others is one of the best ways to serve Islam",
+        "Understanding halal and haram is crucial for every Muslim"
+      ],
+      "famousQuote": "Learn knowledge, for learning it for Allah's sake is fear of Him, seeking it is worship, discussing it is glorification of Allah.",
+      "categories": ["knowledge", "teaching"],
+      "birthYear": "607",
+      "deathYear": "639",
+      "slug": "muadh-enhanced",
+      "icon": "⚖️",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 30,
+      "name": "Abdullah ibn Abbas",
+      "nameArabic": "عبد الله بن عباس",
+      "description": "The Prophet's cousin, known as the 'Interpreter of the Quran' for his deep understanding of Islamic knowledge and Quranic commentary.",
+      "longBiography": "Abdullah ibn Abbas was the Prophet's cousin and one of the greatest scholars in Islamic history. Known as 'Hibr al-Ummah' (The Scholar of the Ummah) and 'Tarjuman al-Quran' (The Interpreter of the Quran), he had an exceptional understanding of the Quran, Hadith, and Islamic law. The Prophet prayed for him saying 'O Allah, give him understanding in religion and teach him the interpretation of the Quran.' This prayer was clearly answered. Despite being very young when the Prophet died, Ibn Abbas had already shown remarkable intelligence and memory. He would follow the older companions and ask them about everything the Prophet said and did. He was known for his humility in seeking knowledge - he would wait outside the homes of companions to ask them questions, even though he was from a noble family. He became the go-to person for Quranic interpretation and Islamic law. His explanations and commentaries form the basis of much of our understanding of the Quran today. He lived a long life and taught thousands of students.",
+      "keyLessons": [
+        "Seeking knowledge requires humility regardless of your status",
+        "Young people should take advantage of learning from elders",
+        "Understanding the Quran is a lifelong journey",
+        "True scholarship means serving others with your knowledge"
+      ],
+      "famousQuote": "I am not ashamed to ask about what I do not know.",
+      "categories": ["knowledge", "scholarship"],
+      "birthYear": "619",
+      "deathYear": "687",
+      "slug": "abdullah-abbas-enhanced",
+      "icon": "📚",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
+    },
+    {
+      "id": 31,
+      "name": "Usama ibn Zayd",
+      "nameArabic": "أسامة بن زيد",
+      "description": "Son of Zayd ibn Harithah, he was beloved by the Prophet and appointed as army commander at a very young age, showing that leadership isn't about age.",
+      "longBiography": "Usama ibn Zayd was the son of Zayd ibn Harithah, the Prophet's adopted son and beloved companion. The Prophet loved Usama so much that he called him 'my beloved, son of my beloved.' Despite being very young, Usama showed exceptional maturity, intelligence, and leadership skills. In one of his last acts, the Prophet appointed 18-year-old Usama as the commander of an army that included many older and more experienced companions like Abu Bakr and Umar. Some people questioned this decision because of his young age, but the Prophet defended his choice and said that Usama was worthy of leadership just as his father had been. This appointment showed that in Islam, leadership is based on merit, character, and ability, not just age or social status. Usama proved the Prophet right by leading the expedition successfully after the Prophet's death. He was known for his bravery, wisdom beyond his years, and deep love for the Prophet. His story inspires young people to take on responsibility and shows that age should not be a barrier to leadership when someone has the right qualities.",
+      "keyLessons": [
+        "Age is not the only factor in determining leadership ability",
+        "Young people can have wisdom beyond their years",
+        "Merit and character matter more than social expectations",
+        "The Prophet's judgment about people was always correct"
+      ],
+      "famousQuote": "I will follow the path that the Messenger of Allah set for me, regardless of what others say.",
+      "categories": ["leadership", "youth"],
+      "birthYear": "612",
+      "deathYear": "674",
+      "slug": "usama-enhanced",
+      "icon": "👨‍💼",
+      "audioFiles": {
+        "arabic": "",
+        "english": ""
+      }
     }
   ]
 }

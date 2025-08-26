@@ -198,6 +198,59 @@
   <div class="container">
     <h2 id="section-title">The Life of Ali ibn Abi Talib</h2>
     
+    <!-- Audio Player Section -->
+    <div class="audio-section">
+      <h3 id="audio-title">Listen to the Story</h3>
+      <div class="audio-players">
+        <div class="audio-player">
+          <div class="audio-header">
+            <span class="audio-lang">🎧 English Narration</span>
+            <span class="audio-duration">7:00</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" onclick="toggleAudio('english')" id="play-btn-en">
+              <span class="play-icon">▶️</span>
+              <span class="play-text">Play</span>
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-en">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="time-display">0:00 / 7:00</span>
+            </div>
+            <button class="download-btn" onclick="downloadAudio('english')">
+              <span>📥 Download</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="audio-player">
+          <div class="audio-header">
+            <span class="audio-lang">🎧 Arabic Narration</span>
+            <span class="audio-duration">7:30</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" onclick="toggleAudio('arabic')" id="play-btn-ar">
+              <span class="play-icon">▶️</span>
+              <span class="play-text">تشغيل</span>
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-ar">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="time-display">0:00 / 7:30</span>
+            </div>
+            <button class="download-btn" onclick="downloadAudio('arabic')">
+              <span>📥 تحميل</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="audio-note">
+        <span id="audio-note-text">🎵 Audio narrations help children learn pronunciation and enjoy the stories better!</span>
+      </p>
+    </div>
+    
     <h3 id="birth-title">Birth and Early Life</h3>
     <p id="birth-text">
       Ali ibn Abi Talib was born in 600 CE in Mecca, the son of Abu Talib, the Prophet's uncle. He was the first male to 
