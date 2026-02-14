@@ -18,6 +18,7 @@ const requestBody = JSON.stringify({
     }],
     generationConfig: {
         responseModalities: ["AUDIO"],
+        responseMimeType: "audio/mp3",
         speechConfig: {
             voiceConfig: {
                 prebuiltVoiceConfig: {
