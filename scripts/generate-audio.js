@@ -16,25 +16,61 @@ if (!fs.existsSync(AUDIO_DIR)) {
     fs.mkdirSync(AUDIO_DIR, { recursive: true });
 }
 
-const DELAY_MS = 5000; // 5 seconds delay to avoid rate limits
+const DELAY_MS = 2000;
+
+// Helper to create WAV header
+function createWavHeader(dataLength, sampleRate = 24000) {
+    const buffer = Buffer.alloc(44);
+
+    // RIFF identifier
+    buffer.write('RIFF', 0);
+    // file length
+    buffer.writeUInt32LE(36 + dataLength, 4);
+    // RIFF type
+    buffer.write('WAVE', 8);
+    // format chunk identifier
+    buffer.write('fmt ', 12);
+    // format chunk length
+    buffer.writeUInt32LE(16, 16);
+    // sample format (1 is PCM)
+    buffer.writeUInt16LE(1, 20);
+    // channels (1)
+    buffer.writeUInt16LE(1, 22);
+    // sample rate
+    buffer.writeUInt32LE(sampleRate, 24);
+    // byte rate (sampleRate * blockAlign)
+    buffer.writeUInt32LE(sampleRate * 2, 28);
+    // block align (channel count * bytes per sample)
+    buffer.writeUInt16LE(2, 32);
+    // bits per sample
+    buffer.writeUInt16LE(16, 34);
+    // data chunk identifier
+    buffer.write('data', 36);
+    // data chunk length
+    buffer.writeUInt32LE(dataLength, 40);
+
+    return buffer;
+}
 
 async function generateAudio(text, voiceName = "Aoede") {
     // Remove HTML tags for TTS
     const cleanText = text.replace(/<[^>]*>/g, '').trim();
     if (!cleanText) return null;
 
-    // Check length. If > 4000, split.
-    if (cleanText.length > 4000) {
+    // Check length.
+    // REDUCED LIMIT TO 600 chars to be safe and avoid timeouts
+    const CHUNK_LIMIT = 600;
+
+    if (cleanText.length > CHUNK_LIMIT) {
         console.log(`Text too long (${cleanText.length} chars). Splitting...`);
         // Simple split by period to avoid cutting sentences. 
-        // We want chunks ~3000 chars.
         const sentences = cleanText.match(/[^.!?]+[.!?]+(\s+|$)/g) || [cleanText];
         const chunks = [];
         let currentChunk = '';
 
         for (const sentence of sentences) {
-            if ((currentChunk + sentence).length > 3500) {
-                chunks.push(currentChunk);
+            if ((currentChunk + sentence).length > (CHUNK_LIMIT - 100)) {
+                if (currentChunk) chunks.push(currentChunk);
                 currentChunk = sentence;
             } else {
                 currentChunk += sentence;
@@ -45,14 +81,45 @@ async function generateAudio(text, voiceName = "Aoede") {
         console.log(`Split into ${chunks.length} chunks.`);
 
         const audioBuffers = [];
-        for (const chunk of chunks) {
-            const buffer = await generateAudio(chunk, voiceName); // Recursive call
-            if (buffer) {
-                audioBuffers.push(buffer);
-                // Brief pause between chunks to be nice to API
-                await new Promise(r => setTimeout(r, 1000));
+        for (let i = 0; i < chunks.length; i++) {
+            const chunk = chunks[i];
+            // Skip empty chunks
+            if (!chunk.trim()) continue;
+
+            console.log(`Processing chunk ${i + 1}/${chunks.length} (${chunk.length} chars)...`);
+
+            let attempts = 0;
+            let success = false;
+
+            while (!success && attempts < 5) {
+                try {
+                    const buffer = await generateAudio(chunk, voiceName); // Recursive call
+                    if (buffer) {
+                        audioBuffers.push(buffer);
+                        console.log(`Chunk ${i + 1} done. Size: ${buffer.length}`);
+                        success = true;
+                        // Brief pause between chunks to be nice to API
+                        await new Promise(r => setTimeout(r, 2000));
+                    } else {
+                        throw new Error("Returned buffer is empty/null");
+                    }
+                } catch (e) {
+                    if (e.message === 'RATE_LIMIT' || e.message.includes('429')) {
+                        console.error(`Chunk ${i + 1} RATE LIMITED. Waiting 60s... (Attempt ${attempts + 1}/5)`);
+                        await new Promise(r => setTimeout(r, 60000));
+                        // Retry
+                    } else {
+                        console.error(`Chunk ${i + 1} failed: ${e.message}. Retrying... (Attempt ${attempts + 1}/5)`);
+                        await new Promise(r => setTimeout(r, 5000));
+                    }
+                    attempts++;
+                }
+            }
+            if (!success) {
+                console.error(`❌ Failed to process chunk ${i + 1} after 5 attempts. Skipping (this will cause audio gap).`);
             }
         }
+        console.log(`All chunks done. Concatenating...`);
         return Buffer.concat(audioBuffers);
     }
 
@@ -79,7 +146,8 @@ async function generateAudio(text, voiceName = "Aoede") {
         headers: {
             'Content-Type': 'application/json',
             'Content-Length': Buffer.byteLength(requestBody)
-        }
+        },
+        timeout: 60000 // 60 seconds timeout
     };
 
     return new Promise((resolve, reject) => {
@@ -112,7 +180,12 @@ async function generateAudio(text, voiceName = "Aoede") {
             });
         });
 
-        req.on('error', reject);
+        req.on('error', (e) => reject(new Error(`Request error: ${e.message}`)));
+        req.on('timeout', () => {
+            req.destroy();
+            reject(new Error('Request timed out'));
+        });
+
         req.write(requestBody);
         req.end();
     });
@@ -136,80 +209,75 @@ async function main() {
             const slug = sahabi.slug || sahabi.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
 
             // Generate English Audio
-            if (!sahabi.audioFiles.english && sahabi.longBiography) {
+            const wavFileNameEn = `${slug}-en.wav`;
+            const wavPathEn = path.join(AUDIO_DIR, wavFileNameEn);
+
+            // Re-check logic: if it exists, CHECK SIZE. If 44 bytes, it's failed. Regenerate.
+            const existsEn = fs.existsSync(wavPathEn);
+            const sizeEn = existsEn ? fs.statSync(wavPathEn).size : 0;
+
+            if ((!existsEn || sizeEn < 1000) && sahabi.longBiography) {
                 console.log(`Generating English audio for ${sahabi.name}...`);
                 try {
-                    // Try generating
-                    let attempts = 0;
-                    let audioData = null;
-                    while (!audioData && attempts < 3) {
-                        try {
-                            audioData = await generateAudio(sahabi.longBiography, "Aoede"); // Female voice
-                        } catch (err) {
-                            if (err.message === 'RATE_LIMIT') {
-                                console.log('Rate limit (English). Waiting 60s...');
-                                await new Promise(r => setTimeout(r, 60000));
-                            } else {
-                                throw err;
-                            }
-                            attempts++;
-                        }
-                    }
+                    let audioData = await generateAudio(sahabi.longBiography, "Aoede"); // Female voice
 
                     if (audioData) {
-                        const fileName = `${slug}-en.mp3`;
-                        fs.writeFileSync(path.join(AUDIO_DIR, fileName), audioData);
-                        sahabi.audioFiles.english = `audio/${fileName}`;
+                        // Create WAV header
+                        const header = createWavHeader(audioData.length);
+                        const finalBuffer = Buffer.concat([header, audioData]);
+
+                        fs.writeFileSync(wavPathEn, finalBuffer);
+                        sahabi.audioFiles.english = `audio/${wavFileNameEn}`;
                         updated = true;
-                        console.log(`✅ Saved ${fileName}`);
+                        console.log(`✅ Saved ${wavFileNameEn} (${finalBuffer.length} bytes)`);
                         await new Promise(r => setTimeout(r, DELAY_MS));
                     }
                 } catch (err) {
                     console.error(`❌ Failed English audio for ${sahabi.name}:`, err.message);
                 }
+            } else if (fs.existsSync(wavPathEn) && sizeEn > 1000) {
+                if (sahabi.audioFiles.english !== `audio/${wavFileNameEn}`) {
+                    sahabi.audioFiles.english = `audio/${wavFileNameEn}`;
+                    updated = true;
+                }
             }
 
             // Generate Arabic Audio
-            if (!sahabi.audioFiles.arabic && sahabi.longBiographyArabic) {
+            const wavFileNameAr = `${slug}-ar.wav`;
+            const wavPathAr = path.join(AUDIO_DIR, wavFileNameAr);
+
+            const existsAr = fs.existsSync(wavPathAr);
+            const sizeAr = existsAr ? fs.statSync(wavPathAr).size : 0;
+
+            if ((!existsAr || sizeAr < 1000) && sahabi.longBiographyArabic) {
                 console.log(`Generating Arabic audio for ${sahabi.name}...`);
                 try {
-                    let attempts = 0;
-                    let audioData = null;
-                    while (!audioData && attempts < 3) {
-                        try {
-                            // Using "Charon" (Male) for Arabic variety, or "Puck". 
-                            // Let's stick to "Aoede" for consistency or "Charon" for male. 
-                            // The user didn't specify. Let's use "Charon" for Arabic to distinguish? 
-                            // Or keep Aoede. Let's try Aoede first as it's tested.
-                            audioData = await generateAudio(sahabi.longBiographyArabic, "Aoede");
-                        } catch (err) {
-                            if (err.message === 'RATE_LIMIT') {
-                                console.log('Rate limit (Arabic). Waiting 60s...');
-                                await new Promise(r => setTimeout(r, 60000));
-                            } else {
-                                throw err;
-                            }
-                            attempts++;
-                        }
-                    }
+                    let audioData = await generateAudio(sahabi.longBiographyArabic, "Aoede");
 
                     if (audioData) {
-                        const fileName = `${slug}-ar.mp3`;
-                        fs.writeFileSync(path.join(AUDIO_DIR, fileName), audioData);
-                        sahabi.audioFiles.arabic = `audio/${fileName}`;
+                        const header = createWavHeader(audioData.length);
+                        const finalBuffer = Buffer.concat([header, audioData]);
+
+                        fs.writeFileSync(wavPathAr, finalBuffer);
+                        sahabi.audioFiles.arabic = `audio/${wavFileNameAr}`;
                         updated = true;
-                        console.log(`✅ Saved ${fileName}`);
+                        console.log(`✅ Saved ${wavFileNameAr} (${finalBuffer.length} bytes)`);
                         await new Promise(r => setTimeout(r, DELAY_MS));
                     }
                 } catch (err) {
                     console.error(`❌ Failed Arabic audio for ${sahabi.name}:`, err.message);
                 }
+            } else if (fs.existsSync(wavPathAr) && sizeAr > 1000) {
+                if (sahabi.audioFiles.arabic !== `audio/${wavFileNameAr}`) {
+                    sahabi.audioFiles.arabic = `audio/${wavFileNameAr}`;
+                    updated = true;
+                }
             }
 
-            // Periodically save to avoid losing progress
+            // Periodically save
             if (updated) {
                 fs.writeFileSync(SAHABA_FILE, JSON.stringify(data, null, 2), 'utf8');
-                updated = false; // Reset flag after save
+                updated = false;
             }
         }
 
