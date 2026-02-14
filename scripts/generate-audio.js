@@ -147,7 +147,7 @@ async function generateAudio(text, voiceName = "Aoede") {
 
     const options = {
         hostname: 'generativelanguage.googleapis.com',
-        path: `/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${API_KEY}`,
+        path: `/v1beta/models/gemini-2.5-pro-preview-tts:generateContent?key=${API_KEY}`,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -156,9 +156,9 @@ async function generateAudio(text, voiceName = "Aoede") {
         timeout: 60000
     };
 
-    // FORCE WAIT 15s before request to avoid Rate Limit
-    console.log("Waiting 15s to respect API rate limit...");
-    await new Promise(r => setTimeout(r, 15000));
+    // FORCE WAIT 30s before request to avoid Rate Limit
+    console.log("Waiting 30s to respect API rate limit...");
+    await new Promise(r => setTimeout(r, 30000));
 
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
