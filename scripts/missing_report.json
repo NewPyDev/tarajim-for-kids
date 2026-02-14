@@ -1,0 +1,223 @@
+[
+  {
+    "id": 7,
+    "name": "Salman Al-Farisi",
+    "slug": "salman-enhanced",
+    "missing": [
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Zaid ibn Thabit",
+    "slug": "zaid",
+    "missing": [
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Abu Ubaidah ibn Al-Jarrah",
+    "slug": "abu-ubaidah",
+    "missing": [
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Abu Dhar Al-Ghifari",
+    "slug": "abu-dhar",
+    "missing": [
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Aisha bint Abu Bakr",
+    "slug": "aisha-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Fatimah bint Muhammad",
+    "slug": "fatimah-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hassan ibn Ali",
+    "slug": "hassan-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Hussein ibn Ali",
+    "slug": "hussein-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Abdullah ibn Umar",
+    "slug": "abdullah-umar-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Anas ibn Malik",
+    "slug": "anas-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Amir ibn Fuhayrah",
+    "slug": "amir-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Sumayyah bint Khayyat",
+    "slug": "sumayyah-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Khadijah bint Khuwaylid",
+    "slug": "khadijah-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Hamza ibn Abdul-Muttalib",
+    "slug": "hamza-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "keyLessonsArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Ammar ibn Yasir",
+    "slug": "ammar-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Ja'far ibn Abi Talib",
+    "slug": "jafar-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Abdur-Rahman ibn Awf",
+    "slug": "abdur-rahman-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Talha ibn Ubaydullah",
+    "slug": "talha-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Az-Zubayr ibn Al-Awwam",
+    "slug": "zubayr-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sa'id ibn Zayd",
+    "slug": "said-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Abu Hurairah",
+    "slug": "abu-hurairah-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Mu'adh ibn Jabal",
+    "slug": "muadh-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Abdullah ibn Abbas",
+    "slug": "abdullah-abbas-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Usama ibn Zayd",
+    "slug": "usama-enhanced",
+    "missing": [
+      "longBiographyArabic",
+      "timelineArabic"
+    ]
+  }
+]

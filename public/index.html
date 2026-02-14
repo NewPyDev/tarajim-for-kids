@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarajim for Kids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2C5F2D;     /* Islamic green */
-      --secondary-color: #97B270;    /* Soft sage */
-      --accent-color: #FFB067;      /* Warm orange */
-      --background-color: #FFF9E9;  /* Soft cream */
-      --text-color: #234638;        /* Deep green-gray */
-      --header-bg: #1F4037;         /* Dark green */
+      --primary-color: #2C5F2D;
+      /* Islamic green */
+      --secondary-color: #97B270;
+      /* Soft sage */
+      --accent-color: #FFB067;
+      /* Warm orange */
+      --background-color: #FFF9E9;
+      /* Soft cream */
+      --text-color: #234638;
+      /* Deep green-gray */
+      --header-bg: #1F4037;
+      /* Dark green */
     }
 
     * {
@@ -252,6 +261,7 @@
     }
   </style>
 </head>
+
 <body dir="ltr">
   <header>
     <h1 id="title">Tarajim for Kids</h1>
@@ -315,49 +325,38 @@
       }
     };
 
-    function toggleLanguage() {
-      const currentLang = document.documentElement.lang;
-      const newLang = currentLang === "en" ? "ar" : "en";
-      document.documentElement.lang = newLang;
-      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+    // State
+    let currentLang = localStorage.getItem('lang') || 'en';
+    let currentCategory = 'all';
 
-      const langContent = content[newLang];
-      document.getElementById("title").textContent = langContent.title;
-      document.getElementById("subtitle").textContent = langContent.subtitle;
-      document.getElementById("nav-caliphs").textContent = langContent.nav.caliphs;
-      document.getElementById("nav-bravery").textContent = langContent.nav.bravery;
-      document.getElementById("nav-kindness").textContent = langContent.nav.kindness;
-      document.getElementById("nav-loyalty").textContent = langContent.nav.loyalty;
-      document.getElementById("nav-contributions").textContent = langContent.nav.contributions;
-      document.getElementById("section-title").textContent = langContent.sectionTitle;
-      document.getElementById("abu-bakr-title").textContent = langContent.abuBakr.title;
-      document.getElementById("abu-bakr-desc").textContent = langContent.abuBakr.desc;
-      document.getElementById("umar-title").textContent = langContent.umar.title;
-      document.getElementById("umar-desc").textContent = langContent.umar.desc;
-      document.getElementById("uthman-title").textContent = langContent.uthman.title;
-      document.getElementById("uthman-desc").textContent = langContent.uthman.desc;
-      document.getElementById("ali-title").textContent = langContent.ali.title;
-      document.getElementById("ali-desc").textContent = langContent.ali.desc;
-      document.getElementById("khalid-title").textContent = langContent.khalid.title;
-      document.getElementById("khalid-desc").textContent = langContent.khalid.desc;
-      document.getElementById("bilal-title").textContent = langContent.bilal.title;
-      document.getElementById("bilal-desc").textContent = langContent.bilal.desc;
-      document.getElementById("salman-title").textContent = langContent.salman.title;
-      document.getElementById("salman-desc").textContent = langContent.salman.desc;
-      document.getElementById("saad-title").textContent = langContent.saad.title;
-      document.getElementById("saad-desc").textContent = langContent.saad.desc;
-      document.getElementById("zaid-title").textContent = langContent.zaid.title;
-      document.getElementById("zaid-desc").textContent = langContent.zaid.desc;
-      document.getElementById("abu-ubaidah-title").textContent = langContent.abuUbaidah.title;
-      document.getElementById("abu-ubaidah-desc").textContent = langContent.abuUbaidah.desc;
-      document.getElementById("abu-dhar-title").textContent = langContent.abuDhar.title;
-      document.getElementById("abu-dhar-desc").textContent = langContent.abuDhar.desc;
+    function initLanguage() {
+      // Set initial state without toggling
+      document.documentElement.lang = currentLang;
+      document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
+      // Update toggle button text if needed, though mostly icons/dynamic
+      updateContent(currentLang);
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "ar" : "en";
+      localStorage.setItem('lang', currentLang);
+
+      document.documentElement.lang = currentLang;
+      document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
+      updateContent(currentLang);
+
+      // Re-render cards with new language
+      if (sahabaData.length > 0) {
+        displaySahaba(sahabaData);
+        filterCards(currentCategory);
+      }
     }
 
     function filterCards(category) {
+      currentCategory = category;
       const cards = document.querySelectorAll('.card');
       const navLinks = document.querySelectorAll('nav a');
-      
+
       // Update active nav link
       navLinks.forEach(link => {
         link.classList.remove('active');
@@ -382,10 +381,41 @@
       });
     }
 
-    // Load Sahaba data when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      loadSahaba();
-    });
+    function updateContent(lang) {
+      const langContent = content[lang];
+      document.getElementById("title").textContent = langContent.title;
+      document.getElementById("subtitle").textContent = langContent.subtitle;
+      document.getElementById("nav-caliphs").textContent = langContent.nav.caliphs;
+      document.getElementById("nav-bravery").textContent = langContent.nav.bravery;
+      document.getElementById("nav-kindness").textContent = langContent.nav.kindness;
+      document.getElementById("nav-loyalty").textContent = langContent.nav.loyalty;
+      document.getElementById("nav-contributions").textContent = langContent.nav.contributions;
+      document.getElementById("section-title").textContent = langContent.sectionTitle;
+
+      // Update donation section
+      const donationH2 = document.querySelector('.donation-section h2');
+      if (donationH2) donationH2.textContent = donationH2.getAttribute(`data-${lang}`);
+
+      const donationP = document.querySelector('.donation-content > p');
+      if (donationP) donationP.textContent = donationP.getAttribute(`data-${lang}`);
+
+      const donationNote = document.querySelector('.donation-note');
+      if (donationNote) donationNote.textContent = donationNote.getAttribute(`data-${lang}`);
+
+      document.querySelectorAll('.donation-btn span[data-en]').forEach(span => {
+        span.textContent = span.getAttribute(`data-${lang}`);
+      });
+
+      // Update dynamically loaded cards
+      // We need to re-render or update existing cards
+      // Ideally re-render or update text in place. 
+      // Re-rendering is easier if we have the data.
+      // But displaySahaba takes 'sahaba' data. We don't have it globally stored in a variable in this scope yet.
+      // Let's store fetched data globally.
+    }
+
+    // Global data storage
+    let sahabaData = [];
 
     async function loadSahaba() {
       try {
@@ -393,30 +423,37 @@
         if (!response.ok) {
           throw new Error('Failed to load data');
         }
-        const sahaba = await response.json();
-        displaySahaba(sahaba);
-        filterCards('all'); // Apply default filter after loading
+        sahabaData = await response.json();
+        displaySahaba(sahabaData);
+        filterCards('all');
       } catch (error) {
         console.error('Error loading Sahaba:', error);
-        // Fallback to show message if API fails
         document.getElementById('sahabaGrid').innerHTML = '<p>Unable to load content. Please try again later.</p>';
       }
     }
 
+    // Load Sahaba data when page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      initLanguage(); // Apply saved language immediately
+      loadSahaba();
+    });
+
     function displaySahaba(sahaba) {
       const container = document.getElementById('sahabaGrid');
       if (!container) return;
-      
+
+      const isAr = currentLang === 'ar';
+
       const html = sahaba.map(sahabi => `
         <div class="card" data-categories="${sahabi.categories ? sahabi.categories.join(',') : ''}">
           <div class="icon">${sahabi.icon || '#'}</div>
-          <a href="/public/${sahabi.slug}.html">
-            <h3>${sahabi.name} (${sahabi.nameArabic})</h3>
-            <p>${sahabi.description}</p>
+          <a href="profile.html?slug=${sahabi.slug}">
+            <h3>${isAr ? sahabi.nameArabic : sahabi.name + ' (' + sahabi.nameArabic + ')'}</h3>
+            <p>${isAr ? (sahabi.descriptionArabic || sahabi.description) : sahabi.description}</p>
           </a>
         </div>
       `).join('');
-      
+
       container.innerHTML = html;
     }
   </script>
@@ -426,9 +463,10 @@
     <div class="container">
       <h2 data-en="Support This Project" data-ar="ادعم هذا المشروع">Support This Project</h2>
       <div class="donation-content">
-        <p data-en="Help us keep this educational content free for all children around the world. Your support helps us create more stories and improve the platform." 
-           data-ar="ساعدنا في الحفاظ على هذا المحتوى التعليمي مجانًا لجميع الأطفال حول العالم. دعمكم يساعدنا في إنشاء المزيد من القصص وتحسين المنصة.">
-           Help us keep this educational content free for all children around the world. Your support helps us create more stories and improve the platform.
+        <p data-en="Help us keep this educational content free for all children around the world. Your support helps us create more stories and improve the platform."
+          data-ar="ساعدنا في الحفاظ على هذا المحتوى التعليمي مجانًا لجميع الأطفال حول العالم. دعمكم يساعدنا في إنشاء المزيد من القصص وتحسين المنصة.">
+          Help us keep this educational content free for all children around the world. Your support helps us create
+          more stories and improve the platform.
         </p>
         <div class="donation-buttons">
           <a href="https://www.buymeacoffee.com/tarajimforkids" target="_blank" class="donation-btn coffee-btn">
@@ -444,9 +482,9 @@
             <span data-en="Donate via PayPal" data-ar="تبرع عبر PayPal">Donate via PayPal</span>
           </a>
         </div>
-        <p class="donation-note" data-en="Every contribution, no matter how small, makes a difference!" 
-           data-ar="كل مساهمة، مهما كانت صغيرة، تحدث فرقًا!">
-           Every contribution, no matter how small, makes a difference!
+        <p class="donation-note" data-en="Every contribution, no matter how small, makes a difference!"
+          data-ar="كل مساهمة، مهما كانت صغيرة، تحدث فرقًا!">
+          Every contribution, no matter how small, makes a difference!
         </p>
       </div>
     </div>
@@ -454,7 +492,8 @@
 
   <style>
     .donation-section {
-      display: none; /* Hidden - can be re-enabled by removing this line */
+      display: none;
+      /* Hidden - can be re-enabled by removing this line */
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
       padding: 60px 0;
@@ -536,7 +575,7 @@
         flex-direction: column;
         align-items: center;
       }
-      
+
       .donation-btn {
         width: 250px;
         justify-content: center;
@@ -545,4 +584,5 @@
   </style>
 
 </body>
+
 </html>.
