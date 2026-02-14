@@ -96,7 +96,9 @@ async function main() {
                     if (quiz) {
                         sahabi.quiz = quiz;
                         updated = true;
-                        console.log(`✅ Generated quiz for ${sahabi.name}`);
+                        // Save immediately to prevent data loss on stop
+                        fs.writeFileSync(SAHABA_FILE, JSON.stringify(data, null, 2), 'utf8');
+                        console.log(`✅ Generated and SAVED quiz for ${sahabi.name}`);
                     }
                 } catch (err) {
                     console.error(`❌ Failed quiz for ${sahabi.name}:`, err.message);
@@ -104,10 +106,7 @@ async function main() {
             }
         }
 
-        if (updated) {
-            fs.writeFileSync(SAHABA_FILE, JSON.stringify(data, null, 2), 'utf8');
-            console.log('🎉 Sahaba file updated with quizzes!');
-        } else {
+        if (!updated) {
             console.log('No updates needed.');
         }
 
