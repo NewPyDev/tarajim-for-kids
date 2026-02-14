@@ -156,6 +156,10 @@ async function generateAudio(text, voiceName = "Aoede") {
         timeout: 60000
     };
 
+    // FORCE WAIT 15s before request to avoid Rate Limit
+    console.log("Waiting 15s to respect API rate limit...");
+    await new Promise(r => setTimeout(r, 15000));
+
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
             let data = [];
