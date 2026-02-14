@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarajim for Kids - Biography</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Quicksand:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body dir="ltr">
 
     <!-- Header -->
@@ -32,16 +36,18 @@
 
         <!-- Content Area (Hidden initially) -->
         <div id="content" style="display: none;">
-            
+
             <!-- Hero Section -->
             <div class="glass-panel profile-header">
                 <span id="sahabi-icon" class="profile-icon"></span>
-                <h2 id="sahabi-name" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"></h2>
+                <h2 id="sahabi-name" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">
+                </h2>
                 <p id="sahabi-desc" style="font-size: 1.2rem; opacity: 0.8;"></p>
-                
-                <!-- Audio Player (Future Implementation) -->
-                <div class="audio-player" style="margin-top: 1.5rem;">
-                    <button class="btn" onclick="alert('Audio coming soon!')">🎧 Listen to Story</button>
+
+                <!-- Audio Player -->
+                <div id="audio-container" class="audio-player" style="margin-top: 1.5rem; display: none;">
+                    <audio id="story-audio" controls
+                        style="width: 100%; border-radius: 10px; margin-top: 10px;"></audio>
                 </div>
             </div>
 
@@ -75,8 +81,8 @@
 
         </div>
 
-         <!-- Error State -->
-         <div id="error" style="display: none; text-align: center; padding: 4rem; color: red;">
+        <!-- Error State -->
+        <div id="error" style="display: none; text-align: center; padding: 4rem; color: red;">
             <p>Sorry, we couldn't find this story.</p>
             <a href="index.html" class="btn">Return Home</a>
         </div>
@@ -85,4 +91,5 @@
     <!-- Main Logic -->
     <script src="js/app.js"></script>
 </body>
+
 </html>

@@ -149,6 +149,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('timeline-title').parentElement.style.display = 'none';
         }
 
+        // Audio Player
+        const audioContainer = document.getElementById('audio-container');
+        const audioPlayer = document.getElementById('story-audio');
+        const audioPath = isAr ? sahabi.audioFiles?.arabic : sahabi.audioFiles?.english;
+
+        if (audioPath) {
+            audioContainer.style.display = 'block';
+            // Only update src if it changed to avoid reloading if just re-rendering
+            // But wait, if language changed, src changes.
+            const currentSrc = audioPlayer.getAttribute('src');
+            if (currentSrc !== audioPath) {
+                audioPlayer.src = audioPath;
+            }
+        } else {
+            audioContainer.style.display = 'none';
+        }
+
         // Back Link
         const backLink = document.getElementById('back-link');
         backLink.textContent = isAr ? '→ العودة للقصص' : '← Back to Stories';
