@@ -172,7 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Show/Hide Quiz Button
         const quizBtn = document.getElementById('start-quiz-btn');
-        if (sahabi.quiz && sahabi.quiz.length > 0) {
+        const hasQuiz = (sahabi.quiz && sahabi.quiz.length > 0) || (sahabi.quizArabic && sahabi.quizArabic.length > 0);
+
+        if (hasQuiz) {
             quizBtn.style.display = 'block';
             quizBtn.textContent = isAr ? '🧠 اختبر معلوماتك!' : '🧠 Test Your Knowledge!';
         } else {
@@ -205,9 +207,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (startQuizBtn) {
         startQuizBtn.addEventListener('click', () => {
-            if (currentSahabi && currentSahabi.quiz) {
-                quizData = currentSahabi.quiz;
-                startQuiz();
+            const isAr = currentLang === 'ar';
+            // Use Arabic quiz if available and language is Arabic
+            if (currentSahabi) {
+                if (isAr && currentSahabi.quizArabic && currentSahabi.quizArabic.length > 0) {
+                    quizData = currentSahabi.quizArabic;
+                    startQuiz();
+                } else if (currentSahabi.quiz && currentSahabi.quiz.length > 0) {
+                    quizData = currentSahabi.quiz;
+                    // Optional alert if Arabic missing
+                    if (isAr) console.warn('Arabic quiz missing, falling back to English');
+                    startQuiz();
+                }
             }
         });
     }
@@ -239,6 +250,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('quiz-result').style.display = 'none';
         document.getElementById('quiz-complete').style.display = 'none';
         document.getElementById('quiz-question-container').style.display = 'block';
+
+        // Translate UI
+        const isAr = currentLang === 'ar';
+        document.getElementById('quiz-title').textContent = isAr ? 'وقت الاختبار!' : 'Quiz Time!';
+        document.getElementById('next-question-btn').textContent = isAr ? 'السؤال التالي' : 'Next Question';
+        document.getElementById('close-quiz-btn').textContent = isAr ? 'إغلاق' : 'Close';
+        const resultTitle = document.querySelector('#quiz-complete h3');
+        if (resultTitle) resultTitle.textContent = isAr ? '🎉 ما شاء الله! أنهيت الاختبار!' : '🎉 MashaAllah! You finished the quiz!';
+        const resultTextPre = document.querySelector('#quiz-complete p');
+        // Note: resultTextPre contains the span for score, better not replace innerHTML entirely or we lose the span reference.
+        // We will handle the score text in showQuizResult
+
         showQuestion(quizCurrentQuestionIndex);
     }
 
@@ -280,6 +303,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             btnElement.classList.add('incorrect');
             // Highlight correct answer
+            const isAr = currentLang === 'ar';
+            // Optional: Show feedback message if we were using the feedback div
             allBtns[correctIndex].classList.add('correct');
             setTimeout(() => {
                 nextQuestion();
@@ -299,7 +324,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function showQuizResult() {
         document.getElementById('quiz-question-container').style.display = 'none';
         document.getElementById('quiz-complete').style.display = 'block';
-        document.getElementById('quiz-score').textContent = quizScore;
+        const isAr = currentLang === 'ar';
+        const scoreEl = document.getElementById('quiz-score');
+        scoreEl.textContent = quizScore;
+        // Update surrounding text
+        scoreEl.parentElement.innerHTML = isAr ?
+            `لقد أجبت على <span id="quiz-score">${quizScore}</span>/3 بشكل صحيح.` :
+            `You got <span id="quiz-score">${quizScore}</span>/3 correct.`;
 
         if (quizScore === quizData.length) {
             confetti({
