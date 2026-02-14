@@ -169,6 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Back Link
         const backLink = document.getElementById('back-link');
         backLink.textContent = isAr ? '→ العودة للقصص' : '← Back to Stories';
+
+        // Show/Hide Quiz Button
+        const quizBtn = document.getElementById('start-quiz-btn');
+        if (sahabi.quiz && sahabi.quiz.length > 0) {
+            quizBtn.style.display = 'block';
+            quizBtn.textContent = isAr ? '🧠 اختبر معلوماتك!' : '🧠 Test Your Knowledge!';
+        } else {
+            quizBtn.style.display = 'none';
+        }
     }
 
     function formatText(text) {
@@ -182,5 +191,129 @@ document.addEventListener('DOMContentLoaded', () => {
         // Map ID to emoji or image
         const icons = ['✨', '📜', '⚔️', '🛡️', '🕌', '⚖️', '🐎', '💫', '🤲', '🌟'];
         return icons[id % icons.length] || '✨';
+    }
+    // --- QUIZ LOGIC ---
+    let quizCurrentQuestionIndex = 0;
+    let quizScore = 0;
+    let quizData = [];
+
+    const quizModal = document.getElementById('quiz-modal');
+    const startQuizBtn = document.getElementById('start-quiz-btn');
+    const closeQuizBtn = document.querySelector('.close-btn');
+    const nextQuestionBtn = document.getElementById('next-question-btn');
+    const closeResultBtn = document.getElementById('close-quiz-btn');
+
+    if (startQuizBtn) {
+        startQuizBtn.addEventListener('click', () => {
+            if (currentSahabi && currentSahabi.quiz) {
+                quizData = currentSahabi.quiz;
+                startQuiz();
+            }
+        });
+    }
+
+    if (closeQuizBtn) {
+        closeQuizBtn.addEventListener('click', () => {
+            quizModal.style.display = 'none';
+        });
+    }
+
+    if (closeResultBtn) {
+        closeResultBtn.addEventListener('click', () => {
+            quizModal.style.display = 'none';
+            // Optional: Mark as "Read/Collected" here
+        });
+    }
+
+    // Close modal on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target === quizModal) {
+            quizModal.style.display = 'none';
+        }
+    });
+
+    function startQuiz() {
+        quizCurrentQuestionIndex = 0;
+        quizScore = 0;
+        quizModal.style.display = 'block';
+        document.getElementById('quiz-result').style.display = 'none';
+        document.getElementById('quiz-complete').style.display = 'none';
+        document.getElementById('quiz-question-container').style.display = 'block';
+        showQuestion(quizCurrentQuestionIndex);
+    }
+
+    function showQuestion(index) {
+        const questionData = quizData[index];
+        document.getElementById('quiz-question-text').textContent = questionData.question;
+
+        const optionsContainer = document.getElementById('quiz-options');
+        optionsContainer.innerHTML = '';
+
+        questionData.options.forEach((option, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option-btn';
+            btn.textContent = option;
+            btn.onclick = () => checkAnswer(i, questionData.correctAnswer, btn);
+            optionsContainer.appendChild(btn);
+        });
+
+        document.getElementById('quiz-result').style.display = 'none';
+    }
+
+    function checkAnswer(selectedIndex, correctIndex, btnElement) {
+        // Disable all buttons to prevent double clicking
+        const allBtns = document.querySelectorAll('.quiz-option-btn');
+        allBtns.forEach(b => b.disabled = true);
+
+        if (selectedIndex === correctIndex) {
+            btnElement.classList.add('correct');
+            quizScore++;
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            setTimeout(() => {
+                nextQuestion();
+            }, 1500);
+        } else {
+            btnElement.classList.add('incorrect');
+            // Highlight correct answer
+            allBtns[correctIndex].classList.add('correct');
+            setTimeout(() => {
+                nextQuestion();
+            }, 2000);
+        }
+    }
+
+    function nextQuestion() {
+        quizCurrentQuestionIndex++;
+        if (quizCurrentQuestionIndex < quizData.length) {
+            showQuestion(quizCurrentQuestionIndex);
+        } else {
+            showQuizResult();
+        }
+    }
+
+    function showQuizResult() {
+        document.getElementById('quiz-question-container').style.display = 'none';
+        document.getElementById('quiz-complete').style.display = 'block';
+        document.getElementById('quiz-score').textContent = quizScore;
+
+        if (quizScore === quizData.length) {
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.6 }
+            });
+
+            // SAVE PROGRESS
+            const collected = JSON.parse(localStorage.getItem('collectedSahaba') || '[]');
+            if (currentSahabi && !collected.includes(currentSahabi.id)) {
+                collected.push(currentSahabi.id);
+                localStorage.setItem('collectedSahaba', JSON.stringify(collected));
+            }
+        }
     }
 });

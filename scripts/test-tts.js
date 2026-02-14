@@ -10,20 +10,14 @@ if (!API_KEY) {
     process.exit(1);
 }
 
-const textToSpeak = "Hello, this is a test of the Gemini Text to Speech capability.";
-
+const textToSpeak = "System check. One two.";
 const requestBody = JSON.stringify({
-    contents: [{
-        parts: [{ text: textToSpeak }]
-    }],
+    contents: [{ parts: [{ text: textToSpeak }] }],
     generationConfig: {
         responseModalities: ["AUDIO"],
-        responseMimeType: "audio/mp3",
         speechConfig: {
             voiceConfig: {
-                prebuiltVoiceConfig: {
-                    voiceName: "Aoede"
-                }
+                prebuiltVoiceConfig: { voiceName: "Aoede" }
             }
         }
     }

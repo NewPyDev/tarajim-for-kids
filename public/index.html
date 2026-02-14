@@ -259,6 +259,74 @@
         padding: 0 20px;
       }
     }
+
+    /* Collection Styles */
+    .collection-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+      border: 2px solid var(--accent-color);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .collection-box h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .badges-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .badge-item {
+      width: 60px;
+      height: 60px;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      border: 3px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .badge-item:hover::after {
+      content: attr(data-name);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    @keyframes popIn {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
@@ -278,6 +346,15 @@
   </nav>
   <div class="container">
     <h2 id="section-title">Stories of the Caliphs</h2>
+
+    <!-- My Collection Section -->
+    <div id="collection-container" class="collection-box" style="display: none;">
+      <h3>🏆 My Collection <span id="collection-count">(0)</span></h3>
+      <div id="badges-grid" class="badges-grid">
+        <!-- Badges injected here -->
+      </div>
+    </div>
+
     <div class="divider"></div>
     <div class="grid" id="sahabaGrid">
       <!-- Dynamic content will be loaded here -->
@@ -455,6 +532,43 @@
       `).join('');
 
       container.innerHTML = html;
+
+      // Update collection display
+      updateCollection();
+    }
+
+    function updateCollection() {
+      const collected = JSON.parse(localStorage.getItem('collectedSahaba') || '[]');
+      const container = document.getElementById('collection-container');
+      const grid = document.getElementById('badges-grid');
+      const countSpan = document.getElementById('collection-count');
+      const isAr = currentLang === 'ar';
+
+      if (collected.length === 0) {
+        container.style.display = 'none';
+        return;
+      }
+
+      container.style.display = 'block';
+      countSpan.textContent = `(${collected.length})`;
+
+      // Find collected sahaba data
+      const collectedData = sahabaData.filter(s => collected.includes(s.id));
+
+      grid.innerHTML = collectedData.map(s => `
+            <div class="badge-item" onclick="window.location.href='profile.html?slug=${s.slug}'" 
+                 data-name="${isAr ? s.nameArabic : s.name}" title="${isAr ? s.nameArabic : s.name}">
+                ${s.icon || '✨'}
+            </div>
+        `).join('');
+
+      // Translate title
+      const title = container.querySelector('h3');
+      if (isAr) {
+        title.innerHTML = `🏆 مجموعتي <span id="collection-count">(${collected.length})</span>`;
+      } else {
+        title.innerHTML = `🏆 My Collection <span id="collection-count">(${collected.length})</span>`;
+      }
     }
   </script>
 

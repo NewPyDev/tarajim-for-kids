@@ -49,6 +49,11 @@
                     <audio id="story-audio" controls
                         style="width: 100%; border-radius: 10px; margin-top: 10px;"></audio>
                 </div>
+
+                <!-- Quiz Button -->
+                <button id="start-quiz-btn" class="btn btn-primary" style="margin-top: 1rem; display: none;">
+                    🧠 Test Your Knowledge!
+                </button>
             </div>
 
             <!-- Biography -->
@@ -87,6 +92,32 @@
             <a href="index.html" class="btn">Return Home</a>
         </div>
     </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal" style="display: none;">
+        <div class="modal-content glass-panel">
+            <span class="close-btn">&times;</span>
+            <h2 id="quiz-title">Quiz Time!</h2>
+            <div id="quiz-question-container">
+                <p id="quiz-question-text" style="font-size: 1.2rem; margin-bottom: 1rem;"></p>
+                <div id="quiz-options" class="quiz-options">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+            <div id="quiz-result" style="display: none; text-align: center;">
+                <h3 id="quiz-feedback"></h3>
+                <button id="next-question-btn" class="btn">Next Question</button>
+            </div>
+            <div id="quiz-complete" style="display: none; text-align: center;">
+                <h3>🎉 MashaAllah! You finished the quiz!</h3>
+                <p>You got <span id="quiz-score"></span>/3 correct.</p>
+                <button id="close-quiz-btn" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <!-- Main Logic -->
     <script src="js/app.js"></script>
