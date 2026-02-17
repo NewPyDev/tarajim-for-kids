@@ -156,9 +156,9 @@ async function generateAudio(text, voiceName = "Aoede") {
         timeout: 60000
     };
 
-    // FORCE WAIT 30s before request to avoid Rate Limit
-    console.log("Waiting 30s to respect API rate limit...");
-    await new Promise(r => setTimeout(r, 30000));
+    // FORCE WAIT 60s before request to avoid Rate Limit
+    console.log("Waiting 60s to respect API rate limit...");
+    await new Promise(r => setTimeout(r, 60000));
 
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
@@ -206,7 +206,12 @@ async function main() {
         const data = JSON.parse(rawData);
         let updated = false;
 
+        // HARD LIMIT: Stop after this many successful audio generations
+        const MAX_REQUESTS_PER_RUN = 10;
+        let requestCount = 0;
+
         console.log(`Found ${data.sahaba.length} Sahaba. Checking for missing audio...`);
+        console.log(`Will stop after ${MAX_REQUESTS_PER_RUN} audio files to respect daily quota.`);
 
         // Check for existing empty files and delete them
         const files = fs.readdirSync(AUDIO_DIR);
@@ -220,6 +225,10 @@ async function main() {
         }
 
         for (const sahabi of data.sahaba) {
+            if (requestCount >= MAX_REQUESTS_PER_RUN) {
+                console.log(`\n🛑 Reached daily limit of ${MAX_REQUESTS_PER_RUN} audio files. Stopping.`);
+                break;
+            }
             if (!sahabi.audioFiles) {
                 sahabi.audioFiles = { arabic: "", english: "" };
             }
@@ -232,7 +241,8 @@ async function main() {
 
             // Only generate if file doesn't exist (we just deleted empty ones)
             if (!fs.existsSync(wavPathEn) && sahabi.longBiography) {
-                console.log(`Generating English audio for ${sahabi.name}...`);
+                if (requestCount >= MAX_REQUESTS_PER_RUN) break;
+                console.log(`[${requestCount + 1}/${MAX_REQUESTS_PER_RUN}] Generating English audio for ${sahabi.name}...`);
                 try {
                     let audioData = await generateAudio(sahabi.longBiography, "Aoede");
 
@@ -243,7 +253,8 @@ async function main() {
                         fs.writeFileSync(wavPathEn, finalBuffer);
                         sahabi.audioFiles.english = `audio/${wavFileNameEn}`;
                         updated = true;
-                        console.log(`✅ Saved ${wavFileNameEn} (${finalBuffer.length} bytes)`);
+                        requestCount++;
+                        console.log(`✅ Saved ${wavFileNameEn} (${finalBuffer.length} bytes) [${requestCount}/${MAX_REQUESTS_PER_RUN}]`);
                         await new Promise(r => setTimeout(r, DELAY_MS));
                     } else {
                         console.error(`❌ Skipping save for ${wavFileNameEn} - No logic audio data generated.`);
@@ -264,7 +275,8 @@ async function main() {
             const wavPathAr = path.join(AUDIO_DIR, wavFileNameAr);
 
             if (!fs.existsSync(wavPathAr) && sahabi.longBiographyArabic) {
-                console.log(`Generating Arabic audio for ${sahabi.name}...`);
+                if (requestCount >= MAX_REQUESTS_PER_RUN) break;
+                console.log(`[${requestCount + 1}/${MAX_REQUESTS_PER_RUN}] Generating Arabic audio for ${sahabi.name}...`);
                 try {
                     let audioData = await generateAudio(sahabi.longBiographyArabic, "Aoede");
 
@@ -275,7 +287,8 @@ async function main() {
                         fs.writeFileSync(wavPathAr, finalBuffer);
                         sahabi.audioFiles.arabic = `audio/${wavFileNameAr}`;
                         updated = true;
-                        console.log(`✅ Saved ${wavFileNameAr} (${finalBuffer.length} bytes)`);
+                        requestCount++;
+                        console.log(`✅ Saved ${wavFileNameAr} (${finalBuffer.length} bytes) [${requestCount}/${MAX_REQUESTS_PER_RUN}]`);
                         await new Promise(r => setTimeout(r, DELAY_MS));
                     } else {
                         console.error(`❌ Skipping save for ${wavFileNameAr} - No logic audio data generated.`);
@@ -296,6 +309,7 @@ async function main() {
             }
         }
 
+        console.log(`\n📊 Audio Summary: ${requestCount} audio files generated this run.`);
         console.log('Audio generation process complete.');
 
     } catch (err) {
