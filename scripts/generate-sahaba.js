@@ -84,7 +84,7 @@ function generateContent(sahabiName) {
 
         const options = {
             hostname: 'generativelanguage.googleapis.com',
-            path: `/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`,
+            path: `/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
