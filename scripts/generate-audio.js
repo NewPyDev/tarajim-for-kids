@@ -57,8 +57,8 @@ async function generateAudio(text, voiceName = "Aoede") {
     const cleanText = text.replace(/<[^>]*>/g, '').trim();
     if (!cleanText) return null;
 
-    // Check length.
-    const CHUNK_LIMIT = 2000;
+    // Check length. Gemini TTS can handle moderate chunks
+    const CHUNK_LIMIT = 2500;
 
     if (cleanText.length > CHUNK_LIMIT) {
         console.log(`Text too long (${cleanText.length} chars). Splitting...`);
@@ -147,18 +147,18 @@ async function generateAudio(text, voiceName = "Aoede") {
 
     const options = {
         hostname: 'generativelanguage.googleapis.com',
-        path: `/v1beta/models/gemini-2.5-pro-preview-tts:generateContent?key=${API_KEY}`,
+        path: `/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${API_KEY}`,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Content-Length': Buffer.byteLength(requestBody)
         },
-        timeout: 60000
+        timeout: 180000
     };
 
-    // FORCE WAIT 60s before request to avoid Rate Limit
-    console.log("Waiting 60s to respect API rate limit...");
-    await new Promise(r => setTimeout(r, 60000));
+    // Wait before request to avoid Rate Limit
+    console.log("Waiting 15s to respect API rate limit...");
+    await new Promise(r => setTimeout(r, 15000));
 
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
