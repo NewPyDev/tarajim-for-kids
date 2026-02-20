@@ -292,8 +292,8 @@
       "slug": "uthman-enhanced",
       "icon": "3",
       "audioFiles": {
-        "arabic": "",
-        "english": ""
+        "arabic": "audio/uthman-enhanced-ar.wav",
+        "english": "audio/uthman-enhanced-en.wav"
       },
       "keyLessonsArabic": [
         "الكرم والثروة يجب أن يستخدما في طاعة الله وخدمة المجتمع",
