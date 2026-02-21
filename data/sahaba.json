@@ -427,8 +427,8 @@
       "slug": "ali-enhanced",
       "icon": "4",
       "audioFiles": {
-        "arabic": "",
-        "english": ""
+        "arabic": "audio/ali-enhanced-ar.wav",
+        "english": "audio/ali-enhanced-en.wav"
       },
       "keyLessonsArabic": [
         "الشجاعة الحقيقية هي الوقوف مع الحق وإن كان صعباً",
@@ -570,8 +570,8 @@
       "slug": "khalid-enhanced",
       "icon": "⚔️",
       "audioFiles": {
-        "arabic": "",
-        "english": ""
+        "arabic": "audio/khalid-enhanced-ar.wav",
+        "english": "audio/khalid-enhanced-en.wav"
       },
       "keyLessonsArabic": [
         "المهارة العسكرية موهبة يمكن تسخيرها للحق",
