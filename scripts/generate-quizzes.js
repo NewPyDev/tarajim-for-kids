@@ -63,9 +63,9 @@ async function generateQuiz(sahabiName, biography, language = 'en') {
         timeout: 30000
     };
 
-    // Delay to respect rate limits (60s to be ultra-conservative)
-    console.log(`Waiting 60s to respect rate limit (${language})...`);
-    await new Promise(r => setTimeout(r, 60000));
+    // Delay to respect rate limits (4.5s to be efficient but safe)
+    console.log(`Waiting 4.5s to respect rate limit (${language})...`);
+    await new Promise(r => setTimeout(r, 4500));
 
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
@@ -123,7 +123,7 @@ async function main() {
         let updated = false;
 
         // HARD LIMIT: Stop after this many successful API calls to stay under free tier quota
-        const MAX_REQUESTS_PER_RUN = 18;
+        const MAX_REQUESTS_PER_RUN = 100;
         let requestCount = 0;
 
         console.log(`Found ${data.sahaba.length} Sahaba. Checking for missing quizzes...`);

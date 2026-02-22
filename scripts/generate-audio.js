@@ -207,7 +207,7 @@ async function main() {
         let updated = false;
 
         // HARD LIMIT: Stop after this many successful audio generations
-        const MAX_REQUESTS_PER_RUN = 10;
+        const MAX_REQUESTS_PER_RUN = 100;
         let requestCount = 0;
 
         console.log(`Found ${data.sahaba.length} Sahaba. Checking for missing audio...`);
