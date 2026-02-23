@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
             audioContainer.style.display = 'block';
             // Only update src if it changed to avoid reloading if just re-rendering
             // But wait, if language changed, src changes.
-            // Ensure the path is absolute so it resolves from the root (e.g., /audio/...) instead of relative to /public/
-            const absoluteAudioPath = audioPath.startsWith('/') ? audioPath : '/' + audioPath;
-            if (currentSrc !== absoluteAudioPath) {
-                audioPlayer.src = absoluteAudioPath;
+            // Reverting to relative path so it correctly resolves to /public/audio/... on Render
+            const currentSrc = audioPlayer.getAttribute('src');
+            if (currentSrc !== audioPath) {
+                audioPlayer.src = audioPath;
             }
         } else {
             audioContainer.style.display = 'none';
