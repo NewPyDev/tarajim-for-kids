@@ -1069,7 +1069,7 @@
       "icon": "📜",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/zaid-en.wav"
       },
       "descriptionArabic": "جامع القرآن الكريم وكاتب الوحي. تميز بذكائه وعلمه بالموارث.",
       "quiz": [
@@ -1153,7 +1153,7 @@
       "icon": "🛡️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/abu-ubaidah-en.wav"
       },
       "descriptionArabic": "أمين هذه الأمة، وقائد الجيوش في فتح الشام.",
       "quiz": [
