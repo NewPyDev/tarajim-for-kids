@@ -2098,7 +2098,7 @@
       "icon": "🦁",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/hamza-enhanced-en.wav"
       },
       "descriptionArabic": "أسد الله ورسوله، عم النبي ﷺ وسيد الشهداء.",
       "quiz": [
@@ -2183,7 +2183,7 @@
       "icon": "⚔️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/ammar-enhanced-en.wav"
       },
       "famousQuoteArabic": "آمنا بالله ورسوله، ولن نغير إيماننا حتى لو قُطعنا إرباً.",
       "descriptionArabic": "الذي تقتله الفئة الباغية، صبر هو وأهله على العذاب في مكة.",
@@ -2269,7 +2269,7 @@
       "icon": "🕊️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/jafar-enhanced-en.wav"
       },
       "famousQuoteArabic": "نعبد الله وحده، ونصلي له، ونحن صادقون وأمناء، ونصل الأرحام.",
       "descriptionArabic": "جعفر الطيار، الذي أبدله الله بجناحين يطير بهما في الجنة، استشهد في مؤتة.",
@@ -2355,7 +2355,7 @@
       "icon": "💰",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/abdur-rahman-enhanced-en.wav"
       },
       "famousQuoteArabic": "لا أريد أن أكون أغنى رجل في المقبرة. أريد أن أنام وأنا أعلم أنني ساعدت شخصاً اليوم.",
       "descriptionArabic": "أحد العشرة المبشرين بالجنة، واشتهر بكرمه وتجارته الرابحة.",
@@ -2441,7 +2441,7 @@
       "icon": "🛡️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/talha-enhanced-en.wav"
       },
       "famousQuoteArabic": "سأعطي حياتي وكل ما أملك لحماية رسول الله.",
       "descriptionArabic": "طلحة الخير، الذي دافع عن النبي يوم أحد حتى شلت يده.",
@@ -2527,7 +2527,7 @@
       "icon": "⚔️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/zubayr-enhanced-en.wav"
       },
       "famousQuoteArabic": "لا أسل سيفي إلا في سبيل الله ولحماية رسوله.",
       "descriptionArabic": "حواري رسول الله، وأول من سل سيفاً في سبيل الله.",
@@ -2613,7 +2613,7 @@
       "icon": "📖",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/said-enhanced-en.wav"
       },
       "famousQuoteArabic": "خير الناس من نفع الناس، وشر الناس من ضر الناس.",
       "descriptionArabic": "أحد العشرة المبشرين بالجنة، وكان مجاب الدعوة.",
@@ -2699,7 +2699,7 @@
       "icon": "🐱",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/abu-hurairah-enhanced-en.wav"
       },
       "famousQuoteArabic": "حفظت من رسول الله وعاءين، فأما أحدهما فبثثته، وأما الآخر فلو بثثته قُطع هذا البلعوم.",
       "descriptionArabic": "راوية الإسلام، أكثر الصحابة رواية للحديث الشريف.",

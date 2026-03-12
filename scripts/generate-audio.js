@@ -11,6 +11,16 @@ if (!API_KEY) {
     process.exit(1);
 }
 
+process.on('uncaughtException', (err) => {
+    console.error('UNCAUGHT EXCEPTION:', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('UNHANDLED REJECTION:', reason);
+    process.exit(1);
+});
+
 // Ensure audio directory exists
 if (!fs.existsSync(AUDIO_DIR)) {
     fs.mkdirSync(AUDIO_DIR, { recursive: true });
@@ -52,7 +62,7 @@ function createWavHeader(dataLength, sampleRate = 24000) {
     return buffer;
 }
 
-async function generateAudio(text, voiceName = "Aoede") {
+async function generateAudio(text, voiceName = "Aoede", isChunk = false) {
     // Remove HTML tags for TTS
     const cleanText = text.replace(/<[^>]*>/g, '').trim();
     if (!cleanText) return null;
@@ -60,8 +70,7 @@ async function generateAudio(text, voiceName = "Aoede") {
     // Check length. Gemini TTS can handle moderate chunks
     const CHUNK_LIMIT = 2500;
 
-    if (cleanText.length > CHUNK_LIMIT) {
-        console.log(`Text too long (${cleanText.length} chars). Splitting...`);
+    if (!isChunk) {
         const sentences = cleanText.match(/[^.!?]+[.!?]+(\s+|$)/g) || [cleanText];
         const chunks = [];
         let currentChunk = '';
@@ -76,7 +85,9 @@ async function generateAudio(text, voiceName = "Aoede") {
         }
         if (currentChunk) chunks.push(currentChunk);
 
-        console.log(`Split into ${chunks.length} chunks.`);
+        if (chunks.length > 1) {
+            console.log(`Text too long (${cleanText.length} chars). Split into ${chunks.length} chunks.`);
+        }
 
         const audioBuffers = [];
         let fullSuccess = true;
@@ -92,7 +103,7 @@ async function generateAudio(text, voiceName = "Aoede") {
 
             while (!success && attempts < 5) {
                 try {
-                    const buffer = await generateAudio(chunk, voiceName); // Recursive call
+                    const buffer = await generateAudio(chunk, voiceName, true); // Recursive call as chunk
                     if (buffer && buffer.length > 0) {
                         audioBuffers.push(buffer);
                         console.log(`Chunk ${i + 1} done. Size: ${buffer.length}`);
