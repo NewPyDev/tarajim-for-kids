@@ -2785,7 +2785,7 @@
       "icon": "⚖️",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/muadh-enhanced-en.wav"
       },
       "famousQuoteArabic": "تعلموا العلم، فإن تعلمه لله خشية، وطلبه عبادة، ومذاكرته تسبيح.",
       "descriptionArabic": "أعلم الأمة بالحلال والحرام، بعثه النبي قاضياً ومعلماً لليمن.",
@@ -2871,7 +2871,7 @@
       "icon": "📚",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/abdullah-abbas-enhanced-en.wav"
       },
       "famousQuoteArabic": "لا أستحي أن أسأل عما لا أعلم.",
       "descriptionArabic": "حبر الأمة وترجمان القرآن، دعا له النبي بالفقه في الدين.",
@@ -2957,7 +2957,7 @@
       "icon": "👨‍💼",
       "audioFiles": {
         "arabic": "",
-        "english": ""
+        "english": "audio/usama-enhanced-en.wav"
       },
       "famousQuoteArabic": "سأتبع الطريق الذي وضعه لي رسول الله، بغض النظر عما يقوله الآخرون.",
       "descriptionArabic": "الحب ابن الحب، أصغر قائد جيش في عهد النبي ﷺ.",
@@ -3120,7 +3120,11 @@
           ],
           "correctAnswer": 1
         }
-      ]
+      ],
+      "audioFiles": {
+        "arabic": "",
+        "english": "audio/musab-ibn-umair-en.wav"
+      }
     },
     {
       "name": "Zubayr ibn al-Awwam",
@@ -3218,7 +3222,11 @@
           ],
           "correctAnswer": 1
         }
-      ]
+      ],
+      "audioFiles": {
+        "arabic": "",
+        "english": "audio/zubayr-ibn-al-awwam-en.wav"
+      }
     },
     {
       "name": "Abd al-Rahman ibn Awf",
@@ -3316,7 +3324,11 @@
           ],
           "correctAnswer": 1
         }
-      ]
+      ],
+      "audioFiles": {
+        "arabic": "",
+        "english": "audio/abd-al-rahman-ibn-awf-en.wav"
+      }
     }
   ]
 }
