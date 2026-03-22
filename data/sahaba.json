@@ -1068,7 +1068,7 @@
       "slug": "zaid",
       "icon": "📜",
       "audioFiles": {
-        "arabic": "",
+        "arabic": "audio/zaid-ar.wav",
         "english": "audio/zaid-en.wav"
       },
       "descriptionArabic": "الكاتب الرئيسي للنبي ومُجمع القرآن. ساعد ذكاؤه في حفظ الرسالة الإلهية.",
@@ -1161,7 +1161,7 @@
       "slug": "abu-ubaidah",
       "icon": "🛡️",
       "audioFiles": {
-        "arabic": "",
+        "arabic": "audio/abu-ubaidah-ar.wav",
         "english": "audio/abu-ubaidah-en.wav"
       },
       "descriptionArabic": "عُرف بأمين الأمة، قاد فتح الشام وكان من العشرة المبشرين بالجنة.",
@@ -1254,7 +1254,7 @@
       "slug": "abu-dhar",
       "icon": "💎",
       "audioFiles": {
-        "arabic": "",
+        "arabic": "audio/abu-dhar-ar.wav",
         "english": "audio/abu-dhar-en.wav"
       },
       "descriptionArabic": "اشتهر بصدقه المطلق وقول الحق في وجه السلطة، وقد وصفه النبي بأنه أصدق الناس لهجة تحت السماء.",
@@ -1348,7 +1348,7 @@
       "slug": "aisha-enhanced",
       "icon": "📚",
       "audioFiles": {
-        "arabic": "",
+        "arabic": "audio/aisha-enhanced-ar.wav",
         "english": "audio/aisha-enhanced-en.wav"
       },
       "famousQuoteArabic": "لا تحقرن من المعروف شيئاً، ولو أن تلقى أخاك بوجه طلق.",
