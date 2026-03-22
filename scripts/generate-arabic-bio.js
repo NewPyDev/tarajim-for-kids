@@ -27,7 +27,8 @@ function buildPrompt(sahabi) {
 You are an expert Islamic historian. I need you to translate and adapt the following English biography of the Sahabi "${sahabi.name}" into Arabic.
 
 The Arabic biography should:
-- Be approximately the same length as the English version
+- Be a concise adaptation of the English version (approximately 200 words or less)
+- Highlight the most important facts only
 - Use proper Modern Standard Arabic (فصحى)
 - Be accurate, respectful, and suitable for children/teens
 - Use HTML formatting (<p>, <strong>) similar to the English version
@@ -171,8 +172,8 @@ async function main() {
             }
 
             if (!success) {
-                console.error(`  ❌ CRITICAL: Failed ${sahabi.name} after 5 attempts. Stopping.`);
-                break;
+                console.error(`  ❌ CRITICAL: Failed ${sahabi.name} after 5 attempts. Skipping.`);
+                continue;
             }
         }
 
